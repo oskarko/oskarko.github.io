@@ -1,0 +1,39 @@
+# Site settings
+title: Oskarko's blog
+description: 'So, You Want To Develop Android Apps?'
+url: 'http://oskarko.github.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Óscar Rodríguez'
+  email: oscar.garrucho@gmail.com
+  twitter_username: oskarko2011
+  facebook_username: oscar.garrucho
+  github_username:  oskarko
+  linkedin_username:  óscar-rodríguez-garrucho-b2a10165
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

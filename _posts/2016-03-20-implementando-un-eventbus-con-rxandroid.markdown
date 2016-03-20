@@ -3,6 +3,7 @@ title:  "Implementando un Event Bus con RxAndroid"
 date:   2016-03-20 12:05:22
 categories: [RxAndroid]
 tags: [RxAndroid]
+comments: True
 ---
 Una de las rutinas más tediosas a la hora de crear una app es la implementación de la  comunicación entre las distintas partes de las que se compone dicha app (actividades, fragmentos, servicios...). Que si métodos de Callback, que si AsyncTask, intents, y aún así, nunca estamos a salvo de ser sorprendidos por un [NPE][NullPointerException] al eliminarnos el recolector de basuras de Android una actividad en el momento menos oportuno.
 

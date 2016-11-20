@@ -18,7 +18,7 @@ El presenter es una capa intermedia que desacopla la lógica de la aplicación d
 
 Los modelos son los casos de uso de la propia aplicación (llamadas a la API, CRUD sobre BBDD, etc), es decir, la lógica de negocio de la aplicación. Lo ideal y lo recomendable es que sólo exista un modelo por cada caso de uso de la aplicación para una mayor escalabilidad de la aplicación ([principios SOLID][enlaceSOLID]).
 
-Para la realización de los test unitarios de un modo más simple es ideal el uso de interfaces con las vistas. Aunque [hay quien no es partidario de ello][wasteOfTime]
+Para la realización de los test unitarios de un modo más simple es ideal el uso de interfaces con las vistas. Aunque [hay quien no es partidario de ello.][wasteOfTime]
 
 Para sacar el máximo partido a este patrón de diseño se suele usar la inyección de dependencias, pero eso lo veremos en otro momento. Por ahora **será la propia actividad la encargada de proporcionar las dependencias** al presenter. Veremos [un ejemplo sencillo][enlaceRepo]. En lugar de crear las dependencias que necesitamos para realizar una determinada tarea, estas dependencias vendrán dadas (inyectadas) en el constructor o en algunos setters(). Así, por ejemplo, el presenter no necesita nunca llamar a getActivity() para conseguir el contexto del framework de Android, sino que éste, por ejemplo, se le pasará en el contructor o en un setter mediante una interfaz. Nuestro presenter no necesita lidiar directamente con el framework, sino con clases que contengan el contexto y que implementen dichas interfaces para hacerlo todo de una forma más abstracta.
 
@@ -34,20 +34,22 @@ En proyectos grandes es común usar la inyección de dependencias para no compli
 * no existe mucha documentación en lógicas de negocio complejas.
 
 
+
 ![bigbangt_dos]({{ site.url }}/images/bbt_02.gif){: .center-image }
 
 
-Ciclo de trabajo del patrón MVP: 
 
-View -> Presenter: mediante listener los presenter recibirán las interacciones del usuario sobre la interfaz gráfica (UI).
+**Ciclo de trabajo del patrón MVP:** 
 
-Presenter -> View: simplemente llamando métodos para actualizar las vistas como por ejemplo setText() o setBackgroundColor().
+`View -> Presenter:` mediante listener los presenter recibirán las interacciones del usuario sobre la interfaz gráfica (UI).
 
-Presenter -> Model: Se solicitará actualizar los datos llamando a setters de los modelos como, por ejemplo, myModel.saveEmail("oskarko@myemail.com").
+`Presenter -> View:` simplemente llamando métodos para actualizar las vistas como por ejemplo setText() o setBackgroundColor().
 
-Model -> Presenter: Normalmente los modelos actualizarán la información realizando llamadas a las distintas API o consultando las bases de datos. Una vez que se han obtenido los datos deseados, se puede notificar al presenter de los nuevos datos mediante métodos de callbacks tales como updateEmail(String email).
+`Presenter -> Model:` Se solicitará actualizar los datos llamando a setters de los modelos como, por ejemplo, myModel.saveEmail("oskarko@myemail.com").
 
-En nuestro [proyecto de ejemplo][enlaceRepo] tendremos una vista (activity) con dos botones, realizando al hacer 'clic' sobre cada uno de ellos, una tarea distinta. Por tanto tendremos una vista, un presenter y dos modelos (tantos como casos de uso).
+`Model -> Presenter:` Normalmente los modelos actualizarán la información realizando llamadas a las distintas API o consultando las bases de datos. Una vez que se han obtenido los datos deseados, se puede notificar al presenter de los nuevos datos mediante métodos de callbacks tales como updateEmail(String email).
+
+En nuestro [proyecto de ejemplo][enlaceRepo] tendremos una vista (*activity*) con dos botones, realizando al hacer 'clic' sobre cada uno de ellos, una tarea distinta. Por tanto tendremos una vista, un presenter y dos modelos (tantos como casos de uso).
 El primer botón realizará una llamada a un servicio web mediante retrofit y mostrará un mensaje según el resultado obtenido. El segundo botón simulará una consulta a una base de datos para rellenar y visualizar una lista con datos ficticios.
 
 {% highlight ruby %}
@@ -162,7 +164,8 @@ Puede parecer complicado a primera vista, además del uso de las diferentes inte
 
 ![indiana_jones]({{ site.url }}/images/indiana_01.gif){: .center-image }
 
-Y ahora pasemos a hablar un poco sobre los test unitarios. Los test unitarios son el mecanismo que tenemos los programadores para comprobar que nuestros métodos funcionan tal y como deberían de funcionar y devuelven el tipo de dato que deberían de devolver (en caso de devolver alguno). Deberán de ser automatizables, reutilizables, independientes y profesionales. Una de su mayores ventajas es que funcionan a modo de documentación del propio código y en caso de contener algún error en nuestro código, éste queda más acotado y localizable (ojo! el que nuestra aplicación supere todos los test unitarios no significa que esté libre de contener errores).
+
+Y ahora pasemos a hablar un poco sobre los **test unitarios**. Los test unitarios son el mecanismo que tenemos los programadores para comprobar que nuestros métodos funcionan tal y como deberían de funcionar y devuelven el tipo de dato que deberían de devolver (en caso de devolver alguno). Deberán de ser automatizables, reutilizables, independientes y profesionales. Una de su mayores ventajas es que funcionan a modo de documentación del propio código y en caso de contener algún error en nuestro código, éste queda más acotado y localizable (ojo! el que nuestra aplicación supere todos los test unitarios no significa que esté libre de contener errores).
 
 Podremos ser muy buenos programadores pero sin la práctica necesaria no seremos capaces de realizar buenos test unitarios por el simple hecho de que es una codificación "diferente". Además, algunas de las preguntas más recurrentes a la hora de escribir test unitarios es `¿Qué debo testear? ¿TODO?` Pues no, no deberemos de comprobar el funcionamiento del propio framework de Android o las librerías externas que usamos en nuestro proyecto, como **retrofit**, por ejemplo. Puesto que no controlamos ese código; por tanto, deberemos de testear únicamente **nuestro propio código.**
 
@@ -233,9 +236,10 @@ En este segundo test comprobamos que la conexión entre el presenter y la vista 
 
 {% endhighlight %}
 
-Realizar test unitarios sobre un IntenService no es nada fácil ([ejemplo][enlaceIntentService]), y es ahí donde radica la belleza de este patrón de diseño. Si modelas bien tu aplicación, no necesitarás usar ningún IntentService. Y como ejemplo, realizaremos una llamada a un webService mediante retrofit de forma totalmente asíncrona sin necesidad de usar ningún intentService, y con ello adjuntaremos sus [correspondientes test unitarios][enlaceTests].
+Realizar test unitarios sobre un IntenService no es nada fácil ([ejemplo][enlaceIntentService]), y es ahí donde radica la belleza de este patrón de diseño. Si modelas bien tu aplicación, no necesitarás usar ningún IntentService. Y como ejemplo, realizaremos una llamada a un webService mediante retrofit de forma totalmente asíncrona sin necesidad de usar ningún intentService. Con el proyecto adjunto sus [correspondientes test unitarios][enlaceTests].
 
 ![thank_you]({{ site.url }}/images/thank_you.gif){: .center-image }
+
 
 
 

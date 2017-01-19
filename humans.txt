@@ -1,7 +1,7 @@
 /* TEAM */
 Developer & Designer: Óscar Rodríguez
-Twitter: @oskarko2011
-Site: http://main30.com
+Twitter: @OscarGarrucho
+Site: http://www.oscargarrucho.com
 Location: Madrid, España
 						
 /* THANKS */

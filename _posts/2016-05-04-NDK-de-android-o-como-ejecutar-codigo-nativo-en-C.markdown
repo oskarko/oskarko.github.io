@@ -2,6 +2,7 @@
 title:  "NDK de android o como ejecutar código nativo en C"
 date:   2016-05-04 21:09:22
 categories: [RxAndroid]
+layout: post
 tags: [NDK]
 comments: True
 ---

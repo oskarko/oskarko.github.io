@@ -1,0 +1,30 @@
+---
+layout: default
+title: Óscar Garrucho
+---
+
+<section class="main-content">
+
+    <div class="wrapper">
+
+        <header class="section-header">
+            <h4 class="section-title">Bienvenido a mi blog</h4>
+            <span class="section-subtitle">Random posts about Android &amp;&amp; Swift development</span>
+        </header>
+
+        <ul id="posts-list">
+
+            {% for post in site.posts %}
+
+            <li class="clearfix">
+                <time datetime="{{ post.date }}" pubdate>{{ post.date | date_to_string }}</time>
+                <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+            </li>
+            
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</section>

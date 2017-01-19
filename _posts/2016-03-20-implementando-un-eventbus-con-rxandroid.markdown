@@ -2,6 +2,7 @@
 title:  "Implementando un Event Bus con RxAndroid"
 date:   2016-03-20 12:05:22
 categories: [RxAndroid]
+layout: post
 tags: [RxAndroid]
 comments: True
 ---

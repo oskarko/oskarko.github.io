@@ -1,0 +1,24 @@
+<section class="main-header home">
+
+    <div class="vertical-container">
+
+    	<div class="wrapper clearfix">
+
+	         <header>
+	        	{% if page.path != 'index.html' %}<a href="/">{% endif %}
+		            <h1 id="main-title">Óscar Garrucho</h1>
+		            <h2 id="main-subtitle">A Terrific Android & Swift Developer</h2>
+	        	{% if page.path != 'index.html' %}</a>{% endif %}
+	        </header>
+
+	        <nav id="main-nav" role="navigation">
+				<a href="/about/" class="{% if page.url == '/about/index.html' %}selected{% endif %}">About</a>
+				<a href="/blog/" class="{% if page.url == '/blog/index.html' %}selected{% endif %}">Blog</a>
+				<a href="mailto:info@oscargarrucho.com">Contact</a>
+			</nav>
+
+		</div>
+
+    </div>
+
+</section>

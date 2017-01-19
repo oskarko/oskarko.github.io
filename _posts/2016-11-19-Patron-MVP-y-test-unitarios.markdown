@@ -2,6 +2,7 @@
 title:  "Patrón MVP y test unitarios"
 date:   2016-11-19 21:04:22
 categories: [MVP, test unitarios]
+layout: post
 tags: [MVP, test unitarios]
 comments: True
 ---

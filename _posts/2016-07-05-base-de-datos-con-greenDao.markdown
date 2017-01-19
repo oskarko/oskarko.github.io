@@ -2,6 +2,7 @@
 title:  "Base de datos con greenDao"
 date:   2016-07-05 19:14:22
 categories: [greenDao]
+layout: post
 tags: [SqLite]
 comments: True
 ---

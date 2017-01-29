@@ -66,15 +66,15 @@ Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceCod
 
 Bibliografía:
 
-- [https://code.google.com/archive/p/apv/wikis/Building.wiki][enlaceUno]
+-- [https://code.google.com/archive/p/apv/wikis/Building.wiki][enlaceUno]
 
-- [https://geekytheory.com/que-es-el-android-ndk-parte-1/][enlaceDos]
+-- [https://geekytheory.com/que-es-el-android-ndk-parte-1/][enlaceDos]
 
-- [https://geekytheory.com/instalacion-del-android-ndk-parte-2/][enlaceTres]
+-- [https://geekytheory.com/instalacion-del-android-ndk-parte-2/][enlaceTres]
 
-- [https://geekytheory.com/hola-mundo-con-android-ndk-parte-4/][enlaceCuatro]
+-- [https://geekytheory.com/hola-mundo-con-android-ndk-parte-4/][enlaceCuatro]
 
-- [https://geekytheory.com/paso-de-parametros-en-funciones-con-android-ndk-parte-5/][enlaceCinco]
+-- [https://geekytheory.com/paso-de-parametros-en-funciones-con-android-ndk-parte-5/][enlaceCinco]
 
 [uno]: https://developer.android.com/intl/es/tools/sdk/ndk/index.html
 [dos]: https://developer.android.com/intl/es/ndk/downloads/index.html

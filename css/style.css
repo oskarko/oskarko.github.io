@@ -62,8 +62,8 @@ figcaption {
 /* Basic links */
 
 a:hover, #posts-list a:hover {
-	color: #D4A16B;
-	border-color: #D4A16B;
+	color: #aaa;
+	border-color: #aaa;
 }
 
 /* --------------------------------------
@@ -91,8 +91,8 @@ body {
 }
 a {
 	text-decoration: none;
-	color: #ccc;
-	border-bottom: 1px dotted #ccc;
+	color: #D4A16B;
+	border-bottom: 1px dotted #D4A16B;
 }
 p {
 	margin: 40px 0;
@@ -226,7 +226,7 @@ h4 + p {
 .section-subtitle {
 	font-size: 12px;
 	line-height: 18px;
-	color: #ccc;
+	color: #aaa;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: block;
@@ -356,6 +356,11 @@ h4 + p {
 /* --------------------------------------
 -----   BLOG   -----
 ------------------------------------------*/
+#disqus_thread {
+padding-left: 10%;
+padding-right: 10%;
+padding-bottom: 1%;
+}
 
 #posts-list {
 	margin-top: 35px;
@@ -370,7 +375,7 @@ h4 + p {
 #posts-list time {
 	font-size: 12px;
 	line-height: 12px;
-	color: #ccc;
+	color: #aaa;
 	width: 115px;
 	text-transform: uppercase;
 	float: left;

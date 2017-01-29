@@ -247,35 +247,35 @@ Realizar test unitarios sobre un IntenService no es nada fácil ([ejemplo][enlac
 
 Bibliografía:
 
-- [http://fernandocejas.com/2014/04/08/unit-testing-asynchronous-methods-with-mockito/][enlaceUno]
+-- [http://fernandocejas.com/2014/04/08/unit-testing-asynchronous-methods-with-mockito/][enlaceUno]
 
-- [http://www.genbetadev.com/paradigmas-de-programacion/usando-mvp-e-inversion-de-dependencias-para-abstraernos-del-framework-en-android][enlaceDos]
+-- [http://www.genbetadev.com/paradigmas-de-programacion/usando-mvp-e-inversion-de-dependencias-para-abstraernos-del-framework-en-android][enlaceDos]
 
-- [https://erikcaffrey.github.io/2015/11/03/mvp/][enlaceTres]
+-- [https://erikcaffrey.github.io/2015/11/03/mvp/][enlaceTres]
 
-- [http://104.168.175.144/modelo-vista-presentador-mvp-en-android/][enlaceCuatro]
+-- [http://104.168.175.144/modelo-vista-presentador-mvp-en-android/][enlaceCuatro]
 
-- [https://www.captechconsulting.com/blogs/a-mvp-approach-to-lifecycle-safe-requests-with-retrofit-20-and-rxjava][enlaceCinco]
+-- [https://www.captechconsulting.com/blogs/a-mvp-approach-to-lifecycle-safe-requests-with-retrofit-20-and-rxjava][enlaceCinco]
 
-- [https://kmangutov.wordpress.com/2015/03/28/android-mvp-consuming-restful-apis/][enlaceSeis]
+-- [https://kmangutov.wordpress.com/2015/03/28/android-mvp-consuming-restful-apis/][enlaceSeis]
 
-- [http://www.limecreativelabs.com/mvp-android/][enlaceSiete]
+-- [http://www.limecreativelabs.com/mvp-android/][enlaceSiete]
 
-- [http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/][enlaceOcho]
+-- [http://macoscope.com/blog/model-view-presenter-architecture-in-android-applications/][enlaceOcho]
 
-- [http://joshfischer.io/#!/sept2016][enlaceNueve]
+-- [http://joshfischer.io/#!/sept2016][enlaceNueve]
 
-- [http://mdswanson.com/blog/2013/12/16/reliable-android-http-testing-with-retrofit-and-mockito.html][enlaceDiez]
+-- [http://mdswanson.com/blog/2013/12/16/reliable-android-http-testing-with-retrofit-and-mockito.html][enlaceDiez]
 
-- [http://xurxodeveloper.blogspot.com.es/2014/11/pruebas-unitarias-en-android-con-mockito.html][enlaceOnce]
+-- [http://xurxodeveloper.blogspot.com.es/2014/11/pruebas-unitarias-en-android-con-mockito.html][enlaceOnce]
 
-- [https://unpocodejava.wordpress.com/2012/07/11/un-poco-de-mockito/][enlaceDoce]
+-- [https://unpocodejava.wordpress.com/2012/07/11/un-poco-de-mockito/][enlaceDoce]
 
-- [https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93presentador][enlaceTrece]
+-- [https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93presentador][enlaceTrece]
 
-- [https://blackpentsoft.wordpress.com/2013/02/04/test-de-integracion-vs-test-unitarios/][enlaceCatorce]
+-- [https://blackpentsoft.wordpress.com/2013/02/04/test-de-integracion-vs-test-unitarios/][enlaceCatorce]
 
-- [https://itblogsogeti.com/2015/03/26/desarrollo-pruebas-unitarias-trinitario-gomez-sogeti/][enlaceQuince]
+-- [https://itblogsogeti.com/2015/03/26/desarrollo-pruebas-unitarias-trinitario-gomez-sogeti/][enlaceQuince]
 
 
 

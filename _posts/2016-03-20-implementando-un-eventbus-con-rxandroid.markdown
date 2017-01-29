@@ -95,13 +95,13 @@ Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceCod
 
 Bibliografía:
 
-- [http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/][enlaceUno]
+-- [http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/][enlaceUno]
 
-- [https://github.com/kaushikgopal/RxJava-Android-Samples][enlaceDos]
+-- [https://github.com/kaushikgopal/RxJava-Android-Samples][enlaceDos]
 
-- [http://aaronliew.github.io/blog/2015/04/15/rxandroid/][enlaceTres]
+-- [http://aaronliew.github.io/blog/2015/04/15/rxandroid/][enlaceTres]
 
-- [https://guides.codepath.com/android/Communicating-with-an-Event-Bus][enlaceCuatro]
+-- [https://guides.codepath.com/android/Communicating-with-an-Event-Bus][enlaceCuatro]
 
 [enlaceUno]: http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/
 [enlaceDos]: https://github.com/kaushikgopal/RxJava-Android-Samples

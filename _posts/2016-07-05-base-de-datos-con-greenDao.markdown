@@ -146,11 +146,11 @@ Fácil, rápido y con ejemplos, ¿necesitas más?
 
 Bibliografía:
 
-- [http://greenrobot.org/greendao/][enlaceUno]
+-- [http://greenrobot.org/greendao/][enlaceUno]
 
-- [http://www.limecreativelabs.com/greendao-sqlite-orm-android/][enlaceDos]
+-- [http://www.limecreativelabs.com/greendao-sqlite-orm-android/][enlaceDos]
 
-- [http://blog.egorand.me/keeping-your-secrets-safe-with-greendaos-database-encryption/][enlaceTres]
+-- [http://blog.egorand.me/keeping-your-secrets-safe-with-greendaos-database-encryption/][enlaceTres]
 
 
 [enlaceUno]: http://greenrobot.org/greendao

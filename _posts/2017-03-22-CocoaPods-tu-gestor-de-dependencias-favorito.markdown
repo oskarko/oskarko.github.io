@@ -11,10 +11,11 @@ CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil 
 
 ¿Por qué necesitas un gestor de dependencias en tu vida? Bueno, no es obligatorio su uso, pero, podrías dedicar tu valioso tiempo a mejorar tu código en lugar de, sencillamente, malgastar tiempo en escribir cientos de líneas de código que no necesitarías escribir. También es cierto que puedes hacer uso de terceras librerías sin necesidad de usar un gestor de dependencías, pero eso te seguiría haciendo perder mucho tiempo tanto en la búsqueda, instalación y en el mantenimiento de dichas librerías (o eliminación de las mismas). Por tanto, la razón principal es obiva: por tiempo. Y como todos sabemos, el tiempo es oro, así que no lo malgastes ;)
 
-![Tiempo]({{ site.url }}/images/pup01.gif){: .center-image }
+![Tiempo]({{ site.url }}/images/pulp_01.gif){: .center-image }
 
-*Instalando...*
-CocoaPods está hecho con Ruby, y por tanto, para instalarlo necesitamos tener instalado Ruby en nuestro Max OS X; pero no sufras, que viene por defecto instalado con todas las versiones de OS X desde la versión 10.7.
+### Instalando...
+
+CocoaPods está hecho con Ruby, y por tanto, para instalarlo **necesitamos tener instalado Ruby** en nuestro Max OS X; pero no sufras, que viene por defecto instalado con todas las versiones de OS X desde la versión 10.7.
 
 Abre una terminal e introduce el siguiente comando (necesitarás introducir tu password para dar permisos de instalación)
 
@@ -24,7 +25,7 @@ Abre una terminal e introduce el siguiente comando (necesitarás introducir tu p
 
 {% endhighlight %}
 
-Ruby instalará todas las 'gemas' que sean necesarias para lograr la correcta instalación de CocoaPods.
+Ruby instalará todas las **gemas** que sean necesarias para lograr la correcta instalación de CocoaPods.
 
 ![Tiempo]({{ site.url }}/images/confetti_03.png){: .center-image }
 
@@ -36,15 +37,19 @@ Si nos diera algún tipo de error, o si incluso de quedara congelada la instrucc
 
 {% endhighlight %}
 
-Además, desde la propia CocoaPods nos recomiendan tener instalada la "Command Line Tools" (Xcode >> Preferences >> Downloads >> Command Line Tools) 
+Además, desde la propia CocoaPods nos recomiendan tener instalada la `Command Line Tools` (Xcode >> Preferences >> Downloads >> Command Line Tools) 
 
-¡Instalado!
+**¡Instalado!**
 
-*Configurando un nuevo proyecto con CocoaPods...*
-Para nuestro proyecto de ejemplo, tan sólo le añadiremos una divertida librería con la ayuda de CocoaPods, más que suficiente para ver como es su configuración y funcionamiento en tiempo de ejecución. Aquí cabe mencionar que todos los Pods que podemos usar en nuestro proyecto deben de estar 'dados de alta' en el repositorio de (http://github.com/CocoaPods/Specs)Github que CocoaPods tiene.
-La librería (LINK) permite soltar confetti por toda la pantalla de nuestro dispositivo, a modo de celebración de algún logro o día festivo. Tan bonito como simple. Vamos allá!
+### Configurando un nuevo proyecto con CocoaPods...
 
-nuevamente en una terminal deberemos situarnos en la carpeta raíz de nuestro proyecto (justo donde tenemos el archivo <nombreProyecto>.xcodeproj)
+Para nuestro proyecto de ejemplo, tan sólo le añadiremos una divertida librería con la ayuda de CocoaPods, más que suficiente para ver como es su configuración y funcionamiento en tiempo de ejecución. Aquí cabe mencionar que todos los Pods que podemos usar en nuestro proyecto deben de estar "dados de alta" en el repositorio de [Github que CocoaPods tiene][enlaceDiez].
+
+[La librería][enlaceDoce] permite soltar confetti por toda la pantalla de nuestro dispositivo, a modo de celebración de algún logro o día festivo. Tan bonito como simple.
+
+![Confetti]({{ site.url }}/images/confetti_01.png){: .center-image }
+
+Vamos allá! Nuevamente en una terminal deberemos situarnos en la carpeta raíz de nuestro proyecto (justo donde tenemos el archivo <nombreProyecto>.xcodeproj)
 
 {% highlight ruby %}
     
@@ -60,9 +65,7 @@ Y desde allí ejecutamos el siguiente comando:
 
 {% endhighlight %}
 
-esto creará [nuestro Podfile][enlaceCinco] en el directorio raíz del proyecto.
-
-y comenzaremos a editarlo (podéis editarlo con vuestro editor de texto plano favorito, yo suelo usar vi):
+esto creará [nuestro Podfile][enlaceCinco] en el directorio raíz del proyecto. Comenzaremos a editarlo (podéis editarlo con vuestro editor de texto plano favorito, yo suelo usar **vi**):
 
 {% highlight ruby %}
     
@@ -90,21 +93,22 @@ y por defecto veremos algo parecido a esto:
 
 
 
-la primera línea indica a CocoaPods que tu librería funcionará a partir de la versión 8.0 de iOS. La línea 'use_frameworks!' es obligatoria si vienes programando en Swift, de lo contrario, obtendrás un error al intentar usar el Pod sin esta línea. Y con la línea 'pod "SAConfettiView"' le decimos a CocoaPods que busque, compile e instale la librería llamada SAConfettiView.
+la primera línea indica a CocoaPods que tu librería funcionará a partir de la versión 8.0 de iOS. La línea `use_frameworks!` es obligatoria si vienes programando en Swift, de lo contrario, obtendrás un error al intentar usar el Pod sin esta línea. Y con la línea `pod SAConfettiView` le decimos a CocoaPods que busque, compile e instale la librería llamada SAConfettiView.
 
 ![Buzz]({{ site.url }}/images/year_01.gif){: .center-image }
 
-*Un alto en el camino...*
-Referirse a las librerías de Swift como librerías propiamente dicho, es un error. Cuando escribo librerías refiriendo al lenguaje Swift en verdad estoy refiriéndome a framworks, o para ser más exactos “Swift dynamic framework”, porque las librerías (estáticas) en Swift simplemente no están permitidas. Entonces, ¿Cuál es la diferencia entre una librería, un framework y un CocoaPod? Bien, espero arrojar algo de luz sobre este asunto:
+### Un alto en el camino...
+
+Referirse a las librerías de Swift como librerías propiamente dicho, es un error. Cuando escribo librerías refiriendo al lenguaje Swift en verdad estoy refiriéndome a framworks, o para ser más exactos **"Swift dynamic framework”**, porque las librerías (estáticas) en Swift simplemente no están permitidas. Entonces, ¿Cuál es la diferencia entre una librería, un framework y un CocoaPod? Bien, espero arrojar algo de luz sobre este asunto:
 
 -- CocoaPod (o 'Pod', usado de forma abreviada) se refiere indistintamente a una librería o un framework que se ha añadido a tu proyecto mediante la herramienta CocoaPods.
 
--- "dynamic frameworks" (o framworks, simple y llanamente) fueron introducidos con la llegada de iOS 8, permitiendo además de código, adjuntar imágenes y otros tipos de 'assets' que hasta entonces, no se podía. Otra sustancial diferencia es que en los frameworks tenemos "namespace classes" que viene a lograr que Xcode use dos clases con nombres idénticos (de distintos frameworks) sin dar errores de símbolos duplicados en proyecto. Esto es debido a que, a diferencia de Objetive-C, los frameworks escritos en Swift no están incluidos en iOS evitando duplicados como bien ya sabes.
+-- "dynamic frameworks" (o framworks, simple y llanamente) fueron introducidos con la llegada de iOS 8, permitiendo además de código, adjuntar imágenes y otros tipos de **assets** que hasta entonces, no se podía. Otra sustancial diferencia es que en los frameworks tenemos "namespace classes" que viene a lograr que Xcode use dos clases con nombres idénticos (de distintos frameworks) sin dar errores de símbolos duplicados en proyecto. Esto es debido a que, a diferencia de Objetive-C, los frameworks escritos en Swift no están incluidos en iOS evitando duplicados como bien ya sabes.
 
-Y de todo esto se encarga CocoaPods por ti, en las sombras, sin que tú te enteres lo más mínimo. Genial, ¿eh?
+Y de todo esto se encarga CocoaPods por ti, en las sombras, sin que tú te enteres lo más mínimo. **Genial, ¿eh?**
 
 Volviendo a nuestro proyecto
-Hemos especificado -------la librería ------ el framework que queremos importar sin indicarle la versión, eso hará que CocoaPods nos instale la última versión estable disponible. Si quisiéramos indicarle una versión en concreto, deberíamos colocarla en el pod de la siguiente manera:
+Hemos especificado ~~la librería~~ el framework que queremos importar sin indicarle la versión, eso hará que CocoaPods nos instale la última versión estable disponible. Si quisiéramos indicarle una versión en concreto, deberíamos colocarla en el pod de la siguiente manera:
 
 {% highlight ruby %}
     
@@ -126,12 +130,13 @@ Verás algo parecido a esto:
 
 Ahora, en la carpeta raíz del proyecto CocoaPods te ha creado un archivo <nombreProyecto>.xcworkspace además de una carpeta Pods donde guardará todas las dependencias de tu proyecto. A partir de ahora, para abrir el proyecto en Xcode usaremos este archivo <nombreProyecto>.xcworkspace en lugar del original que nos creó el propio Xcode, de lo contrario, obtendremos varios errores.
 
-¡Perfecto, acabas de instalar tu primer Pod!
+**¡Perfecto, acabas de instalar tu primer Pod!**
 
 ![Drac]({{ site.url }}/images/drac_01.gif){: .center-image }
 
-*Programando con nuestro primer Pod*
-Si tenías abierto el proyecto en Xcode, ciérralo y ahora abre el archivo <nombreProyecto>.xcworkspace en su lugar. Sólo necesitaremos usar la clase ViewController que viene por defecto en el proyecto, en ella definiremos una variable del tipo 'SAConfettiView':
+### Programando con nuestro primer Pod
+
+Si tenías abierto el proyecto en Xcode, ciérralo y ahora abre el archivo <nombreProyecto>.xcworkspace en su lugar. Sólo necesitaremos usar la clase ViewController que viene por defecto en el proyecto, en ella definiremos una variable del tipo "SAConfettiView":
 
 {% highlight ruby %}
     
@@ -140,7 +145,7 @@ Si tenías abierto el proyecto en Xcode, ciérralo y ahora abre el archivo <nomb
 {% endhighlight %}
 
 
-Y dentro del método 'viewDidLoad' iniciaremos la variable, la adjuntaremos a la vista y ejecutaremos su método para que la lluvia de confetti comience. 
+Y dentro del método `viewDidLoad` iniciaremos la variable, la adjuntaremos a la vista y ejecutaremos su método para que la lluvia de confetti comience. 
 
 {% highlight ruby %}
     
@@ -160,7 +165,7 @@ No olvidemos importar la librería justo debajo de la importación de UIKit, de 
 {% highlight ruby %}
     
     import UIKit
-	import SAConfettiView
+    import SAConfettiView
 
 {% endhighlight %}
 
@@ -170,7 +175,9 @@ Tan fácil como eso. Con esta dependencia - framework - no necesitamos tocar nad
 
 No olvides que tienes [el proyecto][enlaceUno] que hemos venido usando en este 'post' en mi respositorio de GitHub ;)
 
-*Bonus:*
+
+## Bonus:
+
 Un breve inciso sobre el mantenimiento de nuestros pods en cualquiera de nuestros proyectos. Tenemos que aprender a diferenciar entre instalar y actualizar nuestros Pods. Cada vez que modificamos nuestro archivo Podfile para añadir o eliminar una dependencia, necesitaremos ejecutar 'pod install'. Si lo único que pretendemos es usar una versión más actual de algunos de los Pods de nuestro proyecto, deberemos usar 'pod update' una vez modificado nuestro Podfile. Hay que recordar que esta "actualización" seguirá los límites que impusimos dentro del Podfile, por tanto, si pusimos 
 
 {% highlight ruby %}
@@ -179,7 +186,7 @@ Un breve inciso sobre el mantenimiento de nuestros pods en cualquiera de nuestro
 
 {% endhighlight %}
 
-CocoaPods intentará actualizar nuestra dependencia, pero nunca con una versión 2.0 o superior. Y por último, el comando 'pod outdated' listará todas las posibles versiones nuevas a las que podríamos actualizar. Para cualquier otra duda, recomiendo la documentación de CocoaPods(LINKK), es increíblemente buena.
+CocoaPods intentará actualizar nuestra dependencia, pero nunca con una versión 2.0 o superior. Y por último, el comando 'pod outdated' listará todas las posibles versiones nuevas a las que podríamos actualizar. Para cualquier otra duda, recomiendo [la documentación de CocoaPods][enlaceNueve], es increíblemente buena.
 
 Bibliografía:
 
@@ -197,6 +204,9 @@ Bibliografía:
 [enlaceCinco]: https://guides.cocoapods.org/using/the-podfile.html
 [enlaceSiete]: http://www.migueldiazrubio.com/desarrollo-ios-gestionar-dependencias-con-cocoapods/
 [enlaceOcho]: https://www.kodigoswift.com/tutorial-cocoapods-instalacion-y-gestion-de-dependencias/
+[enlaceNueve]: https://guides.cocoapods.org/
+[enlaceDiez]: http://github.com/CocoaPods/Specs
+[enlaceDoce]: https://cocoapods.org/pods/SAConfettiView
 
 
 

@@ -80,11 +80,11 @@ Así que, finalmente, tenemos dos fragmentos cargados en la actividad principal,
 
 Hay que tener en cuenta algunos aspectos antes de usar un modelo de Event Bus:
 
-- No creas que siempre será mejor sustituir un patrón de comunicación con el modelo de Event Bus. Una AsyncTask o un simple listener serán una mejor opción en muchas ocasiones. Imagina el ejemplo de un "subscriber" que actuará como "publisher" a la vez con un mismo evento. La depuración puede llegar a ser casi imposible.
+-- No creas que siempre será mejor sustituir un patrón de comunicación con el modelo de Event Bus. Una AsyncTask o un simple listener serán una mejor opción en muchas ocasiones. Imagina el ejemplo de un "subscriber" que actuará como "publisher" a la vez con un mismo evento. La depuración puede llegar a ser casi imposible.
 
-- No olvides registrar y desregistrar tus "publishers" y "subscribers" para no hacer un acopio innecesario de memoria, de lo contrario tu app podría no discurrir de la forma que esperas. Haz la prueba ;-)
+-- No olvides registrar y desregistrar tus "publishers" y "subscribers" para no hacer un acopio innecesario de memoria, de lo contrario tu app podría no discurrir de la forma que esperas. Haz la prueba ;-)
 
-- Recuerda que un "subscriber" que está contenido en una actividad o un fragmento que es nulo en un momento determinado no llegará a recibir nunca ese evento. Con la librería EventBus de greenRobot hay una forma de que sí puedan recibirlos, pero con RxAndroid y Otto, NO.
+-- Recuerda que un "subscriber" que está contenido en una actividad o un fragmento que es nulo en un momento determinado no llegará a recibir nunca ese evento. Con la librería EventBus de greenRobot hay una forma de que sí puedan recibirlos, pero con RxAndroid y Otto, NO.
 
 
 Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceCodeRepo]

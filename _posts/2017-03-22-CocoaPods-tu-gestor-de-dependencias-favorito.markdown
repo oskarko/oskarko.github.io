@@ -107,7 +107,8 @@ Referirse a las librerías de Swift como librerías propiamente dicho, es un err
 
 Y de todo esto se encarga CocoaPods por ti, en las sombras, sin que tú te enteres lo más mínimo. **Genial, ¿eh?**
 
-Volviendo a nuestro proyecto
+### Volviendo a nuestro proyecto
+
 Hemos especificado ~~la librería~~ el framework que queremos importar sin indicarle la versión, eso hará que CocoaPods nos instale la última versión estable disponible. Si quisiéramos indicarle una versión en concreto, deberíamos colocarla en el pod de la siguiente manera:
 
 {% highlight ruby %}

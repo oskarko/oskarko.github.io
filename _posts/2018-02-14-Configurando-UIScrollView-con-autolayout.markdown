@@ -42,7 +42,7 @@ Y a esta constraint de altura que acabamos de añadir deberemos de colocarle la 
 
 Por si tenéis alguna duda, [aquí os dejo un proyecto a modo de ejemplo][enlaceUno]
 
-![UIScrollView09]({{ site.url }}/images/UIScrollView09.png){: .center-image }
+![UIScrollView09]({{ site.url }}/images/UIScrollView09.gif){: .center-image }
 
 Happy coding! :)
 

@@ -1,6 +1,6 @@
 ---
 title:  "Configurando UIScrollView con autolayout"
-date:   2018-02-14 16:23:22
+date:   2018-02-14 14:23:22
 categories: [iOS, Swift]
 layout: post
 tags: [iOS, Swift]
@@ -46,4 +46,4 @@ Por si tenéis alguna duda, [aquí os dejo un proyecto a modo de ejemplo][enlace
 
 Happy coding! :)
 
-[enlaceUno]: https://medium.com/@mimicatcodes/unwrapping-optional-values-in-swift-3-0-guard-let-vs-if-let-40a0b05f9e69
+[enlaceUno]: https://github.com/oskarko/UIScrollViewExample

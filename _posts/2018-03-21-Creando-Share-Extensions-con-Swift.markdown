@@ -14,12 +14,12 @@ Con la llegada de iOS 8, Apple introdujo las conocidas [App Extensions][enlaceCu
 
 Las extensiones no son una aplicación "independiente" de nuestra app; añaden una funcionalidad extra a nuestra app de forma eficiente y centrada en una sola y única tarea. Los tipos existentes de extensiones son: 
 
-`Today` - Una extensión que se muestra en la vista "Hoy" del Centro de Notificaciones que muestra información breve y permite realizar tareas rápidas y sencillas.
-`Share` - Una extensión que permite que su aplicación comparta (o reciba) contenido con usuarios en las redes sociales y otros servicios similares para compartir
-`Action` - Una extensión que permite la creación de botones de acción personalizados en una vista predefinida para permitir a los usuarios ver o transformar el contenido que se origina en una tercera aplicación.
-`Photo Editing` - Una extensión que permite a los usuarios editar una foto o un video dentro de la aplicación Fotos
-`Document Provider` - Una extensión utilizada para permitir que otras aplicaciones accedan a los documentos administrados por su aplicación
-`Custom Keyboard` - Una extensión que reemplaza el teclado del sistema
+- `Today` - Una extensión que se muestra en la vista "Hoy" del Centro de Notificaciones que muestra información breve y permite realizar tareas rápidas y sencillas.
+- `Share` - Una extensión que permite que su aplicación comparta (o reciba) contenido con usuarios en las redes sociales y otros servicios similares para compartir
+- `Action` - Una extensión que permite la creación de botones de acción personalizados en una vista predefinida para permitir a los usuarios ver o transformar el contenido que se origina en una tercera aplicación.
+- `Photo Editing` - Una extensión que permite a los usuarios editar una foto o un video dentro de la aplicación Fotos
+- `Document Provider` - Una extensión utilizada para permitir que otras aplicaciones accedan a los documentos administrados por su aplicación
+- `Custom Keyboard` - Una extensión que reemplaza el teclado del sistema
 
 ![ShareExtension02]({{ site.url }}/images/shareextension/image_12.png){: .center-image }
 

@@ -21,7 +21,7 @@ Las extensiones no son una aplicación "independiente" de nuestra app; añaden u
 `Document Provider` - Una extensión utilizada para permitir que otras aplicaciones accedan a los documentos administrados por su aplicación
 `Custom Keyboard` - Una extensión que reemplaza el teclado del sistema
 
-![ShareExtension02]({{ site.url }}/images/shareextension/image_012.png){: .center-image }
+![ShareExtension02]({{ site.url }}/images/shareextension/image_12.png){: .center-image }
 
 En el ejemplo de hoy veremos como crear una "Share extension" para recibir archivos desde otras aplicaciones a la nuestra. Para ellos [crearemos un proyecto de prueba][enlaceProyecto] donde añadiremos un "tableView" para poder mostrar los archivos que contiene nuestra aplicación en su carpeta interna.
 

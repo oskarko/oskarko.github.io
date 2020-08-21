@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Implementando un Event Bus con RxAndroid | My thoughts about iOS</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Implementando un Event Bus con RxAndroid" />
+<meta name="author" content="Óscar Garrucho" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Una de las rutinas más tediosas a la hora de crear una app es la implementación de la comunicación entre las distintas partes de las que se compone dicha app (actividades, fragmentos, servicios…). Que si métodos de Callback, que si AsyncTask, intents, y aún así, nunca estamos a salvo de ser sorprendidos por un NPE al eliminarnos el recolector de basuras de Android una actividad en el momento menos oportuno." />
+<meta property="og:description" content="Una de las rutinas más tediosas a la hora de crear una app es la implementación de la comunicación entre las distintas partes de las que se compone dicha app (actividades, fragmentos, servicios…). Que si métodos de Callback, que si AsyncTask, intents, y aún así, nunca estamos a salvo de ser sorprendidos por un NPE al eliminarnos el recolector de basuras de Android una actividad en el momento menos oportuno." />
+<link rel="canonical" href="http://localhost:4000/2016-03-20/implementando-un-eventbus-con-rxandroid" />
+<meta property="og:url" content="http://localhost:4000/2016-03-20/implementando-un-eventbus-con-rxandroid" />
+<meta property="og:site_name" content="My thoughts about iOS" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-03-20T13:05:22+01:00" />
+<script type="application/ld+json">
+{"headline":"Implementando un Event Bus con RxAndroid","dateModified":"2016-03-20T13:05:22+01:00","url":"http://localhost:4000/2016-03-20/implementando-un-eventbus-con-rxandroid","datePublished":"2016-03-20T13:05:22+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2016-03-20/implementando-un-eventbus-con-rxandroid"},"author":{"@type":"Person","name":"Óscar Garrucho"},"description":"Una de las rutinas más tediosas a la hora de crear una app es la implementación de la comunicación entre las distintas partes de las que se compone dicha app (actividades, fragmentos, servicios…). Que si métodos de Callback, que si AsyncTask, intents, y aún así, nunca estamos a salvo de ser sorprendidos por un NPE al eliminarnos el recolector de basuras de Android una actividad en el momento menos oportuno.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- RSS -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My thoughts about iOS" />
+
+  <!-- Google Analytics-->
+  
+</head>
+
+
+  <body>
+
+    <nav class="nav">
+  <div class="nav-container">
+    <a href="/">
+      <h2 class="nav-title">My thoughts about iOS</h2>
+    </a>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/">Posts</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        Óscar Garrucho
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2016-03-20 13:05:22 +0100">March 20, 2016</time>
+    
+  </div>
+
+  <h1 class="post-title">Implementando un Event Bus con RxAndroid</h1>
+  <div class="post-line"></div>
+
+  <p>Una de las rutinas más tediosas a la hora de crear una app es la implementación de la  comunicación entre las distintas partes de las que se compone dicha app (actividades, fragmentos, servicios…). Que si métodos de Callback, que si AsyncTask, intents, y aún así, nunca estamos a salvo de ser sorprendidos por un <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html">NPE</a> al eliminarnos el recolector de basuras de Android una actividad en el momento menos oportuno.</p>
+
+<p>Para solucionar este quebradero de cabeza podemos usar un modelo de Event Bus para simplificar todas la comunicaciones internas de nuestra app. Pero, ¿qué es un Event Bus? El modelo de Event Bus se encarga de la transmisión de Objetos Java entre actividades, fragmentos y servicios, y además, de una manera fácil y limpia.</p>
+
+<p>Hay varios framework que funcionan como Event Bus: <a href="https://github.com/greenrobot/EventBus">EventBus de greenRobot</a>, <a href="http://square.github.io/otto/">Otto de Square</a> y <a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a> entre varios otros. Para nuestro ejemplo usaremos RxAndroid, que entre sus muchas funciones, una de ellas es poder actuar en un modelado de Event Bus.</p>
+
+<p>El modelo de Event Bus se compone de cuatro piezas fundamentales: un <code class="highlighter-rouge">bus</code> o canal de comunicación, un <code class="highlighter-rouge">evento</code> o clase POJO que se enviará a través del bus, un <code class="highlighter-rouge">publisher</code> que enviará dichos eventos y uno o varios <code class="highlighter-rouge">subscribers</code> que recibirán los eventos.</p>
+
+<p>En nuestro ejemplo tendremos una única actividad que contendrá dos fragmentos en su interior ejecutandose a la misma vez. Uno de esos fragmentos contendrá un botón, que al hacer ‘clik’ sobre él lanzará un evento que se recibirá en el segundo fragmento, y al recibirlo, lanzará un simple SnackBar que se mostrará en la actividad principal.</p>
+
+<p>Primero necesitaremos añadir las dependencias de RxAndroid a gradle.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">dependencies</span> <span class="p">{</span>
+    
+    <span class="n">compile</span> <span class="s1">'io.reactivex:rxandroid:1.1.0'</span> 
+<span class="p">}</span></code></pre></figure>
+
+<p>Definiremos nuestra clase bus con un método para enviar eventos y otro para “recibirlos”. Su implementación es bastante sencilla.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">public</span> <span class="k">class</span> <span class="nc">RxBus</span> <span class="p">{</span>
+
+    <span class="kp">private</span> <span class="n">final</span> <span class="no">Subject</span><span class="o">&lt;</span><span class="no">Object</span><span class="p">,</span> <span class="no">Object</span><span class="o">&gt;</span> <span class="n">_bus</span><span class="p">;</span>
+    
+    <span class="n">_bus</span> <span class="o">=</span> <span class="n">new</span> <span class="no">SerializedSubject</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="no">PublishSubject</span><span class="p">.</span><span class="nf">create</span><span class="p">());</span>
+
+    <span class="kp">public</span> <span class="n">void</span> <span class="nb">send</span><span class="p">(</span><span class="no">Object</span> <span class="n">o</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">_bus</span><span class="p">.</span><span class="nf">onNext</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kp">public</span> <span class="no">Observable</span><span class="o">&lt;</span><span class="no">Object</span><span class="o">&gt;</span> <span class="n">toObserverable</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_bus</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>El evento que enviaremos en nuestro ejemplo será un simple objeto Java que contendrá un String como atributo. El “publisher” será el botón contenido en el primer fragmento. Al clickar sobre él se ejecutará uno de los dos métodos implementados en nuestra clase bus, por tanto, debemos de registrarnos en dicha clase y a través de ella enviar nuestro evento POJO.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">mButton</span><span class="p">.</span><span class="nf">setOnClickListener</span><span class="p">(</span><span class="n">new</span> <span class="no">View</span><span class="o">.</span><span class="no">OnClickListener</span><span class="p">()</span> <span class="p">{</span>
+            <span class="vi">@Override</span>
+            <span class="kp">public</span> <span class="n">void</span> <span class="n">onClick</span><span class="p">(</span><span class="no">View</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+                
+                <span class="n">_rxBus</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="n">new</span> <span class="no">OskarkoEvent</span><span class="p">(</span><span class="s2">"click!"</span><span class="p">));</span>
+            <span class="p">}</span>
+        <span class="p">});</span></code></pre></figure>
+
+<p>Sólo tendremos un “subscriber” en este ejemplo. Estará a la escucha de recibir los eventos en el segundo fragmento, y publicará en la actividad principal el texto que contendrá el evento en su interior.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">_subscriptions</span>
+        <span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">_rxBus</span><span class="p">.</span><span class="nf">toObserverable</span><span class="p">()</span>
+                <span class="p">.</span><span class="nf">subscribe</span><span class="p">(</span><span class="n">new</span> <span class="no">Action1</span><span class="o">&lt;</span><span class="no">Object</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="vi">@Override</span>
+                    <span class="kp">public</span> <span class="n">void</span> <span class="n">call</span><span class="p">(</span><span class="no">Object</span> <span class="n">event</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">event</span> <span class="n">instanceof</span> <span class="no">OskarkoEvent</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="no">Snackbar</span>
+                            <span class="p">.</span><span class="nf">make</span><span class="p">(</span><span class="n">getView</span><span class="p">(),</span> <span class="p">((</span><span class="no">OskarkoEvent</span><span class="p">)</span> <span class="n">event</span><span class="p">).</span><span class="nf">getText</span><span class="p">(),</span> 
+                                    <span class="no">Snackbar</span><span class="o">.</span><span class="no">LENGTH_SHORT</span><span class="p">).</span><span class="nf">show</span><span class="p">();</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}));</span></code></pre></figure>
+
+<p>Así que, finalmente, tenemos dos fragmentos cargados en la actividad principal, y al clickar sobre el botón del primer fragmento, con la implementación de un Event Bus con RxAndroid, el segundo fragmento recibirá el evento con muy pocas líneas de código, sin interfaces con métodos de Callback, sin intents, sin AsyncTask… cómodo y sencillo.</p>
+
+<p><img src="/images/rxbusexample2.jpg" alt="Actividad mostrando SnackBar" class="center-image" /></p>
+
+<p>Hay que tener en cuenta algunos aspectos antes de usar un modelo de Event Bus:</p>
+
+<p>– No creas que siempre será mejor sustituir un patrón de comunicación con el modelo de Event Bus. Una AsyncTask o un simple listener serán una mejor opción en muchas ocasiones. Imagina el ejemplo de un “subscriber” que actuará como “publisher” a la vez con un mismo evento. La depuración puede llegar a ser casi imposible.</p>
+
+<p>– No olvides registrar y desregistrar tus “publishers” y “subscribers” para no hacer un acopio innecesario de memoria, de lo contrario tu app podría no discurrir de la forma que esperas. Haz la prueba ;-)</p>
+
+<p>– Recuerda que un “subscriber” que está contenido en una actividad o un fragmento que es nulo en un momento determinado no llegará a recibir nunca ese evento. Con la librería EventBus de greenRobot hay una forma de que sí puedan recibirlos, pero con RxAndroid y Otto, NO.</p>
+
+<p>Puedes descargar el proyecto completo desde <a href="https://github.com/oskarko/RxAndroidExample">mi repositorio de GitHub</a></p>
+
+<p><img src="/images/minions.gif" alt="Minions aplaudiendo" class="center-image" /></p>
+
+<p>Bibliografía:</p>
+
+<p>– <a href="http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/">http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/</a></p>
+
+<p>– <a href="https://github.com/kaushikgopal/RxJava-Android-Samples">https://github.com/kaushikgopal/RxJava-Android-Samples</a></p>
+
+<p>– <a href="http://aaronliew.github.io/blog/2015/04/15/rxandroid/">http://aaronliew.github.io/blog/2015/04/15/rxandroid/</a></p>
+
+<p>– <a href="https://guides.codepath.com/android/Communicating-with-an-Event-Bus">https://guides.codepath.com/android/Communicating-with-an-Event-Bus</a></p>
+
+
+  
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'http://localhost:4000/2016-03-20/implementando-un-eventbus-con-rxandroid';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/2016-03-20/implementando-un-eventbus-con-rxandroid'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//oscargarrucho-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+
+<div class="pagination">
+  
+    <a href="/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C" class="left arrow">&#8592;</a>
+  
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+    </main>
+
+    <footer>
+  <span>
+    &copy; <time datetime="2020-08-21 13:39:10 +0200">2020</time> Óscar Garrucho. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+  </span>
+</footer>
+
+  </body>
+</html>

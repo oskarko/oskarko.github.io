@@ -15,6 +15,6 @@ I have learnt a lot over the last years about iOS development so I guess this is
 
 
 ## Contact
-Feel free to contact either on [Twitter](https://twitter.com/OscarGarrucho) or on [Linkedin](https://www.linkedin.com/in/%C3%B3scar-r-garrucho-%EF%A3%BF-b2a10165/).
+Feel free to contact me either on [Twitter](https://twitter.com/OscarGarrucho) or on [Linkedin](https://www.linkedin.com/in/%C3%B3scar-r-garrucho-%EF%A3%BF-b2a10165/).
 
 Thanks for reading!

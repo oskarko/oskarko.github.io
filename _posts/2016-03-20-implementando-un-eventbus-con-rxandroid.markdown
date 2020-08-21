@@ -75,7 +75,7 @@ _subscriptions
 
 Así que, finalmente, tenemos dos fragmentos cargados en la actividad principal, y al clickar sobre el botón del primer fragmento, con la implementación de un Event Bus con RxAndroid, el segundo fragmento recibirá el evento con muy pocas líneas de código, sin interfaces con métodos de Callback, sin intents, sin AsyncTask... cómodo y sencillo.
 
-![Actividad mostrando SnackBar]({{ site.url }}/images/rxbusexample2.jpg){: .center-image }
+![Actividad mostrando SnackBar]({% link images/rxbusexample2.jpg %}){: .center-image }
 
 
 Hay que tener en cuenta algunos aspectos antes de usar un modelo de Event Bus:
@@ -89,7 +89,7 @@ Hay que tener en cuenta algunos aspectos antes de usar un modelo de Event Bus:
 
 Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceCodeRepo]
 
-![Minions aplaudiendo]({{ site.url }}/images/minions.gif){: .center-image }
+![Minions aplaudiendo]({% link images/minions.gif %}){: .center-image }
 
 
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>NDK de android o como ejecutar código nativo en C | My thoughts about iOS</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="NDK de android o como ejecutar código nativo en C" />
+<meta name="author" content="Óscar Garrucho" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Los desarrolladores pueden, mediante el Android NDK (Native Development Kit), reutilizar código escrito en C/C++ haciendo uso de ello a través del JNI (Java Native Interface). El NDK hace que la ejecución de la aplicación sea directamente en el procesador y no será interpretado mediante una máquina virtual, siendo común en aplicaciones que hagan un uso intensivo de la CPU mediante complejas operaciones matemáticas. En algunas ocasiones esto puede traducirse en una ejecución de la app más rápida." />
+<meta property="og:description" content="Los desarrolladores pueden, mediante el Android NDK (Native Development Kit), reutilizar código escrito en C/C++ haciendo uso de ello a través del JNI (Java Native Interface). El NDK hace que la ejecución de la aplicación sea directamente en el procesador y no será interpretado mediante una máquina virtual, siendo común en aplicaciones que hagan un uso intensivo de la CPU mediante complejas operaciones matemáticas. En algunas ocasiones esto puede traducirse en una ejecución de la app más rápida." />
+<link rel="canonical" href="http://localhost:4000/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C" />
+<meta property="og:url" content="http://localhost:4000/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C" />
+<meta property="og:site_name" content="My thoughts about iOS" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-05-04T23:09:22+02:00" />
+<script type="application/ld+json">
+{"headline":"NDK de android o como ejecutar código nativo en C","dateModified":"2016-05-04T23:09:22+02:00","url":"http://localhost:4000/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C","datePublished":"2016-05-04T23:09:22+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C"},"author":{"@type":"Person","name":"Óscar Garrucho"},"description":"Los desarrolladores pueden, mediante el Android NDK (Native Development Kit), reutilizar código escrito en C/C++ haciendo uso de ello a través del JNI (Java Native Interface). El NDK hace que la ejecución de la aplicación sea directamente en el procesador y no será interpretado mediante una máquina virtual, siendo común en aplicaciones que hagan un uso intensivo de la CPU mediante complejas operaciones matemáticas. En algunas ocasiones esto puede traducirse en una ejecución de la app más rápida.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- RSS -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My thoughts about iOS" />
+
+  <!-- Google Analytics-->
+  
+</head>
+
+
+  <body>
+
+    <nav class="nav">
+  <div class="nav-container">
+    <a href="/">
+      <h2 class="nav-title">My thoughts about iOS</h2>
+    </a>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/">Posts</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        Óscar Garrucho
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2016-05-04 23:09:22 +0200">May 04, 2016</time>
+    
+  </div>
+
+  <h1 class="post-title">NDK de android o como ejecutar código nativo en C</h1>
+  <div class="post-line"></div>
+
+  <p>Los desarrolladores pueden, mediante el Android NDK (<a href="https://developer.android.com/intl/es/tools/sdk/ndk/index.html">Native Development Kit</a>), reutilizar código escrito en C/C++ haciendo uso de ello a través del JNI (<a href="http://developer.android.com/intl/es/training/articles/perf-jni.html">Java Native Interface</a>). El NDK hace que la ejecución de la aplicación sea directamente en el procesador y no será interpretado mediante una máquina virtual, siendo común en aplicaciones que hagan un uso intensivo de la CPU mediante complejas operaciones matemáticas. En algunas ocasiones esto puede traducirse en una ejecución de la app más rápida.</p>
+
+<p>El uso de código nativo en android no está al alcance de todos, y su uso es, cuanto menos, difícil de manejar. Realmente no aporta grandes mejores o diferencias respecto a código android, por lo que,  a no ser que no nos quede más remedio, deberemos de sopesar su implementación. Aplicaciones como Whatsapp o Skype utilizan el NDK de android, ¿curioso, verdad?</p>
+
+<p><img src="/images/friends1.gif" alt="Ahhhmmmm" class="center-image" /></p>
+
+<p>Manos a la obra, lo primero que deberemos hacer será <a href="https://developer.android.com/intl/es/ndk/downloads/index.html">descargar el NDK de android</a> según cual sea nuestro SO; descargadlo y descomprimidlo; yo he renombrado la carpeta como ndk, simplemente. Ahora la copiaremos al directorio donde tengamos instalado el SDK de android y la añadiremos al PATH.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">mv</span> <span class="n">ndk</span> <span class="sr">/Users/</span><span class="no">Oskarko</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Android</span> </code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">export</span> <span class="no">PATH</span><span class="o">=</span><span class="vg">$PATH</span><span class="ss">:/</span><span class="no">Users</span><span class="o">/</span><span class="no">Oskarko</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Android</span><span class="o">/</span><span class="n">ndk</span></code></pre></figure>
+
+<p>El último paso sería compilar el código nativo mediante el NDK de android, para ello navegamos a la raíz de nuestro proyecto y lo compilamos con el comando <code class="highlighter-rouge">ndk-build</code></p>
+
+<p>Como proyecto de ejemplo he tomado prestado el visor de PDF de los chicos de <a href="https://code.google.com/archive/p/apv/">APV PDF Viewer</a>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">sh</span>
+
+    <span class="n">python2</span><span class="o">.</span><span class="mi">7</span> <span class="p">.</span><span class="nf">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">pjpp</span><span class="p">.</span><span class="nf">py</span> <span class="o">--</span><span class="n">configuration</span> <span class="n">pro</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="o">..</span><span class="sr">/scripts/</span><span class="n">build</span><span class="o">-</span><span class="n">native</span><span class="p">.</span><span class="nf">sh</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">cd</span> <span class="o">..</span>
+    <span class="n">ndk</span><span class="o">-</span><span class="n">build</span></code></pre></figure>
+
+<p>Después de descomprimir el proyecto y ejecutar <a href="https://code.google.com/archive/p/apv/wikis/Building.wiki">algún comando en Python</a>, compilo el código mediante <code class="highlighter-rouge">ndk-build</code> para generar las librerías <code class="highlighter-rouge">*.so</code></p>
+
+<p><img src="/images/lib_apv.png" alt="Carpeta LIBS" class="center-image" /></p>
+
+<p>Una vez copiadas a la carpeta <code class="highlighter-rouge">libs</code> de Android Studio tan sólo tendremos que darle a Gradle todo lo que nos pida hasta conseguir compilar la app.</p>
+
+<p><img src="/images/friends2.gif" alt="Dandole a Gradle lo que te pide" class="center-image" /></p>
+
+<p>Puedes descargar el proyecto completo desde <a href="https://github.com/oskarko/APVExample">mi repositorio de GitHub</a></p>
+
+<p>Bibliografía:</p>
+
+<p>– <a href="https://code.google.com/archive/p/apv/wikis/Building.wiki">https://code.google.com/archive/p/apv/wikis/Building.wiki</a></p>
+
+<p>– <a href="https://geekytheory.com/que-es-el-android-ndk-parte-1/">https://geekytheory.com/que-es-el-android-ndk-parte-1/</a></p>
+
+<p>– <a href="https://geekytheory.com/instalacion-del-android-ndk-parte-2/">https://geekytheory.com/instalacion-del-android-ndk-parte-2/</a></p>
+
+<p>– <a href="https://geekytheory.com/hola-mundo-con-android-ndk-parte-4/">https://geekytheory.com/hola-mundo-con-android-ndk-parte-4/</a></p>
+
+<p>– <a href="https://geekytheory.com/paso-de-parametros-en-funciones-con-android-ndk-parte-5/">https://geekytheory.com/paso-de-parametros-en-funciones-con-android-ndk-parte-5/</a></p>
+
+
+  
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'http://localhost:4000/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/2016-05-04/NDK-de-android-o-como-ejecutar-codigo-nativo-en-C'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//oscargarrucho-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+
+<div class="pagination">
+  
+    <a href="/2016-07-05/base-de-datos-con-greenDao" class="left arrow">&#8592;</a>
+  
+  
+    <a href="/2016-03-20/implementando-un-eventbus-con-rxandroid" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+    </main>
+
+    <footer>
+  <span>
+    &copy; <time datetime="2020-08-21 13:39:10 +0200">2020</time> Óscar Garrucho. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+  </span>
+</footer>
+
+  </body>
+</html>

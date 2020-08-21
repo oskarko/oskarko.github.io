@@ -11,7 +11,7 @@ CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil 
 
 ¿Por qué necesitas un gestor de dependencias en tu vida? Bueno, no es obligatorio su uso, pero, podrías dedicar tu valioso tiempo a mejorar tu código en lugar de, sencillamente, malgastar tiempo en escribir cientos de líneas de código que no necesitarías escribir. También es cierto que puedes hacer uso de terceras librerías sin necesidad de usar un gestor de dependencías, pero eso te seguiría haciendo perder mucho tiempo tanto en la búsqueda, instalación y en el mantenimiento de dichas librerías (o eliminación de las mismas). Por tanto, la razón principal es obiva: por tiempo. Y como todos sabemos, el tiempo es oro, así que no lo malgastes ;)
 
-![Tiempo]({{ site.url }}/images/pulp_01.gif){: .center-image }
+![Tiempo]({% link images/pulp_01.gif %}){: .center-image }
 
 ### Instalando...
 
@@ -27,7 +27,7 @@ Abre una terminal e introduce el siguiente comando (necesitarás introducir tu p
 
 Ruby instalará todas las **gemas** que sean necesarias para lograr la correcta instalación de CocoaPods.
 
-![Tiempo]({{ site.url }}/images/confetti_03.png){: .center-image }
+![Tiempo]({% link images/confetti_03.png %}){: .center-image }
 
 Si nos diera algún tipo de error, o si incluso de quedara congelada la instrucción, sería súper recomendable actualizar a la versión mas reciente de Ruby Gems:
 
@@ -47,7 +47,7 @@ Para nuestro proyecto de ejemplo, tan sólo le añadiremos una divertida librer�
 
 [La librería][enlaceDoce] permite soltar confetti por toda la pantalla de nuestro dispositivo, a modo de celebración de algún logro o día festivo. Tan bonito como simple.
 
-![Confetti]({{ site.url }}/images/confetti_01.png){: .center-image }
+![Confetti]({% link images/confetti_01.png %}){: .center-image }
 
 Vamos allá! Nuevamente en una terminal deberemos situarnos en la carpeta raíz de nuestro proyecto (justo donde tenemos el archivo <nombreProyecto>.xcodeproj)
 
@@ -95,7 +95,7 @@ y por defecto veremos algo parecido a esto:
 
 la primera línea indica a CocoaPods que tu librería funcionará a partir de la versión 8.0 de iOS. La línea `use_frameworks!` es obligatoria si vienes programando en Swift, de lo contrario, obtendrás un error al intentar usar el Pod sin esta línea. Y con la línea `pod SAConfettiView` le decimos a CocoaPods que busque, compile e instale la librería llamada SAConfettiView.
 
-![Buzz]({{ site.url }}/images/year_01.gif){: .center-image }
+![Buzz]({% link images/year_01.gif %}){: .center-image }
 
 ### Un alto en el camino...
 
@@ -127,13 +127,13 @@ Y eso le indicaría a CocoaPods que descargase únicamente la versión 1.0 o cua
 
 Verás algo parecido a esto:
 
-![Final]({{ site.url }}/images/confetti_05.png){: .center-image }
+![Final]({% link images/confetti_05.png %}){: .center-image }
 
 Ahora, en la carpeta raíz del proyecto CocoaPods te ha creado un archivo <nombreProyecto>.xcworkspace además de una carpeta Pods donde guardará todas las dependencias de tu proyecto. A partir de ahora, para abrir el proyecto en Xcode usaremos este archivo <nombreProyecto>.xcworkspace en lugar del original que nos creó el propio Xcode, de lo contrario, obtendremos varios errores.
 
 **¡Perfecto, acabas de instalar tu primer Pod!**
 
-![Drac]({{ site.url }}/images/drac_01.gif){: .center-image }
+![Drac]({% link images/drac_01.gif %}){: .center-image }
 
 ### Programando con nuestro primer Pod
 

@@ -10,7 +10,7 @@ He decidido dividir esta entrada en dos entradas diferentes para que no fuese ex
 
 A diferencia del `patrón MVC`, el `patrón MVP` intenta desacoplar tanto como pueda el uso del framework de Android, facilitando así los test unitarios. MVP aporta independencia del framework de Android.
 
-![modelView]({{ site.url }}/images/MVP-Android1.png){: .center-image }
+![modelView]({% link images/MVP-Android1.png %}){: .center-image }
 
 
 Las vistas quedan unicamente para recibir la interacción del usuario con la aplicación y mostrar en pantalla los cambios asociados a esas interacciones previas (si pulso un botón, muestra un Toast...). Las vistas son las Activity y los Fragment propiamente dicho. 
@@ -36,7 +36,7 @@ En proyectos grandes es común usar la inyección de dependencias para no compli
 
 
 
-![bigbangt_dos]({{ site.url }}/images/bbt_02.gif){: .center-image }
+![bigbangt_dos]({% link images/bbt_02.gif %}){: .center-image }
 
 
 
@@ -163,7 +163,7 @@ Y en los modelos de la aplicación es donde se contendrá toda la lógica de neg
 
 Puede parecer complicado a primera vista, además del uso de las diferentes interfaces que implementan las vistas, presenters y modelos. Nada más lejos de la realidad, es tan fácil como crear un proyecto vacío e ir programando poco a poco para ver exáctamente como funciona este patrón en concreto. Puedes echarle un vistazo al [proyecto de ejemplo][enlaceRepo] para ver realmente como está definido cada cosa. Te sorprenderás gratamente de su simpleza.
 
-![indiana_jones]({{ site.url }}/images/indiana_01.gif){: .center-image }
+![indiana_jones]({% link images/indiana_01.gif %}){: .center-image }
 
 
 Y ahora pasemos a hablar un poco sobre los **test unitarios**. Los test unitarios son el mecanismo que tenemos los programadores para comprobar que nuestros métodos funcionan tal y como deberían de funcionar y devuelven el tipo de dato que deberían de devolver (en caso de devolver alguno). Deberán de ser automatizables, reutilizables, independientes y profesionales. Una de su mayores ventajas es que funcionan a modo de documentación del propio código y en caso de contener algún error en nuestro código, éste queda más acotado y localizable (ojo! el que nuestra aplicación supere todos los test unitarios no significa que esté libre de contener errores).
@@ -239,7 +239,7 @@ En este segundo test comprobamos que la conexión entre el presenter y la vista 
 
 Realizar test unitarios sobre un IntenService no es nada fácil ([ejemplo][enlaceIntentService]), y es ahí donde radica la belleza de este patrón de diseño. Si modelas bien tu aplicación, no necesitarás usar ningún IntentService. Y como ejemplo, realizaremos una llamada a un webService mediante retrofit de forma totalmente asíncrona sin necesidad de usar ningún intentService. Con el proyecto adjunto sus [correspondientes test unitarios][enlaceTests].
 
-![thank_you]({{ site.url }}/images/thank_you.gif){: .center-image }
+![thank_you]({% link images/thank_you.gif %}){: .center-image }
 
 
 

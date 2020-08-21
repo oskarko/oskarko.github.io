@@ -10,7 +10,7 @@ Los desarrolladores pueden, mediante el Android NDK ([Native Development Kit][un
 
 El uso de código nativo en android no está al alcance de todos, y su uso es, cuanto menos, difícil de manejar. Realmente no aporta grandes mejores o diferencias respecto a código android, por lo que,  a no ser que no nos quede más remedio, deberemos de sopesar su implementación. Aplicaciones como Whatsapp o Skype utilizan el NDK de android, ¿curioso, verdad?
 
-![Ahhhmmmm]({{ site.url }}/images/friends1.gif){: .center-image }
+![Ahhhmmmm]({% link images/friends1.gif %}){: .center-image }
 
 Manos a la obra, lo primero que deberemos hacer será [descargar el NDK de android][dos] según cual sea nuestro SO; descargadlo y descomprimidlo; yo he renombrado la carpeta como ndk, simplemente. Ahora la copiaremos al directorio donde tengamos instalado el SDK de android y la añadiremos al PATH.
 
@@ -53,11 +53,11 @@ Como proyecto de ejemplo he tomado prestado el visor de PDF de los chicos de [AP
 
 Después de descomprimir el proyecto y ejecutar [algún comando en Python][enlaceUno], compilo el código mediante `ndk-build` para generar las librerías `*.so`
 
-![Carpeta LIBS]({{ site.url }}/images/lib_apv.png){: .center-image }
+![Carpeta LIBS]({% link images/lib_apv.png %}){: .center-image }
 
 Una vez copiadas a la carpeta `libs` de Android Studio tan sólo tendremos que darle a Gradle todo lo que nos pida hasta conseguir compilar la app.
 
-![Dandole a Gradle lo que te pide]({{ site.url }}/images/friends2.gif){: .center-image }
+![Dandole a Gradle lo que te pide]({% link images/friends2.gif %}){: .center-image }
 
 
 Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceCodeRepo]

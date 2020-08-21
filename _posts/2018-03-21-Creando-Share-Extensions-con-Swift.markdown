@@ -10,7 +10,7 @@ Si tu app usa algún tipo de archivo como imágenes, PDF o archivos en general, 
 
 Con la llegada de iOS 8, Apple introdujo las conocidas [App Extensions][enlaceCuatro], una nueva forma de interactuar con una aplicación sin llegar a lanzarla. Podemos compartir archivos de una app a otra, o incluso modificar un archivo en una tercera app y obtenerla nuevamente ya modificada en nuestra aplicación, como ejemplos más significativos. Aunque la arquitectura de iOS (muy segura) impide el uso de código malicioso de terceras aplicaciones, el uso de extensiones dentro de nuestras propias aplicaciones puede llegar a ser un auténtico dolor de cabeza.
 
-![ShareExtension01]({{ site.url }}/images/mr_T.gif){: .center-image }
+![ShareExtension01]({% link images/mr_T.gif %}){: .center-image }
 
 Las extensiones no son una aplicación "independiente" de nuestra app; añaden una funcionalidad extra a nuestra app de forma eficiente y centrada en una sola y única tarea. Los tipos existentes de extensiones son: 
 
@@ -21,23 +21,23 @@ Las extensiones no son una aplicación "independiente" de nuestra app; añaden u
 - `Document Provider`: Una extensión utilizada para permitir que otras aplicaciones accedan a los documentos administrados por su aplicación
 - `Custom Keyboard`: Una extensión que reemplaza el teclado del sistema
 
-![ShareExtension02]({{ site.url }}/images/shareextension/image_12.png){: .center-image }
+![ShareExtension02]({% link images/shareextension/image_12.png %}){: .center-image }
 
 En el ejemplo de hoy veremos como crear una "Share extension" para recibir archivos desde otras aplicaciones a la nuestra. Para ellos [crearemos un proyecto de prueba][enlaceProyecto] donde añadiremos un "tableView" para poder mostrar los archivos que contiene nuestra aplicación en su carpeta interna.
 
-![ShareExtension03]({{ site.url }}/images/shareextension/image_01.png){: .center-image }
+![ShareExtension03]({% link images/shareextension/image_01.png %}){: .center-image }
 
 Ahora necesitaremos añadir una extensión a nuestro proyecto. Para ello iremos a "File >> New >> Target..." y seleccionaremos una "Share Extension"
 
-![ShareExtension04]({{ site.url }}/images/shareextension/image_02.png){: .center-image }
+![ShareExtension04]({% link images/shareextension/image_02.png %}){: .center-image }
 
 Tendremos que ponerle un nombre fácil de reconocer desde otras aplicaciones:
 
-![ShareExtension05]({{ site.url }}/images/shareextension/image_03.png){: .center-image }
+![ShareExtension05]({% link images/shareextension/image_03.png %}){: .center-image }
 
 ... y te pedirá confirmación para activar la extensión que acabas de crear, dile que "sí" (Activate)
 
-![ShareExtension06]({{ site.url }}/images/shareextension/image_04.png){: .center-image }
+![ShareExtension06]({% link images/shareextension/image_04.png %}){: .center-image }
 
 
 Verás que ha aparecido una clase "ShareViewController" que `NO` hereda de UIViewController tal que así:
@@ -68,7 +68,7 @@ class ShareViewController: SLComposeServiceViewController {
 
 Practicamente borraremos todo esto y crearemos nuestra propia "ShareViewController" personalizada, aunque para eso, primero deberemos de personalizar el Storyboard asociado a esta clase. En mi caso, he borrado casi todo lo que venía por defecto y lo he dejado a mi gusto:
 
-![ShareExtension07]({{ site.url }}/images/shareextension/image_05.png){: .center-image }
+![ShareExtension07]({% link images/shareextension/image_05.png %}){: .center-image }
 
 Una vez tengamos la vista, es hora de añadirle código a nuestra extensión. Lo primero será definir qué tipo de archivos vamos a aceptar en nuestra aplicación, así que abriremos el archivo "Info.plist" de la extensión y sustituiremos este código:
 
@@ -184,11 +184,11 @@ self.extensionContext?.completeRequest(returningItems: nil, completionHandler: n
 
 para abadonar el ViewController de nuestra extensión. Curioso, eh? De igual modo que con ese código podremos coger los archivos que nos importen desde archivos en local (como archivos adjuntos en Mail), modificando levemente ese código podremos descargar archivos desde DropBox e importarlos también en nuestra aplicación. [No olvides echar un vistazo a nuestro proyecto para ver como hacer esto][enlaceProyecto]
 
-![ShareExtension08]({{ site.url }}/images/matrix_01.gif){: .center-image }
+![ShareExtension08]({% link images/matrix_01.gif %}){: .center-image }
 
 Aquí solo nos queda habilitar los grupos entre nuestra aplicación y nuestra extensión para poder compartir los archivos entre ellas. Para ello iremos a la pestaña "Capabilities" y habilitaremos la opción "App Groups" en ambas. Desde el traget de nuestra aplicación crearemos un "App Groups" (suele ponerse "group." más el mismo bundle que usamos en la app). Una vez creada, deberemos añadirlo también en la extensión.
 
-![ShareExtension09]({{ site.url }}/images/shareextension/image_06.png){: .center-image }
+![ShareExtension09]({% link images/shareextension/image_06.png %}){: .center-image }
 
 Listo, nuestra app ya tiene una "Share Extension" para importar archivos... ahora veremos cómo leerlos desde el ViewController de nuestra app.
 
@@ -239,7 +239,7 @@ Listo, nuestra app ya tiene una "Share Extension" para importar archivos... ahor
 
 En nuestro ViewController tenemos un método "refresh" para leer los archivos que existan en la carpeta compartida con la extensión y copiarlos a la carpeta interna de la aplicación. Si se ha copiado bien, borraremos el archivo en la carpeta compartida puesto que ya no nos sirve. Después llamaremos a otro método, en este caso "getAllFiles()" para leer todos los archivos de nuestra carpeta interna y pintarlos en el tableView. Cómo hacer eso no entra dentro del objetivo de este post lo he omitido para no hace muy larga esta lectura, pero te recuerdo que [tienes el proyecto que estoy usando a modo de ejemplo colgado en Github][enlaceProyecto] para que le eches un ojo si te apetece. El resultado final sería algo así:
 
-![ShareExtension11]({{ site.url }}/images/shareextension/image_11.png){: .center-image }
+![ShareExtension11]({% link images/shareextension/image_11.png %}){: .center-image }
 
 
 Consideraciones a tener en cuenta:
@@ -267,7 +267,7 @@ defaults.objectForKey(“monthSelected”)
 
 - Las imágenes que añadas a tus Assets no se cargarán por defecto en tus extensiones. Debes de habilitar el "Target Membership" por cada imagen
 
-![ShareExtension10]({{ site.url }}/images/shareextension/image_08.png){: .center-image }
+![ShareExtension10]({% link images/shareextension/image_08.png %}){: .center-image }
 
 Puedes descargar el proyecto completo desde [mi repositorio de GitHub][enlaceProyecto]
 

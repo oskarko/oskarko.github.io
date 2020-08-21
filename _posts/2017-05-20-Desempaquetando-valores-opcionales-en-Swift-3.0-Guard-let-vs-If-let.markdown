@@ -16,43 +16,43 @@ Por tanto, ¿Por qué deberíamos usar otra sintaxis si "if let" funciona maravi
 
 Veamos el siguiente ejemplo:
 
-![GuardLetViewController]({{ site.url }}/images/guardletviewcontroller.png){: .center-image }
+![GuardLetViewController]({% link images/guardletviewcontroller.png %}){: .center-image }
 
 Es una sencilla aplicación para iOS donde solicitaremos al usuario varios datos personales mediante "textFields" para posteriormente mostrarlos en una única "label". Los valores que se obtienen de estos "textfields" son valores opcionales, por lo que tendremos que desempaquetarlos previamente antes de poder mostrarlos en la "label".
 
 La manera más sencilla que se nos podría ocurrir sería algo así:
 
-![GuardLetViewController1]({{ site.url }}/images/guardletviewcontroller1.png){: .center-image }
+![GuardLetViewController1]({% link images/guardletviewcontroller1.png %}){: .center-image }
 
 Aunque funciona bien, queda un poco engorroso con tantos if anidados, ¿no? ¿Qué pasaría si tuviésemos diez IF más? Sería un poco enredado su mantenimiento y escalabilidad. Podríamos usar una pequeña variación para no andar anidando los IF: (usando return con cada if-let)
 
-![GuardLetViewController2]({{ site.url }}/images/guardletviewcontroller2.png){: .center-image }
+![GuardLetViewController2]({% link images/guardletviewcontroller2.png %}){: .center-image }
 
 Se ve un poco más claro y sencillo que el anterior pero los valores opcionales desempaquetados sólo podrán ser usados dentro de sus correspondientes "if let", si queremos usarlos posteriormente tendremos que volver a desempaquetarlos, por tanto, no parece una opción muy eficiente.
 
 Ahora intentaremos reescribir el código nuevamente usando "guard let", que fue una de las mejoras que se introdujo con la llegada de Swift 2.0, en lugar de "if let":
 
-![GuardLetViewController3]({{ site.url }}/images/guardletviewcontroller3.png){: .center-image }
+![GuardLetViewController3]({% link images/guardletviewcontroller3.png %}){: .center-image }
 
 De esta forma nuestro código se ve más legible y fácil de mantener, ¿verdad? Y estos dos factores son muy importantes, sobre todo si trabajamos en equipo con otros programadores. Además, usando "guard let" nos ahorramos todas las anidaciones que vimos en el primer ejemplo de "if let". Y lo que hace realmente valioso a "guard let" (y a diferencia de "if let") es que los valores opcionales que desempaquetamos seguirán estando desempaquetados para el resto del bloque de código, incluso fuera del "guard let".
 
 Podemos optimizar el código aún más todavía sin perder claridad
 
-![GuardLetViewController4]({{ site.url }}/images/guardletviewcontroller4.png){: .center-image }
+![GuardLetViewController4]({% link images/guardletviewcontroller4.png %}){: .center-image }
 
 Nota: Dentro de cada "guard let" debemos de tener obligatoriamente un elemento de control de flujo, bien sea un simple return, un break o un continue (Ojo! recuerda que tanto break como continue se usan para bucles, y return para funciones).
 
 Podemos probar todos estos conceptos fácilmente en "Playground".
 
-![GuardLetViewController5]({{ site.url }}/images/guardletviewcontroller5.png){: .center-image }
+![GuardLetViewController5]({% link images/guardletviewcontroller5.png %}){: .center-image }
 
-![GuardLetViewController6]({{ site.url }}/images/guardletviewcontroller6.png){: .center-image }
+![GuardLetViewController6]({% link images/guardletviewcontroller6.png %}){: .center-image }
 
 
 Usando "guard" podemos mejorar la calidad de nuestro código, con una mejor lectura y un mantenimiento más sencillo. Todo va a depender finalmente de nuestros gustos a la hora de elegir entre "if let" o "guard let". Pero de nuestra flexibilidad como programadores dependerá nuestra productividad final.
 
 
-![Goku_Napa]({{ site.url }}/images/DBZ_05.gif){: .center-image }
+![Goku_Napa]({% link images/DBZ_05.gif %}){: .center-image }
 
 Eso sí, no debemos caer en el error de querer usar "guard let" en todo momento que nos sea posible. Los extremos siempre son malos. Lo ideal es no sustituir sentencias sencillas de IF-ELSE mediante "guard let", con ello el código se hará más engorroso nuevamente a la hora de leerlo.
 

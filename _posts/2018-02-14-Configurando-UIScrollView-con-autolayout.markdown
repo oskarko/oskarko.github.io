@@ -10,39 +10,39 @@ Como desarrollador de iOS he visto en más de una ocasión a compañeros sufrien
 
 Lo primero que haremos es crear un proyecto a modo de ejemplo:
 
-![UIScrollView01]({{ site.url }}/images/UIScrollView01.png){: .center-image }
+![UIScrollView01]({% link images/UIScrollView01.png %}){: .center-image }
 
 Sobre el ViewController que ya tenemos en nuestro storyBoard añadiremos un UIScrollView:
 
-![UIScrollView02]({{ site.url }}/images/UIScrollView02.png){: .center-image }
+![UIScrollView02]({% link images/UIScrollView02.png %}){: .center-image }
 
 Usaremos autolayout para ajustar todas las constraints a la vista superior:
 
-![UIScrollView03]({{ site.url }}/images/UIScrollView03.png){: .center-image }
+![UIScrollView03]({% link images/UIScrollView03.png %}){: .center-image }
 
 Ahora añadiremos un UIView (al que llamaremos "Background View") al interior de nuestro scrollView. Deberemos de tener nuestro único ViewController como en la imagen:
 
-![UIScrollView04]({{ site.url }}/images/UIScrollView04.png){: .center-image }
+![UIScrollView04]({% link images/UIScrollView04.png %}){: .center-image }
 
 A este UIView (al que hemos llamado "Background View") le añadiremos constraints para ajustarlo por completo al scrollView:
 
-![UIScrollView05]({{ site.url }}/images/UIScrollView03.png){: .center-image }
+![UIScrollView05]({% link images/UIScrollView03.png %}){: .center-image }
 
 ** Súper importante ** A nuestro "Background View" le añadiremos un par de constraints más: "Equal Heights" y "Equal Widths" con la UIView superior de nuestro ViewController:
 
-![UIScrollView06]({{ site.url }}/images/UIScrollView06.png){: .center-image }
+![UIScrollView06]({% link images/UIScrollView06.png %}){: .center-image }
 
 Y a esta constraint de altura que acabamos de añadir deberemos de colocarle la prioridad baja (250):
 
-![UIScrollView07]({{ site.url }}/images/UIScrollView07.png){: .center-image }
+![UIScrollView07]({% link images/UIScrollView07.png %}){: .center-image }
 
 ¡Listo! Ahora podemos añadir tantos elementos al interior de nuestro scrollView como necesitemos, y funcionará maravillosamente igual de bien con todos ellos. No olvidéis añadir constraints a los elementos que vayáis añadiendo al interior del scrollView para que se muestren tal y como queréis.
 
-![UIScrollView08]({{ site.url }}/images/UIScrollView08.png){: .center-image }
+![UIScrollView08]({% link images/UIScrollView08.png %}){: .center-image }
 
 Por si tenéis alguna duda, [aquí os dejo un proyecto a modo de ejemplo][enlaceUno]
 
-![UIScrollView09]({{ site.url }}/images/UIScrollView09.gif){: .center-image }
+![UIScrollView09]({% link images/UIScrollView09.gif %}){: .center-image }
 
 Happy coding! :)
 

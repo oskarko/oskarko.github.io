@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CocoaPods, tu gestor de dependencias favorito | My thoughts about iOS</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="CocoaPods, tu gestor de dependencias favorito" />
+<meta name="author" content="Óscar Garrucho" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil como especificar qué dependencias necesitas en un sencillo archivo de texto plano. Es capaz de mantener las dependencias entre las distintas librerías que añades y ‘mergear’ el código fuente de las distintas dependencias. A fecha de escribir esto va por la versión 1.2.0 (rama estable)." />
+<meta property="og:description" content="CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil como especificar qué dependencias necesitas en un sencillo archivo de texto plano. Es capaz de mantener las dependencias entre las distintas librerías que añades y ‘mergear’ el código fuente de las distintas dependencias. A fecha de escribir esto va por la versión 1.2.0 (rama estable)." />
+<link rel="canonical" href="http://localhost:4000/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito" />
+<meta property="og:url" content="http://localhost:4000/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito" />
+<meta property="og:site_name" content="My thoughts about iOS" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-22T20:04:22+01:00" />
+<script type="application/ld+json">
+{"headline":"CocoaPods, tu gestor de dependencias favorito","dateModified":"2017-03-22T20:04:22+01:00","url":"http://localhost:4000/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito","datePublished":"2017-03-22T20:04:22+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito"},"author":{"@type":"Person","name":"Óscar Garrucho"},"description":"CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil como especificar qué dependencias necesitas en un sencillo archivo de texto plano. Es capaz de mantener las dependencias entre las distintas librerías que añades y ‘mergear’ el código fuente de las distintas dependencias. A fecha de escribir esto va por la versión 1.2.0 (rama estable).","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- RSS -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="My thoughts about iOS" />
+
+  <!-- Google Analytics-->
+  
+</head>
+
+
+  <body>
+
+    <nav class="nav">
+  <div class="nav-container">
+    <a href="/">
+      <h2 class="nav-title">My thoughts about iOS</h2>
+    </a>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/">Posts</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        Óscar Garrucho
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2017-03-22 20:04:22 +0100">March 22, 2017</time>
+    
+  </div>
+
+  <h1 class="post-title">CocoaPods, tu gestor de dependencias favorito</h1>
+  <div class="post-line"></div>
+
+  <p>CocoaPods es un gestor de dependencias para tu proyecto de Xcode. Es tan fácil como especificar qué dependencias necesitas en un sencillo archivo de texto plano. Es capaz de mantener las dependencias entre las distintas librerías que añades y ‘mergear’ el código fuente de las distintas dependencias. A fecha de escribir esto <a href="https://github.com/CocoaPods/CocoaPods">va por la versión 1.2.0</a> (rama estable).</p>
+
+<p>¿Por qué necesitas un gestor de dependencias en tu vida? Bueno, no es obligatorio su uso, pero, podrías dedicar tu valioso tiempo a mejorar tu código en lugar de, sencillamente, malgastar tiempo en escribir cientos de líneas de código que no necesitarías escribir. También es cierto que puedes hacer uso de terceras librerías sin necesidad de usar un gestor de dependencías, pero eso te seguiría haciendo perder mucho tiempo tanto en la búsqueda, instalación y en el mantenimiento de dichas librerías (o eliminación de las mismas). Por tanto, la razón principal es obiva: por tiempo. Y como todos sabemos, el tiempo es oro, así que no lo malgastes ;)</p>
+
+<p><img src="/images/pulp_01.gif" alt="Tiempo" class="center-image" /></p>
+
+<h3 id="instalando">Instalando…</h3>
+
+<p>CocoaPods está hecho con Ruby, y por tanto, para instalarlo <strong>necesitamos tener instalado Ruby</strong> en nuestro Max OS X; pero no sufras, que viene por defecto instalado con todas las versiones de OS X desde la versión 10.7.</p>
+
+<p>Abre una terminal e introduce el siguiente comando (necesitarás introducir tu password para dar permisos de instalación)</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span></code></pre></figure>
+
+<p>Ruby instalará todas las <strong>gemas</strong> que sean necesarias para lograr la correcta instalación de CocoaPods.</p>
+
+<p><img src="/images/confetti_03.png" alt="Tiempo" class="center-image" /></p>
+
+<p>Si nos diera algún tipo de error, o si incluso de quedara congelada la instrucción, sería súper recomendable actualizar a la versión mas reciente de Ruby Gems:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">sudo</span> <span class="n">gem</span> <span class="n">update</span> <span class="o">--</span><span class="nb">system</span></code></pre></figure>
+
+<p>Además, desde la propia CocoaPods nos recomiendan tener instalada la <code class="highlighter-rouge">Command Line Tools</code> (Xcode » Preferences » Downloads » Command Line Tools)</p>
+
+<p><strong>¡Instalado!</strong></p>
+
+<h3 id="configurando-un-nuevo-proyecto-con-cocoapods">Configurando un nuevo proyecto con CocoaPods…</h3>
+
+<p>Para nuestro proyecto de ejemplo, tan sólo le añadiremos una divertida librería con la ayuda de CocoaPods, más que suficiente para ver como es su configuración y funcionamiento en tiempo de ejecución. Aquí cabe mencionar que todos los Pods que podemos usar en nuestro proyecto deben de estar “dados de alta” en el repositorio de <a href="http://github.com/CocoaPods/Specs">Github que CocoaPods tiene</a>.</p>
+
+<p><a href="https://cocoapods.org/pods/SAConfettiView">La librería</a> permite soltar confetti por toda la pantalla de nuestro dispositivo, a modo de celebración de algún logro o día festivo. Tan bonito como simple.</p>
+
+<p><img src="/images/confetti_01.png" alt="Confetti" class="center-image" /></p>
+
+<p>Vamos allá! Nuevamente en una terminal deberemos situarnos en la carpeta raíz de nuestro proyecto (justo donde tenemos el archivo <nombreProyecto>.xcodeproj)</nombreProyecto></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">cd</span> <span class="o">~</span><span class="sr">/Path/</span><span class="no">To</span><span class="o">/</span><span class="no">Project</span><span class="o">/</span><span class="no">Folder</span></code></pre></figure>
+
+<p>Y desde allí ejecutamos el siguiente comando:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">pod</span> <span class="n">init</span></code></pre></figure>
+
+<p>esto creará <a href="https://guides.cocoapods.org/using/the-podfile.html">nuestro Podfile</a> en el directorio raíz del proyecto. Comenzaremos a editarlo (podéis editarlo con vuestro editor de texto plano favorito, yo suelo usar <strong>vi</strong>):</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">vi</span> <span class="no">Podfile</span></code></pre></figure>
+
+<p>y por defecto veremos algo parecido a esto:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="c1"># Uncomment this line to define a global platform for your project</span>
+	<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+
+	<span class="n">target</span> <span class="s1">'CocoaPodsDemo'</span> <span class="k">do</span>
+  		<span class="c1"># Comment this line if you're not using Swift and don't want to use dynamic frameworks</span>
+  	<span class="n">use_frameworks!</span>
+
+  	<span class="c1"># Pods for CocoaPodsDemo</span>
+	<span class="n">pod</span> <span class="s2">"SAConfettiView"</span>
+
+	<span class="k">end</span></code></pre></figure>
+
+<p>la primera línea indica a CocoaPods que tu librería funcionará a partir de la versión 8.0 de iOS. La línea <code class="highlighter-rouge">use_frameworks!</code> es obligatoria si vienes programando en Swift, de lo contrario, obtendrás un error al intentar usar el Pod sin esta línea. Y con la línea <code class="highlighter-rouge">pod SAConfettiView</code> le decimos a CocoaPods que busque, compile e instale la librería llamada SAConfettiView.</p>
+
+<p><img src="/images/year_01.gif" alt="Buzz" class="center-image" /></p>
+
+<h3 id="un-alto-en-el-camino">Un alto en el camino…</h3>
+
+<p>Referirse a las librerías de Swift como librerías propiamente dicho, es un error. Cuando escribo librerías refiriendo al lenguaje Swift en verdad estoy refiriéndome a framworks, o para ser más exactos <strong>“Swift dynamic framework”</strong>, porque las librerías (estáticas) en Swift simplemente no están permitidas. Entonces, ¿Cuál es la diferencia entre una librería, un framework y un CocoaPod? Bien, espero arrojar algo de luz sobre este asunto:</p>
+
+<p>– CocoaPod (o ‘Pod’, usado de forma abreviada) se refiere indistintamente a una librería o un framework que se ha añadido a tu proyecto mediante la herramienta CocoaPods.</p>
+
+<p>– “dynamic frameworks” (o framworks, simple y llanamente) fueron introducidos con la llegada de iOS 8, permitiendo además de código, adjuntar imágenes y otros tipos de <strong>assets</strong> que hasta entonces, no se podía. Otra sustancial diferencia es que en los frameworks tenemos “namespace classes” que viene a lograr que Xcode use dos clases con nombres idénticos (de distintos frameworks) sin dar errores de símbolos duplicados en proyecto. Esto es debido a que, a diferencia de Objetive-C, los frameworks escritos en Swift no están incluidos en iOS evitando duplicados como bien ya sabes.</p>
+
+<p>Y de todo esto se encarga CocoaPods por ti, en las sombras, sin que tú te enteres lo más mínimo. <strong>Genial, ¿eh?</strong></p>
+
+<h3 id="volviendo-a-nuestro-proyecto">Volviendo a nuestro proyecto</h3>
+
+<p>Hemos especificado <del>la librería</del> el framework que queremos importar sin indicarle la versión, eso hará que CocoaPods nos instale la última versión estable disponible. Si quisiéramos indicarle una versión en concreto, deberíamos colocarla en el pod de la siguiente manera:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">pod</span> <span class="s1">'SAConfettiView'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span></code></pre></figure>
+
+<p>Y eso le indicaría a CocoaPods que descargase únicamente la versión 1.0 o cualquier otra versión superior hasta la 1.1 sin incluir la 1.1 del pod que le estamos indicando. Todo el tema de las versiones lo tienen muy bien explicado los compañeros de <a href="https://www.kodigoswift.com/tutorial-cocoapods-instalacion-y-gestion-de-dependencias/">kodigoswift.com</a>, échale un vistazo ;) .Guarda y cierra. Ahora es el momento de decirle a CocoaPods que descargue e instale las dependencias de tu proyecto. Para eso, nuevamente en la terminal, cerciorándonos de que estamos en el directorio raíz del proyecto, escribimos el siguiente comando:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">pod</span> <span class="n">install</span></code></pre></figure>
+
+<p>Verás algo parecido a esto:</p>
+
+<p><img src="/images/confetti_05.png" alt="Final" class="center-image" /></p>
+
+<p>Ahora, en la carpeta raíz del proyecto CocoaPods te ha creado un archivo <nombreProyecto>.xcworkspace además de una carpeta Pods donde guardará todas las dependencias de tu proyecto. A partir de ahora, para abrir el proyecto en Xcode usaremos este archivo <nombreProyecto>.xcworkspace en lugar del original que nos creó el propio Xcode, de lo contrario, obtendremos varios errores.</nombreProyecto></nombreProyecto></p>
+
+<p><strong>¡Perfecto, acabas de instalar tu primer Pod!</strong></p>
+
+<p><img src="/images/drac_01.gif" alt="Drac" class="center-image" /></p>
+
+<h3 id="programando-con-nuestro-primer-pod">Programando con nuestro primer Pod</h3>
+
+<p>Si tenías abierto el proyecto en Xcode, ciérralo y ahora abre el archivo <nombreProyecto>.xcworkspace en su lugar. Sólo necesitaremos usar la clase ViewController que viene por defecto en el proyecto, en ella definiremos una variable del tipo "SAConfettiView":</nombreProyecto></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">var</span> <span class="ss">confettiView: </span><span class="no">SAConfettiView</span><span class="o">!</span></code></pre></figure>
+
+<p>Y dentro del método <code class="highlighter-rouge">viewDidLoad</code> iniciaremos la variable, la adjuntaremos a la vista y ejecutaremos su método para que la lluvia de confetti comience.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">override</span> <span class="n">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        
+        <span class="n">confettiView</span> <span class="o">=</span> <span class="no">SAConfettiView</span><span class="p">(</span><span class="ss">frame: </span><span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">bounds</span><span class="p">)</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">view</span><span class="p">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">confettiView</span><span class="p">)</span>
+        <span class="n">confettiView</span><span class="p">.</span><span class="nf">startConfetti</span><span class="p">()</span>
+        
+    <span class="p">}</span></code></pre></figure>
+
+<p>No olvidemos importar la librería justo debajo de la importación de UIKit, de lo contrario… ¡error!</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">import</span> <span class="no">UIKit</span>
+    <span class="n">import</span> <span class="no">SAConfettiView</span></code></pre></figure>
+
+<p>Tan fácil como eso. Con esta dependencia - framework - no necesitamos tocar nada de las vistas. Sólo inicializa tu proyecto en el emulador de Xcode y disfruta con el resultado!</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/11940172/11791210/f97b6bd8-a2da-11e5-9083-b131fa796373.gif" alt="confetti" class="center-image" /></p>
+
+<p>No olvides que tienes <a href="https://github.com/oskarko/CocoaPodsDemo">el proyecto</a> que hemos venido usando en este ‘post’ en mi respositorio de GitHub ;)</p>
+
+<h2 id="bonus">Bonus:</h2>
+
+<p>Un breve inciso sobre el mantenimiento de nuestros pods en cualquiera de nuestros proyectos. Tenemos que aprender a diferenciar entre instalar y actualizar nuestros Pods. Cada vez que modificamos nuestro archivo Podfile para añadir o eliminar una dependencia, necesitaremos ejecutar ‘pod install’. Si lo único que pretendemos es usar una versión más actual de algunos de los Pods de nuestro proyecto, deberemos usar ‘pod update’ una vez modificado nuestro Podfile. Hay que recordar que esta “actualización” seguirá los límites que impusimos dentro del Podfile, por tanto, si pusimos</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="n">pod</span> <span class="s1">'MyAwesomePodLibrary'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span></code></pre></figure>
+
+<p>CocoaPods intentará actualizar nuestra dependencia, pero nunca con una versión 2.0 o superior. Y por último, el comando ‘pod outdated’ listará todas las posibles versiones nuevas a las que podríamos actualizar. Para cualquier otra duda, recomiendo <a href="https://guides.cocoapods.org/">la documentación de CocoaPods</a>, es increíblemente buena.</p>
+
+<p>Bibliografía:</p>
+
+<p>– <a href="https://www.raywenderlich.com/97014/use-cocoapods-with-swift">https://www.raywenderlich.com/97014/use-cocoapods-with-swift</a></p>
+
+<p>– <a href="http://www.migueldiazrubio.com/desarrollo-ios-gestionar-dependencias-con-cocoapods/">http://www.migueldiazrubio.com/desarrollo-ios-gestionar-dependencias-con-cocoapods/</a></p>
+
+<p>– <a href="https://www.kodigoswift.com/tutorial-cocoapods-instalacion-y-gestion-de-dependencias/">https://www.kodigoswift.com/tutorial-cocoapods-instalacion-y-gestion-de-dependencias/</a></p>
+
+
+  
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'http://localhost:4000/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/2017-03-22/CocoaPods-tu-gestor-de-dependencias-favorito'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//oscargarrucho-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+
+<div class="pagination">
+  
+    <a href="/2017-05-20/Desempaquetando-valores-opcionales-en-Swift-3.0-Guard-let-vs-If-let" class="left arrow">&#8592;</a>
+  
+  
+    <a href="/2016-11-19/Patron-MVP-y-test-unitarios" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+    </main>
+
+    <footer>
+  <span>
+    &copy; <time datetime="2020-08-21 13:39:10 +0200">2020</time> Óscar Garrucho. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+  </span>
+</footer>
+
+  </body>
+</html>

@@ -10,7 +10,7 @@ Después de un tiempo con mucho trabajo y poco tiempo libre, vuelvo a escribir s
 
 No es necesario que te preocupes por cómo funciona **greenDao**, simplemente preocúpate de rellenar tu base de datos con datos ;)
 
-![rellenando]({{ site.url }}/images/rellenando.gif){: .center-image }
+![rellenando]({% link images/rellenando.gif %}){: .center-image }
 
 Suena bien, ¿verdad? Pero... [¿cómo funciona?][features] Pues gracias a dos módulos principales: **Core** y **Generator**. El primero de ellos irá empaquetado en tu app y el segundo te ayudará a generar las clases necesarias para interactuar con tu base de datos. Y ni siquiera tendrás que interactuar con ellas... Todo de una forma muy muy rápida.
 
@@ -31,23 +31,23 @@ Aunque la primera vez que lo usas en un proyecto puede parecer un poco complejo;
 
 Ya tenemos la configuración inicial de Android, aunque ahora necesitaremos añadir un nuevo módulo Java para la implementación de **greenDao** en el proyecto. Para hacer esto selecciona "*Archivo*" - "*Nuevo*" - "*Nuevo módulo*" ... y elije "*librería Java*" tal y como puedes ver en la siguiente captura:
 
-![Java library]({{ site.url }}/images/java_library.png){: .center-image }
+![Java library]({% link images/java_library.png %}){: .center-image }
 
 Presiona en "*Siguiente*" y llama a tu nuevo módulo `greendao-gen` y a la clase Java como `MainGenerator`. No hace falta modificar nada más, por tanto, presiona en "*Finalizar*". La estructura de tu proyecto deberá verse así:
 
-![structure]({{ site.url }}/images/structure.png){: .center-image }
+![structure]({% link images/structure.png %}){: .center-image }
 
 Y finalmente sólo nos queda añadir las dependencias de **greenDao** en *gradle* y ¡listo!
 
-![baile]({{ site.url }}/images/facil.gif){: .center-image }
+![baile]({% link images/facil.gif %}){: .center-image }
 
 Abrimos el archivo `build.gradle` y añadimos `compile 'de.greenrobot:greendao:2.1.0'`. La versión 2.1.0 de greenDao es la más actual a la hora de escribir este pequeño tutorial, pero puedes comprobar la versión más reciente [aquí][dependencias]. Aquí te dejo una pequeña captura de como quedan las dependencias en este ejemplo:
 
-![dependencies example]({{ site.url }}/images/dependencies.png){: .center-image }
+![dependencies example]({% link images/dependencies.png %}{: .center-image }
 
 Acabamos de añadir la dependencia para nuestro **módulo Core**, pero ahora necesitamos añadir las dependencias al **módulo Generator**. Abrimos el archivo `build.gradle` del módulo Java que añadimos y escribimos `compile 'de.greenrobot:greendao-generator:2.1.0'` (recuerda comprobar la última versión disponible [aquí][genDependencias]). Y como siempre, captura del resultado:
 
-![dependencies exampleGen]({{ site.url }}/images/dependencies_gen.png){: .center-image }
+![dependencies exampleGen]({% link images/dependencies_gen.png %}){: .center-image }
 
 Sincronizamos todos los archivos de *gradle* para comprobar que no tenemos errores pendientes de resolver, y por fin, es hora de escribir algo de código :)
 
@@ -133,13 +133,13 @@ PROJECT_DIR es una variable inicializada con la ruta principal donde tenemos col
 
 Después de eso crearemos la estructura de tablas (entidades) y la relación entre ellas. Una vez hecho, hacemos clic sobre la clase Maingenerator con el botón derecho y elegimos `Run 'MainGenerator.main()'` , y al cabo de unos pocos segundos se generarán todas las entidades en el paquete arriba indicado con sus correspondientes relaciones entre ellas.
 
-![generator_run]({{ site.url }}/images/gen_run.png){: .center-image }
+![generator_run]({% link images/gen_run.png %}){: .center-image }
 
 ¡Y eso es todo! ya tienes integrado greenDAO de forma correcta y sencilla en tu proyecto. Si quieres saber ahora cómo interactuar con dichas entidades y comenzar a realizar CRUD sobre tu nueva base de datos puedes echar un vistazo al [ejemplo que viene con greenDAO][daoExample], o si quieres uno un poco más sencillo, te dejo en mi repositorio un [proyecto de ejemplo][enlaceCodeRepo] ;)
 
 Fácil, rápido y con ejemplos, ¿necesitas más?
 
-![en_absoluto]({{ site.url }}/images/notatall.gif){: .center-image }
+![en_absoluto]({% link images/notatall.gif %}){: .center-image }
 
 
 

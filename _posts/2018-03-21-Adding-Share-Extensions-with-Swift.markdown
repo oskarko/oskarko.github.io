@@ -42,7 +42,7 @@ You will be asked for your confirmation to activate the extension that you just 
 
 You will see that “ShareViewController” class has appeared which inherits `NO` from UIViewController like this
 
-{% gist 20468fba3b003f30717f6ae663c7bdfc %}
+{% gist a61b7dade047e9ceaadac1cbdb54bc6a %}
 
 For practical reasons, we erase all this and create our own personalized “ShareViewController”. But before we can do that, we must first customize the Storyboard that is linked to this class. In this case, I have deleted almost all the default settings and I created it to my liking.
 
@@ -58,7 +58,7 @@ Which means that it accepts any file. But we don’t want it to accept every pos
 
 Which means that it will accept files from a URL (e.g. Dropbox) or attachments in mail messages. Now I will go more into detail about the rest of the extension code. First you need to make it inherit UIViewController and add a “importFile” method that contains a code similar to the following:
 
-{% gist 96246f70cecda563d35b5fdd5a94c4b4 %}
+{% gist 00f1305deb87fee11027b2cd0198d02a %}
 
 First, we need to identify what type of files we expect to find
 
@@ -71,11 +71,11 @@ let identifier = kUTTypeContent as String
 Using an ItemProvider, load the file that you have received in your “ShareExtension”. Copy it to the shared folder in your extension and your main application. Before launching the application, check the shared folder for the files you just imported. 
 Once the file has been copied to said shared folder, you will get a UIAlertController that informs the user and closes the application.
 
-{% gist 14e016f8f0efc120aafbb908c1801517 %}
+{% gist 1e95790b8fbc39847d962198ffcf47df %}
 
 Notice that in order to go back and leave the current ViewController, we do not use a `dismiss` as we normally do. Instead we use:
 
-{% gist b75a6c80daae42569d5d34c2949e2dda %}
+{% gist ad9e1cac90dd1be124ab72c3c72ba89b %}
 
 To close the ViewController of our extension. Weird huh? By slightly modifying the code we can download files from DropBox and import them into our application, very much in the same way we can take the files that we import from local files (such as attachments in Mail). [Take a look at our project to see how it’s done][enlaceProyecto]
 
@@ -87,7 +87,7 @@ We have to enable the groups between our application and our extension in order 
 
 So that’s done, our app now has a “Share Extension” to import files. Now I will explain how to read the files from the ViewController of our app. 
 
-{% gist 0c31b091b9469960b72395e876de6ac9 %}
+{% gist 5ea1ab1dcc96a352c9830b4754f10206 %}
 
 ViewController has a “refresh” method to read the content of the shared folder with the extension. Copy them to the internal folder of the application. Once it’s copied correctly, you can delete this file in the shared folder, it no longer serves a purpose here.
 After all this is done we use another method, in this case “getAllFiles()”, to read all the files in our internal folder and make them pop up in the tableview. How to do this is not within the objectives of this post. I skipped thi because I have talked about this in one of my previous posts. [Check out the example I am using on GitHub][enlaceProyecto]. The end result, should be something like this:
@@ -106,9 +106,9 @@ I- n order to upload a binary to the `AppStore`, the `Version` and `Build` of ou
 
 
 
-{% gist f6186460b50f85355784dae724ffd000 %}
+{% gist c3faa279098793c3faff231037fd9061 %}
 
-{% gist 55888264379aa21afbe57c69cd50e957 %}
+{% gist b70c0d0720357cd8b6bad0df2b3ef54b %}
 
 - The images that you add to your Assets will not be loaded by default in your extensions. You must enable the “TargetMembership” for each image.
 

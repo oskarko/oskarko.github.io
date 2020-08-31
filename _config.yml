@@ -27,7 +27,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
-  - jemoji #Uncomment this to allow emoji in your post
+  - jekyll-gist
+  #- jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
@@ -38,3 +39,6 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
 # Disqus (Set to your disqus id)
 disqus:         jekyll-tale
+
+gist:
+  noscript: false

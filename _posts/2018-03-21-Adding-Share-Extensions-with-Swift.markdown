@@ -62,11 +62,7 @@ Which means that it will accept files from a URL (e.g. Dropbox) or attachments i
 
 First, we need to identify what type of files we expect to find
 
-{% highlight ruby %}
-
-let identifier = kUTTypeContent as String
-
-{% endhighlight %}
+{% gist 74dc6d3276a65b416c9cc2c24ec922bf %}
 
 Using an ItemProvider, load the file that you have received in your “ShareExtension”. Copy it to the shared folder in your extension and your main application. Before launching the application, check the shared folder for the files you just imported. 
 Once the file has been copied to said shared folder, you will get a UIAlertController that informs the user and closes the application.

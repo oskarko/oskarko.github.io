@@ -86,7 +86,7 @@ So that’s done, our app now has a “Share Extension” to import files. Now I
 {% gist 5ea1ab1dcc96a352c9830b4754f10206 %}
 
 ViewController has a “refresh” method to read the content of the shared folder with the extension. Copy them to the internal folder of the application. Once it’s copied correctly, you can delete this file in the shared folder, it no longer serves a purpose here.
-After all this is done we use another method, in this case “getAllFiles()”, to read all the files in our internal folder and make them pop up in the tableview. How to do this is not within the objectives of this post. I skipped thi because I have talked about this in one of my previous posts. [Check out the example I am using on GitHub][enlaceProyecto]. The end result, should be something like this:
+After all this is done we use another method, in this case “getAllFiles()”, to read all the files in our internal folder and make them pop up in the tableview. How to do this is not within the objectives of this post. I skipped this because I have talked about this in one of my previous posts. [Check out the example I am using on GitHub][enlaceProyecto]. The end result, should be something like this:
 
 ![ShareExtension11]({% link images/shareextension/image_11.png %}){: .center-image }
 

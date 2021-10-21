@@ -1,13 +1,11 @@
 title: Óscar R. Garrucho
 author: oskarko
+domain: oskarko.github.io 
+url: "https://oskarko.github.io"
 email: oscar.garrucho@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Óscar R. Garrucho personal web
-show_excerpts: true # set to true to show excerpts on the homepage
-
-domain: oskarko.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://oskarko.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /oskarko.github.io/  
+#description: > # this means to ignore newlines until "show_exerpts:"
+#  Óscar R. Garrucho personal web
+#show_excerpts: true # set to true to show excerpts on the homepage
 
 sass:
   sass_dir: _sass

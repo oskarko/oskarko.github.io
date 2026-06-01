@@ -1,0 +1,116 @@
+es:
+  nav:
+    about: Sobre mí
+    stack: Stack
+    contact: Contacto
+  hero:
+    greeting: Hola, soy
+    name: Óscar R. Garrucho
+    role: Senior iOS Engineer
+    location: Algeciras, Cádiz · Remote-ready
+    cta_primary: Hablemos
+    cta_secondary: Descargar CV
+    available: Disponible para nuevos proyectos
+  about:
+    title: Sobre mí
+    lead: >
+      Senior iOS Engineer con 10+ años entregando apps en producción para
+      grandes empresas del sector fintech, salud, e-commerce y entertainment
+      — desde arquitectura greenfield hasta entrega en App Store.
+    body: >
+      Empecé en 2014 programando mi primera app móvil como prácticas en
+      Cádiz, sin saber que aquel primer proyecto marcaría el resto de mi
+      carrera. Desde entonces he tenido la suerte de tocar muchos mundos:
+      desde una startup europea hasta una casa de apuestas internacional,
+      pasando por apps internas para grandes empresas del sector retail
+      y financiero. Hoy trabajo como Tech Lead y contractor desde mi
+      propia empresa, liderando equipos distribuidos y disfrutando de
+      lo que mejor sé hacer: diseñar arquitecturas iOS desde cero. Y
+      cuando puedo, enseño — porque enseñar es la mejor forma de seguir
+      aprendiendo.
+    highlights:
+      - title: 10+ años
+        text: "Apps en producción en App Store para grandes empresas nacionales e internacionales"
+      - title: Tech Lead
+        text: "He liderado equipos distribuidos de hasta 7 ingenieros y mentoreado juniors en múltiples proyectos"
+      - title: Full SDLC
+        text: "Desde arquitectura greenfield hasta CI/CD con Xcode Cloud, performance y entrega en App Store"
+      - title: Enseñanza
+        text: "Instructor de Swift (UIKit) en Keep Coding — top ratings en bootcamps"
+  stack:
+    title: Stack
+    subtitle: Tecnologías y herramientas con las que trabajo a diario
+  contact:
+    title: Contacto
+    lead: >
+      ¿Tienes una idea, un proyecto entre manos o simplemente quieres
+      charlar sobre iOS? Escríbeme.
+    email_label: Email
+    cv_label: Currículum
+    social_label: Encuéntrame también en
+  footer:
+    rights: Todos los derechos reservados.
+    built: Diseñado y desarrollado con cariño en Cádiz.
+  notfound:
+    label: ERROR 404
+    message: Esta página se perdió en el limbo del simulador. Vuelve a la pantalla de inicio.
+    cta: Volver al inicio
+
+en:
+  nav:
+    about: About
+    stack: Stack
+    contact: Contact
+  hero:
+    greeting: Hi, I'm
+    name: Óscar R. Garrucho
+    role: Senior iOS Engineer
+    location: Algeciras, Spain · Remote-ready
+    cta_primary: Let's talk
+    cta_secondary: Download CV
+    available: Available for new projects
+  about:
+    title: About me
+    lead: >
+      Senior iOS Engineer with 10+ years delivering production apps for
+      leading national and international companies across fintech, health,
+      e-commerce and entertainment — from greenfield architecture to App
+      Store release.
+    body: >
+      Back in 2014 I shipped my first mobile app during a university
+      internship in Cádiz — I had no idea that project would end up
+      shaping my whole career. Since then I've moved through a bunch
+      of different worlds: from a European startup to an international
+      betting platform, working on internal apps for large retail and
+      financial companies along the way. Today I work as Tech Lead and
+      contractor from my own company, leading distributed teams and
+      doing what I love most: designing iOS architectures from scratch.
+      And whenever I get the chance, I teach — because teaching is
+      honestly the best way to keep learning.
+    highlights:
+      - title: 10+ years
+        text: "Production apps on the App Store for leading national and international companies"
+      - title: Tech Lead
+        text: "Led distributed teams of up to 7 engineers and mentored juniors across multiple projects"
+      - title: Full SDLC
+        text: "From greenfield architecture to CI/CD with Xcode Cloud, performance tuning and App Store delivery"
+      - title: Teaching
+        text: "Swift (UIKit) instructor at Keep Coding — top instructor ratings across bootcamp cohorts"
+  stack:
+    title: Stack
+    subtitle: Technologies and tools I work with daily
+  contact:
+    title: Contact
+    lead: >
+      Got an idea, a project in mind, or just want to chat about iOS?
+      Drop me a line.
+    email_label: Email
+    cv_label: Résumé
+    social_label: Find me also on
+  footer:
+    rights: All rights reserved.
+    built: Designed and developed with care in Cádiz.
+  notfound:
+    label: ERROR 404
+    message: This page got lost in the simulator limbo. Head back to the home screen.
+    cta: Back to home

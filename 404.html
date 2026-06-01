@@ -1,39 +1,19 @@
 ---
-title: Page Not Found
+title: 404 — Page Not Found
 permalink: /404.html
+layout: page
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	{%- include head.html -%}
-	<style>
-	h1 {
-		background-color: #eee;
-		width: 220px;
-		height: 220px;
-		border-radius: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center
-	}
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		font-size: 20px;
-		height: 80vh;
-	}
-	p {
-		font-size: 1.5em;
-		text-align: center;
-		margin: 0;
-		line-height: 2em;
-	}
-	</style>
-</head>
-<body>
-	<h1>404</h1>
-	<p>Page not found.</p><a href=".">Return to start page</a>
-</body>
-</html>
+
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<section class="section" style="min-height: 80vh; display: grid; place-items: center; text-align: center;">
+	<div class="container">
+		<p class="notfound-eyebrow" data-es="{{ t.notfound.label }}" data-en="{{ en.notfound.label }}">{{ t.notfound.label }}</p>
+		<h1 class="section-title notfound-title">404</h1>
+		<p class="section-subtitle notfound-msg" data-es="{{ t.notfound.message }}" data-en="{{ en.notfound.message }}">{{ t.notfound.message }}</p>
+		<a class="btn btn-primary" href="{{ '/' | relative_url }}">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+			<span data-es="{{ t.notfound.cta }}" data-en="{{ en.notfound.cta }}">{{ t.notfound.cta }}</span>
+		</a>
+	</div>
+</section>

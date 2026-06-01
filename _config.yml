@@ -1,32 +1,33 @@
 title: Óscar R. Garrucho
 author: oskarko
 email: oscar.garrucho@gmail.com
-#description: > # this means to ignore newlines until "show_exerpts:"
-#  Óscar R. Garrucho personal web
-#show_excerpts: true # set to true to show excerpts on the homepage
+description: Senior iOS Developer — portfolio personal de Óscar R. Garrucho
+lang: es
+url: "https://www.oscargarrucho.com"
 
 sass:
   sass_dir: _sass
 
-permalink: /posts/:title/
-texture:
-  title: Óscar R. Garrucho
-  tagline: Senior iOS developer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: false
-  showPicker: false
+permalink: /:title/
 
-  # generate social links in footer
-  social_links:
-    dev: oskarko
-    twitter: oscarGarrucho
-    github:  oskarko
-    linkedIn: in/oscar-garrucho
-    rss: rss
- 
-
+profile:
+  name: Óscar R. Garrucho
+  role: Senior iOS Developer
+  email: oscar.garrucho@gmail.com
+  cv: /cv/2026.pdf
+  social:
+    - label: GitHub
+      url: https://github.com/oskarko
+      icon: github
+    - label: LinkedIn
+      url: https://linkedin.com/in/oscar-garrucho
+      icon: linkedin
+    - label: Twitter
+      url: https://twitter.com/oscarGarrucho
+      icon: twitter
+    - label: DEV
+      url: https://dev.to/oskarko
+      icon: dev
 
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed

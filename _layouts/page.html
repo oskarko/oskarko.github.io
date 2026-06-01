@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'es' }}">
 <head>
 	{%- include head.html -%}
 </head>
-<body>
-	<header class="texture-{{ site.texture.style }}">
-		<div class="container">
-			{%- include nav.html -%}
-		</div>
-		{%- include page_header.html -%}	
-	</header>
-	<main>
-		<div class="container">
-			{{ content }}
-		</div>
+<body class="page" data-lang="{{ site.lang | default: 'es' }}">
+	<div class="bg-aurora" aria-hidden="true">
+		<div class="aurora aurora-1"></div>
+		<div class="aurora aurora-2"></div>
+		<div class="aurora aurora-3"></div>
+	</div>
+
+	{%- include nav.html -%}
+
+	<main class="page-main">
+		{{ content }}
 	</main>
+
 	{%- include footer.html -%}
+
+	<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>

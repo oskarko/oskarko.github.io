@@ -1,0 +1,45 @@
+# Stack tecnológico. abbr = monograma del icono, color = color de marca.
+# es_name / en_name se renderizan con data-i18n y el conmutador de idioma.
+groups:
+  - id: languages
+    es_name: Lenguajes
+    en_name: Languages
+    items:
+      - { abbr: "Sw",   es_name: "Swift",       en_name: "Swift",       color: "#F05138" }
+      - { abbr: "Obj",  es_name: "Objective-C", en_name: "Objective-C", color: "#438EFF" }
+
+  - id: ui
+    es_name: UI & gráficos
+    en_name: UI & graphics
+    items:
+      - { abbr: "SUI",  es_name: "SwiftUI",        en_name: "SwiftUI",        color: "#0071E3" }
+      - { abbr: "UIK",  es_name: "UIKit",          en_name: "UIKit",          color: "#34C759" }
+      - { abbr: "SPK",  es_name: "SpriteKit",      en_name: "SpriteKit",      color: "#FF3B30" }
+      - { abbr: "Cm",   es_name: "Combine",        en_name: "Combine",        color: "#AF52DE" }
+      - { abbr: "CA",   es_name: "Core Animation", en_name: "Core Animation", color: "#FF9500" }
+
+  - id: data
+    es_name: Datos y arquitectura
+    en_name: Data & architecture
+    items:
+      - { abbr: "CD",   es_name: "Core Data",          en_name: "Core Data",          color: "#FF2D55" }
+      - { abbr: "SD",   es_name: "SwiftData",          en_name: "SwiftData",          color: "#5856D6" }
+      - { abbr: "Rm",   es_name: "Realm",              en_name: "Realm",              color: "#39477F" }
+      - { abbr: "CK",   es_name: "CloudKit",           en_name: "CloudKit",           color: "#5AC8FA" }
+      - { abbr: "Mv",   es_name: "MVVM",               en_name: "MVVM",               color: "#BF5AF2" }
+      - { abbr: "VP",   es_name: "VIPER",              en_name: "VIPER",              color: "#30B0C7" }
+      - { abbr: "MP",   es_name: "MVP",                en_name: "MVP",                color: "#5E5CE6" }
+      - { abbr: "CA²",  es_name: "Clean Architecture", en_name: "Clean Architecture", color: "#5AC8FA" }
+
+  - id: tooling
+    es_name: Herramientas
+    en_name: Tooling
+    items:
+      - { abbr: "Xd",   es_name: "Xcode",        en_name: "Xcode",        color: "#157EFB" }
+      - { abbr: "XC",   es_name: "Xcode Cloud",  en_name: "Xcode Cloud",  color: "#0A84FF" }
+      - { abbr: "Gh",   es_name: "GitHub",       en_name: "GitHub",       color: "#FFFFFF" }
+      - { abbr: "Ins",  es_name: "Instruments",  en_name: "Instruments",  color: "#FF3B30" }
+      - { abbr: "Fl",   es_name: "Fastlane",     en_name: "Fastlane",     color: "#0D83CE" }
+      - { abbr: "Jk",   es_name: "Jenkins",      en_name: "Jenkins",      color: "#D33833" }
+      - { abbr: "Btr",  es_name: "Bitrise",      en_name: "Bitrise",      color: "#16A75A" }
+      - { abbr: "TF",   es_name: "TestFlight",   en_name: "TestFlight",   color: "#0A84FF" }

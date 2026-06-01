@@ -1,0 +1,26 @@
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<section class="section about" id="about">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">01</span>
+			<h2 class="section-title" data-es="{{ t.about.title }}" data-en="{{ en.about.title }}">{{ t.about.title }}</h2>
+		</header>
+
+		<div class="about-grid">
+			<div class="about-text glass reveal">
+				<p class="lead" data-es="{{ t.about.lead | strip }}" data-en="{{ en.about.lead | strip }}">{{ t.about.lead | strip }}</p>
+				<p class="body" data-es="{{ t.about.body | strip }}" data-en="{{ en.about.body | strip }}">{{ t.about.body | strip }}</p>
+			</div>
+
+			<ul class="highlights" role="list">
+				{%- for h in t.about.highlights -%}
+				<li class="highlight glass reveal" style="--delay: {{ forloop.index0 | times: 80 }}ms">
+					<strong data-es="{{ h.title }}" data-en="{{ en.about.highlights[forloop.index0].title }}">{{ h.title }}</strong>
+					<span data-es="{{ h.text }}" data-en="{{ en.about.highlights[forloop.index0].text }}">{{ h.text }}</span>
+				</li>
+				{%- endfor -%}
+			</ul>
+		</div>
+	</div>
+</section>

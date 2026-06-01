@@ -1,0 +1,48 @@
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<section class="section contact" id="contact">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">03</span>
+			<h2 class="section-title" data-es="{{ t.contact.title }}" data-en="{{ en.contact.title }}">{{ t.contact.title }}</h2>
+			<p class="section-subtitle" data-es="{{ t.contact.lead | strip }}" data-en="{{ en.contact.lead | strip }}">{{ t.contact.lead | strip }}</p>
+		</header>
+
+		<div class="contact-grid">
+			<a class="contact-card glass reveal" href="mailto:{{ site.profile.email }}">
+				<span class="contact-card-label" data-es="{{ t.contact.email_label }}" data-en="{{ en.contact.email_label }}">{{ t.contact.email_label }}</span>
+				<span class="contact-card-value">{{ site.profile.email }}</span>
+				<svg class="contact-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+			</a>
+
+			<a class="contact-card glass reveal" style="--delay: 80ms" href="{{ site.profile.cv | relative_url }}" target="_blank" rel="noopener">
+				<span class="contact-card-label" data-es="{{ t.contact.cv_label }}" data-en="{{ en.contact.cv_label }}">{{ t.contact.cv_label }}</span>
+				<span class="contact-card-value">2026.pdf</span>
+				<svg class="contact-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+			</a>
+		</div>
+
+		<div class="social-block reveal">
+			<p class="social-label" data-es="{{ t.contact.social_label }}" data-en="{{ en.contact.social_label }}">{{ t.contact.social_label }}</p>
+			<ul class="social-list" role="list">
+				{%- for s in site.profile.social -%}
+				<li>
+					<a class="social-link glass" href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.label }}">
+						{%- case s.icon -%}
+							{%- when 'github' -%}
+							<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .5C5.7.5.7 5.5.7 11.8c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.6v-2c-3.1.7-3.8-1.5-3.8-1.5-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.2-3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.1.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.1 3.2-1.1.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.7-5.7 7.7-10.7C23.3 5.5 18.3.5 12 .5z"/></svg>
+							{%- when 'linkedin' -%}
+							<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3v10zM6.5 7.7A1.7 1.7 0 1 1 8.2 6a1.7 1.7 0 0 1-1.7 1.7zM19 19h-3v-5.3c0-1.3-.5-2-1.7-2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V19h-3V9h3v1.3a3 3 0 0 1 2.7-1.5c2 0 3.7 1.3 3.7 4.1V19z"/></svg>
+							{%- when 'twitter' -%}
+							<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+							{%- when 'dev' -%}
+							<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M7.42 10.05a.95.95 0 0 0-.94.95v2.05a.95.95 0 1 0 1.9 0V11a.95.95 0 0 0-.96-.95zm9.16 0a.95.95 0 0 0-.94.95v2.05a.95.95 0 1 0 1.9 0V11a.95.95 0 0 0-.96-.95zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm5.5 13.3a3.5 3.5 0 0 1-1.4.3c-.8 0-1.5-.3-2-.85a2.6 2.6 0 0 1-4 0 2.45 2.45 0 0 1-3.4.55 2.6 2.6 0 0 1-1.2-2.1V9.5a2.6 2.6 0 0 1 4.6-1.7c.3-.1.6-.1 1 0a2.6 2.6 0 0 1 4.6 1.7v3.7a2.6 2.6 0 0 1-1.2 2.1z"/></svg>
+						{%- endcase -%}
+						<span>{{ s.label }}</span>
+					</a>
+				</li>
+				{%- endfor -%}
+			</ul>
+		</div>
+	</div>
+</section>

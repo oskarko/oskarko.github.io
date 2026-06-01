@@ -1,9 +1,26 @@
-{%- if site.texture.showNav -%}
-<div class="navbar">
-	<ul>
-		{% for link in site.texture.navigation %}
-		<a href="{{ link.url | prepend:site.baseurl }}"><li {% if link.url == page.url %}class="active"{% endif %} >{{ link.title }}</li></a>
-		{% endfor %}
-	</ul>
-</div>
-{%- endif -%}
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<nav class="navbar glass" aria-label="Principal">
+	<div class="nav-inner">
+		<a class="nav-brand" href="{{ '/' | relative_url }}">
+			<span class="brand-mark" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+					<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+				</svg>
+			</span>
+			<span class="brand-name">{{ site.profile.name }}</span>
+		</a>
+
+		<ul class="nav-links" role="list">
+			<li><a href="#about" data-es="{{ t.nav.about }}" data-en="{{ en.nav.about }}">{{ t.nav.about }}</a></li>
+			<li><a href="#stack" data-es="{{ t.nav.stack }}" data-en="{{ en.nav.stack }}">{{ t.nav.stack }}</a></li>
+			<li><a href="#contact" data-es="{{ t.nav.contact }}" data-en="{{ en.nav.contact }}">{{ t.nav.contact }}</a></li>
+		</ul>
+
+		<div class="lang-switch" role="group" aria-label="Idioma">
+			<button type="button" class="lang-btn is-active" data-set-lang="es" aria-label="Español">ES</button>
+			<span class="lang-divider" aria-hidden="true">/</span>
+			<button type="button" class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,27 @@
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<section class="section stack" id="stack">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">02</span>
+			<h2 class="section-title" data-es="{{ t.stack.title }}" data-en="{{ en.stack.title }}">{{ t.stack.title }}</h2>
+			<p class="section-subtitle" data-es="{{ t.stack.subtitle }}" data-en="{{ en.stack.subtitle }}">{{ t.stack.subtitle }}</p>
+		</header>
+
+		<div class="stack-groups">
+			{%- for group in site.data.stack.groups -%}
+			<div class="stack-group glass reveal" style="--delay: {{ forloop.index0 | times: 80 }}ms">
+				<h3 class="stack-group-title" data-es="{{ group.es_name }}" data-en="{{ group.en_name }}">{{ group.es_name }}</h3>
+				<ul class="chip-list" role="list">
+					{%- for item in group.items -%}
+					<li class="chip" style="--chip-color: {{ item.color }}">
+						<span class="chip-mark" aria-hidden="true">{{ item.abbr }}</span>
+						<span class="chip-name" data-es="{{ item.es_name }}" data-en="{{ item.en_name }}">{{ item.es_name }}</span>
+					</li>
+					{%- endfor -%}
+				</ul>
+			</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</section>

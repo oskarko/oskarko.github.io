@@ -899,7 +899,8 @@ body[data-lang="es"] [data-lang-block="en"] { display: none; }
 body[data-lang="en"] [data-lang-block="es"] { display: none; }
 
 /* Brand accent */
-.drivelang .brand-accent {
+.drivelang .brand-accent,
+.citizenlang .brand-accent {
 	background: var(--gradient-text);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -982,6 +983,20 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	font-weight: 600;
 	letter-spacing: -0.01em;
 }
+
+/* App Store badge — coming soon (non-clickable) */
+.appstore-badge--soon {
+	cursor: default;
+	background: var(--surface-2);
+	color: var(--text-1);
+	border: 1px solid var(--border);
+	box-shadow: none;
+}
+.appstore-badge--soon:hover {
+	transform: none;
+	box-shadow: none;
+}
+.appstore-badge--soon .appstore-logo { color: var(--text-1); }
 
 /* Features grid */
 .dl-section { padding-top: clamp(40px, 6vw, 80px); }
@@ -1076,9 +1091,11 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 }
 .dl-legal-body li { margin: 0.4em 0; }
 
-/* driveLang footer */
-.drivelang-footer { text-align: center; }
-.drivelang-footer .container {
+/* driveLang / citizenLang footer */
+.drivelang-footer,
+.citizenlang-footer { text-align: center; }
+.drivelang-footer .container,
+.citizenlang-footer .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1106,7 +1123,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	line-height: 1.5;
 	color: var(--text-3);
 }
-.drivelang-footer .copyright {
+.drivelang-footer .copyright,
+.citizenlang-footer .copyright {
 	font-size: 13px;
 	color: var(--text-3);
 }

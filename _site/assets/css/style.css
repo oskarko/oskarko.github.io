@@ -1084,7 +1084,7 @@ body[data-lang=en] [data-lang-block=es] {
 /* Brand accent */
 .drivelang .brand-accent,
 .citizenlang .brand-accent,
-.kairos .brand-accent {
+.lenta .brand-accent {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1092,9 +1092,9 @@ body[data-lang=en] [data-lang-block=es] {
   color: transparent;
 }
 
-/* Kairos amber gradient override */
-.kairos .gradient-text,
-.kairos .brand-accent {
+/* Lenta amber gradient override */
+.lenta .gradient-text,
+.lenta .brand-accent {
   background: linear-gradient(135deg, #C8833A 0%, #E09A50 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1335,16 +1335,16 @@ body[data-lang=en] [data-lang-block=es] {
   margin: 0.4em 0;
 }
 
-/* driveLang / citizenLang / Kairos footer */
+/* driveLang / citizenLang / Lenta footer */
 .drivelang-footer,
 .citizenlang-footer,
-.kairos-footer {
+.lenta-footer {
   text-align: center;
 }
 
 .drivelang-footer .container,
 .citizenlang-footer .container,
-.kairos-footer .container {
+.lenta-footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1381,7 +1381,7 @@ body[data-lang=en] [data-lang-block=es] {
 
 .drivelang-footer .copyright,
 .citizenlang-footer .copyright,
-.kairos-footer .copyright {
+.lenta-footer .copyright {
   font-size: 13px;
   color: var(--text-3);
 }

@@ -1084,7 +1084,9 @@ body[data-lang=en] [data-lang-block=es] {
 /* Brand accent */
 .drivelang .brand-accent,
 .citizenlang .brand-accent,
-.lenta .brand-accent {
+.lenta .brand-accent,
+.saqo .brand-accent,
+.driza .brand-accent {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1096,6 +1098,26 @@ body[data-lang=en] [data-lang-block=es] {
 .lenta .gradient-text,
 .lenta .brand-accent {
   background: linear-gradient(135deg, #C8833A 0%, #E09A50 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Saqo green → lime gradient override */
+.saqo .gradient-text,
+.saqo .brand-accent {
+  background: linear-gradient(135deg, #12946B 0%, #C8FF3D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Driza ocean blue → lighthouse amber gradient override */
+.driza .gradient-text,
+.driza .brand-accent {
+  background: linear-gradient(135deg, #3E8FD0 0%, #FFB02E 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1335,16 +1357,20 @@ body[data-lang=en] [data-lang-block=es] {
   margin: 0.4em 0;
 }
 
-/* driveLang / citizenLang / Lenta footer */
+/* driveLang / citizenLang / Lenta / Saqo / Driza footer */
 .drivelang-footer,
 .citizenlang-footer,
-.lenta-footer {
+.lenta-footer,
+.saqo-footer,
+.driza-footer {
   text-align: center;
 }
 
 .drivelang-footer .container,
 .citizenlang-footer .container,
-.lenta-footer .container {
+.lenta-footer .container,
+.saqo-footer .container,
+.driza-footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1381,7 +1407,9 @@ body[data-lang=en] [data-lang-block=es] {
 
 .drivelang-footer .copyright,
 .citizenlang-footer .copyright,
-.lenta-footer .copyright {
+.lenta-footer .copyright,
+.saqo-footer .copyright,
+.driza-footer .copyright {
   font-size: 13px;
   color: var(--text-3);
 }

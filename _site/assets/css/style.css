@@ -1216,12 +1216,44 @@ body[data-lang=en] [data-lang-block=es] {
 }
 
 /* Brand accent */
+.acerinox .brand-accent,
+.work-calendar .brand-accent,
+.runout .brand-accent,
 .drivelang .brand-accent,
 .citizenlang .brand-accent,
 .lenta .brand-accent,
 .saqo .brand-accent,
 .driza .brand-accent {
   background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.acerinox .gradient-text,
+.acerinox .brand-accent {
+  background: linear-gradient(135deg, #1C3FB2 0%, #8CC3FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Work Calendar ember gradient override */
+.work-calendar .gradient-text,
+.work-calendar .brand-accent {
+  background: linear-gradient(135deg, #F97316 0%, #EF4444 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Runout blue aqua gradient override */
+.runout .gradient-text,
+.runout .brand-accent {
+  background: linear-gradient(135deg, #4C82F7 0%, #7AD4FF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1531,7 +1563,10 @@ body[data-lang=en] [data-lang-block=es] {
   margin: 0.4em 0;
 }
 
-/* driveLang / citizenLang / OPO / Reclamo / Cobijo / Raudo / Lenta / Saqo / Driza footer */
+/* Acerinox / Work Calendar / Runout / driveLang / citizenLang / OPO / Reclamo / Cobijo / Raudo / Lenta / Saqo / Driza footer */
+.acerinox-footer,
+.work-calendar-footer,
+.runout-footer,
 .drivelang-footer,
 .citizenlang-footer,
 .opo-footer,
@@ -1544,6 +1579,9 @@ body[data-lang=en] [data-lang-block=es] {
   text-align: center;
 }
 
+.acerinox-footer .container,
+.work-calendar-footer .container,
+.runout-footer .container,
 .drivelang-footer .container,
 .citizenlang-footer .container,
 .opo-footer .container,

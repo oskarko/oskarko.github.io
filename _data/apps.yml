@@ -2,6 +2,33 @@
 # status: live | soon   (drives the status pill label + style)
 # accent: representative brand colour used for the hover glow.
 items:
+  - slug: acerinox
+    name: Acerinox
+    icon: acerinox.png
+    url: /acerinox/
+    status: live
+    accent: "#1C3FB2"
+    es_tagline: Calendario 5º turno
+    en_tagline: 5-shift calendar
+
+  - slug: work-calendar
+    name: Work Calendar
+    icon: work-calendar.png
+    url: /work-calendar/
+    status: live
+    accent: "#F97316"
+    es_tagline: Calendario laboral rotativo
+    en_tagline: Rotating work calendar
+
+  - slug: runout
+    name: Runout
+    icon: runout.png
+    url: /runout/
+    status: live
+    accent: "#4C82F7"
+    es_tagline: Listas de la compra compartidas
+    en_tagline: Shared shopping lists
+
   - slug: drivelang
     name: driveLang
     icon: drivelang.png

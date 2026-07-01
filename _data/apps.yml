@@ -87,7 +87,7 @@ items:
     name: Lenta
     icon: lenta.png
     url: /lenta/
-    status: soon
+    status: live
     accent: "#E09A50"
     es_tagline: Ayuno intermitente para +40
     en_tagline: Intermittent fasting for 40+
@@ -96,7 +96,7 @@ items:
     name: Saqo
     icon: saqo.png
     url: /saqo/
-    status: soon
+    status: live
     accent: "#3FB984"
     es_tagline: Escáner de gastos para autónomos
     en_tagline: Expense scanner for freelancers
@@ -105,7 +105,7 @@ items:
     name: Driza
     icon: driza.png
     url: /driza/
-    status: soon
+    status: live
     accent: "#3E8FD0"
     es_tagline: Prepara el examen del PER
     en_tagline: Prep for the PER boating exam

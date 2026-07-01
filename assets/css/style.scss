@@ -1059,6 +1059,46 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	color: transparent;
 }
 
+/* OPO indigo → amber gradient override */
+.opo .gradient-text,
+.opo .brand-accent {
+	background: linear-gradient(135deg, #3C318F 0%, #F4B63A 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* Reclamo forest → brass gradient override */
+.reclamo .gradient-text,
+.reclamo .brand-accent {
+	background: linear-gradient(135deg, #1F5F3C 0%, #C79A53 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* Cobijo terracotta → sage gradient override */
+.cobijo .gradient-text,
+.cobijo .brand-accent {
+	background: linear-gradient(135deg, #C8724C 0%, #6B8E7B 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* Raudo electric blue → lime gradient override */
+.raudo .gradient-text,
+.raudo .brand-accent {
+	background: linear-gradient(135deg, #2E5BE6 0%, #C8FF3D 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
 /* Hero (centered) */
 .dl-hero {
 	min-height: auto;
@@ -1242,14 +1282,22 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 }
 .dl-legal-body li { margin: 0.4em 0; }
 
-/* driveLang / citizenLang / Lenta / Saqo / Driza footer */
+/* driveLang / citizenLang / OPO / Reclamo / Cobijo / Raudo / Lenta / Saqo / Driza footer */
 .drivelang-footer,
 .citizenlang-footer,
+.opo-footer,
+.reclamo-footer,
+.cobijo-footer,
+.raudo-footer,
 .lenta-footer,
 .saqo-footer,
 .driza-footer { text-align: center; }
 .drivelang-footer .container,
 .citizenlang-footer .container,
+.opo-footer .container,
+.reclamo-footer .container,
+.cobijo-footer .container,
+.raudo-footer .container,
 .lenta-footer .container,
 .saqo-footer .container,
 .driza-footer .container {

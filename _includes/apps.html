@@ -1,0 +1,31 @@
+{%- assign t = site.data.i18n[site.lang] -%}
+{%- assign en = site.data.i18n.en -%}
+<section class="section apps" id="apps">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">03</span>
+			<h2 class="section-title" data-es="{{ t.apps.title }}" data-en="{{ en.apps.title }}">{{ t.apps.title }}</h2>
+			<p class="section-subtitle" data-es="{{ t.apps.subtitle }}" data-en="{{ en.apps.subtitle }}">{{ t.apps.subtitle }}</p>
+		</header>
+
+		<div class="apps-grid">
+			{%- for app in site.data.apps.items -%}
+			<a class="app-card glass reveal" style="--delay: {{ forloop.index0 | times: 70 }}ms; --app-accent: {{ app.accent }}" href="{{ app.url | relative_url }}" aria-label="{{ app.name }}">
+				<img class="app-card-icon" src="{{ '/assets/img/apps/' | append: app.icon | relative_url }}" alt="{{ app.name }}" width="64" height="64" loading="lazy" decoding="async">
+				<span class="app-card-body">
+					<span class="app-card-head">
+						<span class="app-card-name">{{ app.name }}</span>
+						{%- if app.status == 'live' -%}
+						<span class="app-card-status is-live" data-es="{{ t.apps.available }}" data-en="{{ en.apps.available }}">{{ t.apps.available }}</span>
+						{%- else -%}
+						<span class="app-card-status is-soon" data-es="{{ t.apps.soon }}" data-en="{{ en.apps.soon }}">{{ t.apps.soon }}</span>
+						{%- endif -%}
+					</span>
+					<span class="app-card-tagline" data-es="{{ app.es_tagline }}" data-en="{{ app.en_tagline }}">{{ app.es_tagline }}</span>
+				</span>
+				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+			</a>
+			{%- endfor -%}
+		</div>
+	</div>
+</section>

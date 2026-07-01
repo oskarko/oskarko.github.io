@@ -2,6 +2,7 @@ es:
   nav:
     about: Sobre mí
     stack: Stack
+    apps: Apps
     contact: Contacto
   hero:
     greeting: Hola, soy
@@ -40,6 +41,11 @@ es:
   stack:
     title: Stack
     subtitle: Tecnologías y herramientas con las que trabajo a diario
+  apps:
+    title: Mis apps
+    subtitle: Apps propias que diseño, desarrollo y publico en la App Store
+    available: Disponible
+    soon: Próximamente
   contact:
     title: Contacto
     lead: >
@@ -60,6 +66,7 @@ en:
   nav:
     about: About
     stack: Stack
+    apps: Apps
     contact: Contact
   hero:
     greeting: Hi, I'm
@@ -99,6 +106,11 @@ en:
   stack:
     title: Stack
     subtitle: Technologies and tools I work with daily
+  apps:
+    title: My apps
+    subtitle: My own apps — designed, built and shipped to the App Store
+    available: Available
+    soon: Coming soon
   contact:
     title: Contact
     lead: >

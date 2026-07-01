@@ -1,0 +1,48 @@
+# Apps portfolio — surfaced on the homepage "apps" section.
+# status: live | soon   (drives the status pill label + style)
+# accent: representative brand colour used for the hover glow.
+items:
+  - slug: drivelang
+    name: driveLang
+    icon: drivelang.png
+    url: /drivelang/
+    status: live
+    accent: "#2F7BF6"
+    es_tagline: Examen teórico de conducir
+    en_tagline: Driving theory test
+
+  - slug: citizenlang
+    name: citizenLang
+    icon: citizenlang.png
+    url: /citizenlang/
+    status: live
+    accent: "#12B37A"
+    es_tagline: Examen CCSE de nacionalidad
+    en_tagline: CCSE nationality exam
+
+  - slug: lenta
+    name: Lenta
+    icon: lenta.png
+    url: /lenta/
+    status: soon
+    accent: "#E09A50"
+    es_tagline: Ayuno intermitente para +40
+    en_tagline: Intermittent fasting for 40+
+
+  - slug: saqo
+    name: Saqo
+    icon: saqo.png
+    url: /saqo/
+    status: soon
+    accent: "#3FB984"
+    es_tagline: Escáner de gastos para autónomos
+    en_tagline: Expense scanner for freelancers
+
+  - slug: driza
+    name: Driza
+    icon: driza.png
+    url: /driza/
+    status: soon
+    accent: "#3E8FD0"
+    es_tagline: Prepara el examen del PER
+    en_tagline: Prep for the PER boating exam

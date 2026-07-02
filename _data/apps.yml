@@ -56,33 +56,6 @@ items:
     es_tagline: Ortografía para opositores
     en_tagline: Spanish orthography for exam candidates
 
-  - slug: reclamo
-    name: Reclamo
-    icon: reclamo.png
-    url: /reclamo/
-    status: live
-    accent: "#C79A53"
-    es_tagline: Cazador, armas y tiro
-    en_tagline: Hunting, firearms and shooting exams
-
-  - slug: cobijo
-    name: Cobijo
-    icon: cobijo.png
-    url: /cobijo/
-    status: live
-    accent: "#C8724C"
-    es_tagline: Cartilla digital para tus mascotas
-    en_tagline: Digital health record for your pets
-
-  - slug: raudo
-    name: Raudo
-    icon: raudo.png
-    url: /raudo/
-    status: live
-    accent: "#2E5BE6"
-    es_tagline: Psicotécnicos generados al vuelo
-    en_tagline: Procedurally generated aptitude tests
-
   - slug: lenta
     name: Lenta
     icon: lenta.png
@@ -109,3 +82,30 @@ items:
     accent: "#3E8FD0"
     es_tagline: Prepara el examen del PER
     en_tagline: Prep for the PER boating exam
+
+  - slug: reclamo
+    name: Reclamo
+    icon: reclamo.png
+    url: /reclamo/
+    status: live
+    accent: "#C79A53"
+    es_tagline: Cazador, armas y tiro
+    en_tagline: Hunting, firearms and shooting exams
+
+  - slug: cobijo
+    name: Cobijo
+    icon: cobijo.png
+    url: /cobijo/
+    status: live
+    accent: "#C8724C"
+    es_tagline: Cartilla digital para tus mascotas
+    en_tagline: Digital health record for your pets
+
+  - slug: raudo
+    name: Raudo
+    icon: raudo.png
+    url: /raudo/
+    status: live
+    accent: "#2E5BE6"
+    es_tagline: Psicotécnicos generados al vuelo
+    en_tagline: Procedurally generated aptitude tests

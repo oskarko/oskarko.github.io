@@ -1024,7 +1024,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .citizenlang .brand-accent,
 .lenta .brand-accent,
 .saqo .brand-accent,
-.driza .brand-accent {
+.driza .brand-accent,
+.aplomo .brand-accent {
 	background: var(--gradient-text);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -1125,6 +1126,16 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .raudo .gradient-text,
 .raudo .brand-accent {
 	background: linear-gradient(135deg, #2E5BE6 0%, #C8FF3D 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* Aplomo deep green → mint gradient override */
+.aplomo .gradient-text,
+.aplomo .brand-accent {
+	background: linear-gradient(135deg, #0C8A5E 0%, #42D29B 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1326,7 +1337,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .raudo-footer,
 .lenta-footer,
 .saqo-footer,
-.driza-footer { text-align: center; }
+.driza-footer,
+.aplomo-footer { text-align: center; }
 .acerinox-footer .container,
 .work-calendar-footer .container,
 .runout-footer .container,
@@ -1338,7 +1350,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .raudo-footer .container,
 .lenta-footer .container,
 .saqo-footer .container,
-.driza-footer .container {
+.driza-footer .container,
+.aplomo-footer .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

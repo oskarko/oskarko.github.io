@@ -2,6 +2,15 @@
 # status: live | soon   (drives the status pill label + style)
 # accent: representative brand colour used for the hover glow.
 items:
+  - slug: aplomo
+    name: Aplomo
+    icon: aplomo.svg
+    url: /aplomo/
+    status: soon
+    accent: "#12A574"
+    es_tagline: Certificados y ITE en campo
+    en_tagline: Field energy certs & ITE
+
   - slug: acerinox
     name: Acerinox
     icon: acerinox.png

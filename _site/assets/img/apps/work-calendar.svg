@@ -1,21 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Work Calendar icon">
   <defs>
-    <linearGradient id="bg" x1="32" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22bdb2"/>
-      <stop offset="1" stop-color="#0fa8a4"/>
+    <linearGradient id="bg" x1="24" y1="20" x2="232" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#26bfb5"/>
+      <stop offset="1" stop-color="#14b0a9"/>
     </linearGradient>
   </defs>
   <rect width="256" height="256" fill="url(#bg)"/>
   <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="62" y="80" width="128" height="140" rx="6.5" stroke-width="8"/>
-    <path d="M62 108h128" stroke-width="8"/>
-    <path d="M96 62v26M160 62v26" stroke-width="8"/>
-    <path d="M108 80h72" stroke-width="8"/>
-    <rect x="146" y="48" width="18" height="34" rx="4" fill="#fff" stroke="none"/>
-    <circle cx="88" cy="108" r="28" stroke-width="8"/>
-    <path d="M88 92v16l10 10" stroke-width="7"/>
-    <path d="M78 96a19 19 0 0 1 0-12" stroke-width="5"/>
-    <path d="M90 140v60M118 140v60M146 140v60" stroke-width="8"/>
-    <path d="M76 164h100M76 188h100" stroke-width="8"/>
+    <rect x="60" y="82" width="132" height="132" rx="4.5" stroke-width="8"/>
+    <path d="M60 114h132" stroke-width="8"/>
+    <path d="M100 62v20M164 62v20" stroke-width="8"/>
+    <rect x="144" y="46" width="18" height="32" rx="4" fill="#fff" stroke="none"/>
+    <circle cx="92" cy="104" r="30" stroke-width="8"/>
+    <path d="M92 87v17l11 11" stroke-width="7"/>
+    <path d="M82 94a17 17 0 0 1 0-11" stroke-width="5"/>
+    <path d="M88 140v54M116 140v54M144 140v54M172 140v54" stroke-width="8"/>
+    <path d="M76 162h108M76 184h108" stroke-width="8"/>
   </g>
 </svg>

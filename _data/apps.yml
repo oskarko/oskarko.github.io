@@ -13,7 +13,7 @@ items:
 
   - slug: work-calendar
     name: Work Calendar
-    icon: work-calendar.png
+    icon: work-calendar.svg
     url: /work-calendar/
     status: live
     accent: "#F97316"

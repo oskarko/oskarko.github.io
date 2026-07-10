@@ -4,7 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a0a14">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light dark">
+
+<script>
+	(function () {
+		try {
+			var t = localStorage.getItem("preferred-theme");
+			document.documentElement.setAttribute("data-theme", (t === "dark" || t === "light") ? t : "light");
+		} catch (e) {
+			document.documentElement.setAttribute("data-theme", "light");
+		}
+	})();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,8 +75,15 @@
 			<button type="button" class="lang-btn is-active" data-set-lang="es" aria-label="Español">ES</button>
 			<span class="lang-divider" aria-hidden="true">/</span>
 			<button type="button" class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
-		</div>
-	</div>
+		</div><div class="theme-switch" role="group" aria-label="Tema / Theme">
+	<button type="button" class="theme-btn" data-set-theme="light" aria-label="Modo claro / Light mode" aria-pressed="true">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+	</button>
+	<button type="button" class="theme-btn" data-set-theme="dark" aria-label="Modo oscuro / Dark mode" aria-pressed="false">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+	</button>
+</div>
+</div>
 </nav>
 <main class="page-main">
 		<section class="hero" id="top">
@@ -269,7 +287,15 @@
 			<p class="section-subtitle" data-es="Apps propias que diseño, desarrollo y publico en la App Store" data-en="My own apps — designed, built and shipped to the App Store">Apps propias que diseño, desarrollo y publico en la App Store</p>
 		</header>
 
-		<div class="apps-grid"><a class="app-card glass reveal" style="--delay: 0ms; --app-accent: #1C3FB2" href="/acerinox/" aria-label="Acerinox">
+		<div class="apps-grid"><a class="app-card glass reveal" style="--delay: 0ms; --app-accent: #0E6E7C" href="/aljibe/" aria-label="Aljibe">
+				<img class="app-card-icon" src="/assets/img/apps/aljibe.png" alt="Aljibe" width="64" height="64" loading="lazy" decoding="async">
+				<span class="app-card-body">
+					<span class="app-card-head">
+						<span class="app-card-name">Aljibe</span><span class="app-card-status is-live" data-es="Disponible" data-en="Available">Disponible</span></span>
+					<span class="app-card-tagline" data-es="Actas de control de legionela" data-en="Legionella-control reports">Actas de control de legionela</span>
+				</span>
+				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+			</a><a class="app-card glass reveal" style="--delay: 70ms; --app-accent: #1C3FB2" href="/acerinox/" aria-label="Acerinox">
 				<img class="app-card-icon" src="/assets/img/apps/acerinox.png" alt="Acerinox" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -277,7 +303,7 @@
 					<span class="app-card-tagline" data-es="Calendario 5º turno" data-en="5-shift calendar">Calendario 5º turno</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 70ms; --app-accent: #F97316" href="/work-calendar/" aria-label="Work Calendar">
+			</a><a class="app-card glass reveal" style="--delay: 140ms; --app-accent: #F97316" href="/work-calendar/" aria-label="Work Calendar">
 				<img class="app-card-icon" src="/assets/img/apps/work-calendar.svg" alt="Work Calendar" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -285,7 +311,7 @@
 					<span class="app-card-tagline" data-es="Calendario laboral rotativo" data-en="Rotating work calendar">Calendario laboral rotativo</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 140ms; --app-accent: #4C82F7" href="/runout/" aria-label="Runout">
+			</a><a class="app-card glass reveal" style="--delay: 210ms; --app-accent: #4C82F7" href="/runout/" aria-label="Runout">
 				<img class="app-card-icon" src="/assets/img/apps/runout.png" alt="Runout" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -293,7 +319,7 @@
 					<span class="app-card-tagline" data-es="Listas de la compra compartidas" data-en="Shared shopping lists">Listas de la compra compartidas</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 210ms; --app-accent: #2F7BF6" href="/drivelang/" aria-label="driveLang">
+			</a><a class="app-card glass reveal" style="--delay: 280ms; --app-accent: #2F7BF6" href="/drivelang/" aria-label="driveLang">
 				<img class="app-card-icon" src="/assets/img/apps/drivelang.png" alt="driveLang" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -301,7 +327,7 @@
 					<span class="app-card-tagline" data-es="Examen teórico de conducir" data-en="Driving theory test">Examen teórico de conducir</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 280ms; --app-accent: #12B37A" href="/citizenlang/" aria-label="citizenLang">
+			</a><a class="app-card glass reveal" style="--delay: 350ms; --app-accent: #12B37A" href="/citizenlang/" aria-label="citizenLang">
 				<img class="app-card-icon" src="/assets/img/apps/citizenlang.png" alt="citizenLang" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -309,7 +335,7 @@
 					<span class="app-card-tagline" data-es="Examen CCSE de nacionalidad" data-en="CCSE nationality exam">Examen CCSE de nacionalidad</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 350ms; --app-accent: #F4B63A" href="/opo/" aria-label="OPO">
+			</a><a class="app-card glass reveal" style="--delay: 420ms; --app-accent: #F4B63A" href="/opo/" aria-label="OPO">
 				<img class="app-card-icon" src="/assets/img/apps/opo.png" alt="OPO" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -317,7 +343,7 @@
 					<span class="app-card-tagline" data-es="Ortografía para opositores" data-en="Spanish orthography for exam candidates">Ortografía para opositores</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 420ms; --app-accent: #E09A50" href="/lenta/" aria-label="Lenta">
+			</a><a class="app-card glass reveal" style="--delay: 490ms; --app-accent: #E09A50" href="/lenta/" aria-label="Lenta">
 				<img class="app-card-icon" src="/assets/img/apps/lenta.png" alt="Lenta" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -325,7 +351,7 @@
 					<span class="app-card-tagline" data-es="Ayuno intermitente para +40" data-en="Intermittent fasting for 40+">Ayuno intermitente para +40</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 490ms; --app-accent: #3FB984" href="/saqo/" aria-label="Saqo">
+			</a><a class="app-card glass reveal" style="--delay: 560ms; --app-accent: #3FB984" href="/saqo/" aria-label="Saqo">
 				<img class="app-card-icon" src="/assets/img/apps/saqo.png" alt="Saqo" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -333,7 +359,7 @@
 					<span class="app-card-tagline" data-es="Escáner de gastos para autónomos" data-en="Expense scanner for freelancers">Escáner de gastos para autónomos</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 560ms; --app-accent: #3E8FD0" href="/driza/" aria-label="Driza">
+			</a><a class="app-card glass reveal" style="--delay: 630ms; --app-accent: #3E8FD0" href="/driza/" aria-label="Driza">
 				<img class="app-card-icon" src="/assets/img/apps/driza.png" alt="Driza" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -341,7 +367,7 @@
 					<span class="app-card-tagline" data-es="Prepara el examen del PER" data-en="Prep for the PER boating exam">Prepara el examen del PER</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 630ms; --app-accent: #C79A53" href="/reclamo/" aria-label="Reclamo">
+			</a><a class="app-card glass reveal" style="--delay: 700ms; --app-accent: #C79A53" href="/reclamo/" aria-label="Reclamo">
 				<img class="app-card-icon" src="/assets/img/apps/reclamo.png" alt="Reclamo" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -349,7 +375,7 @@
 					<span class="app-card-tagline" data-es="Cazador, armas y tiro" data-en="Hunting, firearms and shooting exams">Cazador, armas y tiro</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 700ms; --app-accent: #C8724C" href="/cobijo/" aria-label="Cobijo">
+			</a><a class="app-card glass reveal" style="--delay: 770ms; --app-accent: #C8724C" href="/cobijo/" aria-label="Cobijo">
 				<img class="app-card-icon" src="/assets/img/apps/cobijo.png" alt="Cobijo" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -357,7 +383,7 @@
 					<span class="app-card-tagline" data-es="Cartilla digital para tus mascotas" data-en="Digital health record for your pets">Cartilla digital para tus mascotas</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 770ms; --app-accent: #2E5BE6" href="/raudo/" aria-label="Raudo">
+			</a><a class="app-card glass reveal" style="--delay: 840ms; --app-accent: #2E5BE6" href="/raudo/" aria-label="Raudo">
 				<img class="app-card-icon" src="/assets/img/apps/raudo.png" alt="Raudo" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -365,7 +391,7 @@
 					<span class="app-card-tagline" data-es="Psicotécnicos generados al vuelo" data-en="Procedurally generated aptitude tests">Psicotécnicos generados al vuelo</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 840ms; --app-accent: #12A574" href="/aplomo/" aria-label="Aplomo">
+			</a><a class="app-card glass reveal" style="--delay: 910ms; --app-accent: #12A574" href="/aplomo/" aria-label="Aplomo">
 				<img class="app-card-icon" src="/assets/img/apps/aplomo.png" alt="Aplomo" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">
@@ -373,7 +399,7 @@
 					<span class="app-card-tagline" data-es="Certificados y ITE en campo" data-en="Field energy certs & ITE">Certificados y ITE en campo</span>
 				</span>
 				<svg class="app-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-			</a><a class="app-card glass reveal" style="--delay: 910ms; --app-accent: #FFB020" href="/reten/" aria-label="Retén">
+			</a><a class="app-card glass reveal" style="--delay: 980ms; --app-accent: #FFB020" href="/reten/" aria-label="Retén">
 				<img class="app-card-icon" src="/assets/img/apps/reten.png" alt="Retén" width="64" height="64" loading="lazy" decoding="async">
 				<span class="app-card-body">
 					<span class="app-card-head">

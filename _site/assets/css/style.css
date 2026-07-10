@@ -32,6 +32,42 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --container: 1140px;
   --pad-x: clamp(20px, 4vw, 40px);
+  --switch-active-bg: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Light theme ---------- */
+html[data-theme=light] {
+  --bg-0: #FAF7F0;
+  --bg-1: #F4F0E7;
+  --bg-2: #ECE7DA;
+  --surface: rgba(31, 42, 51, 0.035);
+  --surface-2: rgba(31, 42, 51, 0.06);
+  --border: rgba(31, 42, 51, 0.10);
+  --border-2: rgba(31, 42, 51, 0.18);
+  --text-1: rgba(26, 29, 26, 0.96);
+  --text-2: rgba(40, 47, 51, 0.72);
+  --text-3: rgba(40, 47, 51, 0.50);
+  --text-on-accent: #ffffff;
+  --gradient-text: linear-gradient(135deg, #1F2A33 0%, #3A4A58 45%, #0a84ff 100%);
+  --shadow-sm: 0 1px 2px rgba(31, 42, 51, 0.08);
+  --shadow: 0 8px 32px rgba(31, 42, 51, 0.10);
+  --shadow-lg: 0 24px 60px rgba(31, 42, 51, 0.14);
+  --switch-active-bg: rgba(31, 42, 51, 0.10);
+  color-scheme: light;
+}
+
+html[data-theme=light] body {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(10, 132, 255, 0.1), transparent 60%), radial-gradient(ellipse 60% 50% at 90% 30%, rgba(175, 82, 222, 0.08), transparent 60%), radial-gradient(ellipse 60% 50% at 10% 70%, rgba(255, 55, 95, 0.06), transparent 60%), var(--bg-0);
+  background-attachment: fixed;
+}
+
+html[data-theme=light] .aurora {
+  opacity: 0.2;
+}
+
+html[data-theme=light] ::selection {
+  background: rgba(10, 132, 255, 0.22);
+  color: inherit;
 }
 
 /* ---------- Reset / base ---------- */
@@ -303,7 +339,7 @@ html.has-js .reveal:not(.is-visible) {
 
 .lang-btn.is-active {
   color: var(--text-1);
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--switch-active-bg);
 }
 
 .lang-btn:hover {
@@ -314,6 +350,40 @@ html.has-js .reveal:not(.is-visible) {
   color: var(--text-3);
   font-size: 12px;
   user-select: none;
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.theme-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-3);
+  border-radius: var(--radius-pill);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.theme-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.theme-btn.is-active {
+  color: var(--text-1);
+  background: var(--switch-active-bg);
+}
+
+.theme-btn:hover {
+  color: var(--text-1);
 }
 
 @media (max-width: 720px) {

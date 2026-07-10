@@ -4,6 +4,9 @@
 	const STORAGE_KEY = "preferred-lang";
 	const DEFAULT_LANG = (document.body.dataset.lang || "es").toLowerCase();
 
+	const THEME_KEY = "preferred-theme";
+	const DEFAULT_THEME = "light";
+
 	const applyLanguage = (lang) => {
 		if (lang !== "es" && lang !== "en") lang = "es";
 		document.documentElement.setAttribute("lang", lang);
@@ -33,6 +36,31 @@
 		const lang = btn.dataset.setLang;
 		applyLanguage(lang);
 		try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
+	});
+
+	const applyTheme = (theme) => {
+		if (theme !== "light" && theme !== "dark") theme = DEFAULT_THEME;
+		document.documentElement.setAttribute("data-theme", theme);
+
+		document.querySelectorAll(".theme-btn").forEach((btn) => {
+			const active = btn.dataset.setTheme === theme;
+			btn.classList.toggle("is-active", active);
+			btn.setAttribute("aria-pressed", active ? "true" : "false");
+		});
+	};
+
+	const initTheme = () => {
+		let stored = null;
+		try { stored = localStorage.getItem(THEME_KEY); } catch (_) {}
+		applyTheme(stored || document.documentElement.getAttribute("data-theme") || DEFAULT_THEME);
+	};
+
+	document.addEventListener("click", (e) => {
+		const btn = e.target.closest("[data-set-theme]");
+		if (!btn) return;
+		const theme = btn.dataset.setTheme;
+		applyTheme(theme);
+		try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
 	});
 
 	document.addEventListener("click", (e) => {
@@ -105,6 +133,7 @@
 
 	const boot = () => {
 		initLanguage();
+		initTheme();
 		initReveal();
 		initActiveNav();
 		initNavScroll();

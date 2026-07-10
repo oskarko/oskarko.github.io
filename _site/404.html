@@ -4,7 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0a0a14">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light dark">
+
+<script>
+	(function () {
+		try {
+			var t = localStorage.getItem("preferred-theme");
+			document.documentElement.setAttribute("data-theme", (t === "dark" || t === "light") ? t : "light");
+		} catch (e) {
+			document.documentElement.setAttribute("data-theme", "light");
+		}
+	})();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,8 +75,15 @@
 			<button type="button" class="lang-btn is-active" data-set-lang="es" aria-label="Español">ES</button>
 			<span class="lang-divider" aria-hidden="true">/</span>
 			<button type="button" class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
-		</div>
-	</div>
+		</div><div class="theme-switch" role="group" aria-label="Tema / Theme">
+	<button type="button" class="theme-btn" data-set-theme="light" aria-label="Modo claro / Light mode" aria-pressed="true">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+	</button>
+	<button type="button" class="theme-btn" data-set-theme="dark" aria-label="Modo oscuro / Dark mode" aria-pressed="false">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+	</button>
+</div>
+</div>
 </nav>
 <main class="page-main">
 		<section class="section" style="min-height: 80vh; display: grid; place-items: center; text-align: center;">

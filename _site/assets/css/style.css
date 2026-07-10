@@ -1509,6 +1509,136 @@ body[data-lang=en] [data-lang-block=es] {
   color: var(--text-2);
 }
 
+/* Hero note (under CTA) */
+.dl-note {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: var(--text-3);
+}
+
+/* Flow steps (“how it works”) */
+.dl-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.dl-step {
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.dl-step:hover {
+  transform: translateY(-3px);
+}
+
+.dl-step-n {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1F2A33;
+  background: linear-gradient(135deg, #FFB020 0%, #FF6B5C 100%);
+  margin-bottom: 2px;
+}
+
+.dl-step strong {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.dl-step span {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+/* Pricing */
+.dl-pricing {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.dl-pricing-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.dl-pricing-price {
+  margin: 6px 0 0;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.dl-pricing-amount {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #FFB020 0%, #FF6B5C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.dl-pricing-per {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-3);
+}
+
+.dl-pricing-sub {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  color: var(--text-3);
+}
+
+.dl-pricing-list {
+  list-style: none;
+  margin: 10px 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.dl-pricing-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 15px;
+  color: var(--text-1);
+}
+
+.dl-pricing-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  color: #FFB020;
+}
+
 /* Support */
 .dl-support {
   padding-top: 150px;
@@ -1649,6 +1779,7 @@ body[data-lang=en] [data-lang-block=es] {
   font-size: 12.5px;
   line-height: 1.5;
   color: var(--text-3);
+  text-align: center;
 }
 
 .drivelang-footer .copyright,

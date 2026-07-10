@@ -118,3 +118,12 @@ items:
     accent: "#12A574"
     es_tagline: Certificados y ITE en campo
     en_tagline: Field energy certs & ITE
+
+  - slug: reten
+    name: Retén
+    icon: reten.png
+    url: /reten/
+    status: live
+    accent: "#FFB020"
+    es_tagline: Actas de mantenimiento PCI
+    en_tagline: Fire-protection maintenance reports

@@ -1224,7 +1224,8 @@ body[data-lang=en] [data-lang-block=es] {
 .lenta .brand-accent,
 .saqo .brand-accent,
 .driza .brand-accent,
-.aplomo .brand-accent {
+.aplomo .brand-accent,
+.reten .brand-accent {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1335,6 +1336,16 @@ body[data-lang=en] [data-lang-block=es] {
 .aplomo .gradient-text,
 .aplomo .brand-accent {
   background: linear-gradient(135deg, #0C8A5E 0%, #42D29B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Reten ignition amber → coral gradient override */
+.reten .gradient-text,
+.reten .brand-accent {
+  background: linear-gradient(135deg, #FFB020 0%, #FF6B5C 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1587,7 +1598,8 @@ body[data-lang=en] [data-lang-block=es] {
 .lenta-footer,
 .saqo-footer,
 .driza-footer,
-.aplomo-footer {
+.aplomo-footer,
+.reten-footer {
   text-align: center;
 }
 
@@ -1603,7 +1615,8 @@ body[data-lang=en] [data-lang-block=es] {
 .lenta-footer .container,
 .saqo-footer .container,
 .driza-footer .container,
-.aplomo-footer .container {
+.aplomo-footer .container,
+.reten-footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;

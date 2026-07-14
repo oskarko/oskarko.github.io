@@ -640,6 +640,26 @@ html.has-js .reveal:not(.is-visible) {
   color: #82d4ff;
 }
 
+/* Light mode: keep the code card on a dark "editor" surface so the
+   syntax-highlighted text stays legible against the light page. */
+html[data-theme=light] .code-card {
+  background: #14171F;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme=light] .code-card-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme=light] .code-card-title {
+  color: rgba(235, 235, 245, 0.55);
+}
+
+html[data-theme=light] .code-card-body {
+  color: rgba(235, 235, 245, 0.82);
+}
+
 .floating-chip {
   position: absolute;
   display: inline-flex;

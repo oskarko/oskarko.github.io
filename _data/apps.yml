@@ -2,15 +2,6 @@
 # status: live | soon   (drives the status pill label + style)
 # accent: representative brand colour used for the hover glow.
 items:
-  - slug: aljibe
-    name: Aljibe
-    icon: aljibe.png
-    url: /aljibe/
-    status: live
-    accent: "#0E6E7C"
-    es_tagline: Actas de control de legionela
-    en_tagline: Legionella-control reports
-
   - slug: acerinox
     name: Acerinox
     icon: acerinox.png
@@ -136,3 +127,21 @@ items:
     accent: "#FFB020"
     es_tagline: Actas de mantenimiento PCI
     en_tagline: Fire-protection maintenance reports
+
+  - slug: aljibe
+    name: Aljibe
+    icon: aljibe.png
+    url: /aljibe/
+    status: live
+    accent: "#0E6E7C"
+    es_tagline: Actas de control de legionela
+    en_tagline: Legionella-control reports
+
+  - slug: penumbra
+    name: Penumbra
+    icon: penumbra.png
+    url: /penumbra/
+    status: soon
+    accent: "#9A87D6"
+    es_tagline: Caja fuerte cifrada para tus archivos
+    en_tagline: Encrypted vault for your files

@@ -63,6 +63,11 @@ html[data-theme="light"] {
 
 	--gradient-text: linear-gradient(135deg, #1F2A33 0%, #3A4A58 45%, #0a84ff 100%);
 
+	/* Light mode: bluer accent (less purple) + darker "available" green */
+	--accent-2:    #4f63d6;
+	--success:     #128a45;
+	--gradient-accent: linear-gradient(135deg, #0a7bff 0%, #2f66e6 50%, #4f63d6 100%);
+
 	--shadow-sm: 0 1px 2px rgba(31, 42, 51, 0.08);
 	--shadow:    0 8px 32px rgba(31, 42, 51, 0.10);
 	--shadow-lg: 0 24px 60px rgba(31, 42, 51, 0.14);
@@ -1051,6 +1056,10 @@ html.has-js .reveal:not(.is-visible) {
 	color: #34c77b;
 	background: rgba(52, 199, 123, 0.12);
 }
+html[data-theme="light"] .app-card-status.is-live {
+	color: #0f7d3e;
+	background: rgba(15, 125, 62, 0.12);
+}
 .app-card-status.is-soon {
 	color: var(--text-3);
 	background: rgba(255, 255, 255, 0.06);
@@ -1212,6 +1221,16 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .reten .gradient-text,
 .reten .brand-accent {
 	background: linear-gradient(135deg, #FFB020 0%, #FF6B5C 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
+/* Penumbra midnight → silver lilac "Moonlight" gradient override */
+.penumbra .gradient-text,
+.penumbra .brand-accent {
+	background: linear-gradient(135deg, #5B4E8E 0%, #B9A7E6 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1529,7 +1548,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .saqo-footer,
 .driza-footer,
 .aplomo-footer,
-.reten-footer { text-align: center; }
+.reten-footer,
+.penumbra-footer { text-align: center; }
 .acerinox-footer .container,
 .work-calendar-footer .container,
 .runout-footer .container,
@@ -1543,7 +1563,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .saqo-footer .container,
 .driza-footer .container,
 .aplomo-footer .container,
-.reten-footer .container {
+.reten-footer .container,
+.penumbra-footer .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

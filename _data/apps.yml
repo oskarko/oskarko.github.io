@@ -141,7 +141,7 @@ items:
     name: Penumbra
     icon: penumbra.png
     url: /penumbra/
-    status: soon
+    status: live
     accent: "#9A87D6"
     es_tagline: Caja fuerte cifrada para tus archivos
     en_tagline: Encrypted vault for your files

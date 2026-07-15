@@ -640,10 +640,10 @@ html.has-js .reveal:not(.is-visible) {
   color: #82d4ff;
 }
 
-/* Light mode: keep the code card on a dark "editor" surface so the
+/* Light mode: keep the code card on a medium-gray "editor" surface so the
    syntax-highlighted text stays legible against the light page. */
 html[data-theme=light] .code-card {
-  background: #14171F;
+  background: #3A4048;
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }

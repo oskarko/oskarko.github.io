@@ -1248,6 +1248,16 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	color: transparent;
 }
 
+/* Tomillo sage → deep forest "Serene sage" gradient override */
+.tomillo .gradient-text,
+.tomillo .brand-accent {
+	background: linear-gradient(135deg, #6B8E6B 0%, #2F4A38 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
 /* Hero (centered) */
 .dl-hero {
 	min-height: auto;
@@ -1560,7 +1570,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .driza-footer,
 .aplomo-footer,
 .reten-footer,
-.penumbra-footer { text-align: center; }
+.penumbra-footer,
+.tomillo-footer { text-align: center; }
 .acerinox-footer .container,
 .work-calendar-footer .container,
 .runout-footer .container,
@@ -1575,7 +1586,8 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .driza-footer .container,
 .aplomo-footer .container,
 .reten-footer .container,
-.penumbra-footer .container {
+.penumbra-footer .container,
+.tomillo-footer .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

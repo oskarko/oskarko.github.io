@@ -145,3 +145,12 @@ items:
     accent: "#9A87D6"
     es_tagline: Caja fuerte cifrada para tus archivos
     en_tagline: Encrypted vault for your files
+
+  - slug: tomillo
+    name: Tomillo
+    icon: tomillo.png
+    url: /tomillo/
+    status: live
+    accent: "#6B8E6B"
+    es_tagline: Calorías y macros, bonito y honesto
+    en_tagline: Calories & macros, beautiful and honest

@@ -1,0 +1,45 @@
+_data/apps.yml
+  s_98672f228bda21::t_96ee7d07696332 157-165
+_layouts/app.html
+  s_98672f228bda21::t_a6be7ec6f6bd45 43-44
+_site/assets/css/style.css
+  s_98672f228bda21::t_ebe3b567e5c56e 1474-1483,1863,1883
+_site/assets/css/style.css.map
+  s_98672f228bda21::t_5d81e05f3743a6 1
+_site/index.html
+  s_98672f228bda21::t_2771a5218fb4c3 426-433
+_site/remanso/index.html
+  s_98672f228bda21::t_a79e32b1d83872 1-209
+_site/remanso/privacy/index.html
+  s_98672f228bda21::t_06f0217e83de38 1-199
+_site/remanso/support/index.html
+  s_98672f228bda21::t_80265c2adf8365 1-141
+_site/remanso/terms/index.html
+  s_98672f228bda21::t_2eba77b65fb160 1-169
+assets/css/style.scss
+  s_98672f228bda21::t_66e8026c57b1d2 1261-1270,1584,1601
+remanso/index.html
+  s_98672f228bda21::t_bca94fd816e0ff 1-115
+remanso/privacy.html
+  s_98672f228bda21::t_526c97c8611acf 1-104
+remanso/support.html
+  s_98672f228bda21::t_9e01376ede68b3 1-44
+remanso/terms.html
+  s_98672f228bda21::t_c699fa08c0816d 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "17bce35795a44a68f206637fe8df0e5a587d5fa7",
+  "prompts": {},
+  "sessions": {
+    "s_98672f228bda21": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "ae63303a-f4e1-44ce-b19e-9c6bfeec884b",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Óscar R. Garrucho <oscar.garrucho@gmail.com>"
+    }
+  }
+}

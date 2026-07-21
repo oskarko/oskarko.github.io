@@ -154,3 +154,12 @@ items:
     accent: "#6B8E6B"
     es_tagline: Calorías y macros, bonito y honesto
     en_tagline: Calories & macros, beautiful and honest
+
+  - slug: remanso
+    name: Remanso
+    icon: remanso.png
+    url: /remanso/
+    status: live
+    accent: "#E2743A"
+    es_tagline: Relajación, sonidos y calma
+    en_tagline: Relaxation, sounds and calm

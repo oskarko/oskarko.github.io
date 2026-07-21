@@ -1258,6 +1258,16 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	color: transparent;
 }
 
+/* Remanso ember → coral "Ember dusk" gradient override */
+.remanso .gradient-text,
+.remanso .brand-accent {
+	background: linear-gradient(135deg, #E2743A 0%, #EC9778 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+}
+
 /* Hero (centered) */
 .dl-hero {
 	min-height: auto;
@@ -1571,6 +1581,7 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .aplomo-footer,
 .reten-footer,
 .penumbra-footer,
+.remanso-footer,
 .tomillo-footer { text-align: center; }
 .acerinox-footer .container,
 .work-calendar-footer .container,
@@ -1587,6 +1598,7 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 .aplomo-footer .container,
 .reten-footer .container,
 .penumbra-footer .container,
+.remanso-footer .container,
 .tomillo-footer .container {
 	display: flex;
 	flex-direction: column;

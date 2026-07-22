@@ -1,0 +1,45 @@
+_data/apps.yml
+  s_6f290ab4079876::t_ee6d852f764bff 166-174
+_layouts/app.html
+  s_6f290ab4079876::t_69d73b1031a0d2 45-46
+_site/assets/css/style.css
+  s_6f290ab4079876::t_66e97a115184c8 1434-1443,1874,1895
+_site/assets/css/style.css.map
+  s_6f290ab4079876::t_9fc30281717374 1
+_site/cofia/index.html
+  s_6f290ab4079876::t_e9c5020c100b32 1-194
+_site/cofia/privacy/index.html
+  s_6f290ab4079876::t_cf04846e6734b6 1-179
+_site/cofia/support/index.html
+  s_6f290ab4079876::t_f4d46ee46f34ec 1-136
+_site/cofia/terms/index.html
+  s_6f290ab4079876::t_494650d18806c0 1-181
+_site/index.html
+  s_6f290ab4079876::t_9bd37b8f1306ec 434-441
+assets/css/style.scss
+  s_6f290ab4079876::t_bec2409d77c474 1221-1230,1595,1613
+cofia/index.html
+  s_6f290ab4079876::t_a4a0c3c395aef8 1-99
+cofia/privacy.html
+  s_6f290ab4079876::t_fe8a07e5e0faf5 1-84
+cofia/support.html
+  s_6f290ab4079876::t_9dd4595c6f2178 1-41
+cofia/terms.html
+  s_6f290ab4079876::t_b10d58789b42e0 1-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "9b47a96f9bb8aea2f9ac6b27fa2c7c78ee1c458d",
+  "prompts": {},
+  "sessions": {
+    "s_6f290ab4079876": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "58f95c64-ecb7-4248-aeff-ecf09d99fb65",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Óscar R. Garrucho <oscar.garrucho@gmail.com>"
+    }
+  }
+}

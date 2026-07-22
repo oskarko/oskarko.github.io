@@ -163,3 +163,12 @@ items:
     accent: "#E2743A"
     es_tagline: Relajación, sonidos y calma
     en_tagline: Relaxation, sounds and calm
+
+  - slug: cofia
+    name: Cofia
+    icon: cofia.png
+    url: /cofia/
+    status: soon
+    accent: "#0E8A80"
+    es_tagline: Prepara tu oposición de TCAE
+    en_tagline: Prepare for your nursing-assistant exam

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a14">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="color-scheme" content="light dark">
+
+<script>
+	(function () {
+		try {
+			var t = localStorage.getItem("preferred-theme");
+			document.documentElement.setAttribute("data-theme", (t === "dark" || t === "light") ? t : "light");
+		} catch (e) {
+			document.documentElement.setAttribute("data-theme", "light");
+		}
+	})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Cofia — Prepara y aprueba tu oposición de TCAE | Óscar R. Garrucho</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Cofia — Prepara y aprueba tu oposición de TCAE" />
+<meta name="author" content="oskarko" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Cofia es el entrenador de exámenes para la oposición de Técnico en Cuidados Auxiliares de Enfermería (TCAE). Practica por temas, haz simulacros como el examen real y estudia la parte específica de las 17 comunidades autónomas. En tu dispositivo, sin cuenta y sin conexión. Para iPhone y iPad." />
+<meta property="og:description" content="Cofia es el entrenador de exámenes para la oposición de Técnico en Cuidados Auxiliares de Enfermería (TCAE). Practica por temas, haz simulacros como el examen real y estudia la parte específica de las 17 comunidades autónomas. En tu dispositivo, sin cuenta y sin conexión. Para iPhone y iPad." />
+<link rel="canonical" href="https://www.oscargarrucho.com/cofia/" />
+<meta property="og:url" content="https://www.oscargarrucho.com/cofia/" />
+<meta property="og:site_name" content="Óscar R. Garrucho" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cofia — Prepara y aprueba tu oposición de TCAE" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"oskarko"},"description":"Cofia es el entrenador de exámenes para la oposición de Técnico en Cuidados Auxiliares de Enfermería (TCAE). Practica por temas, haz simulacros como el examen real y estudia la parte específica de las 17 comunidades autónomas. En tu dispositivo, sin cuenta y sin conexión. Para iPhone y iPad.","headline":"Cofia — Prepara y aprueba tu oposición de TCAE","url":"https://www.oscargarrucho.com/cofia/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<script>document.documentElement.classList.add('has-js');</script>
+</head>
+<body class="page cofia" data-lang="es">
+	<div class="bg-aurora" aria-hidden="true">
+		<div class="aurora aurora-1"></div>
+		<div class="aurora aurora-2"></div>
+		<div class="aurora aurora-3"></div>
+	</div>
+
+	<nav class="navbar glass" aria-label="Cofia">
+		<div class="nav-inner">
+			<a class="nav-brand" href="/">
+				<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 3h4a1 1 0 0 1 1 1v5h5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-5v5a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-5H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h5V4a1 1 0 0 1 1-1z"/></svg></span>
+				<span class="brand-name">Cofia</span>
+			</a>
+
+			<ul class="nav-links" role="list">
+				<li><a href="/cofia/support/" data-es="Soporte" data-en="Support">Soporte</a></li>
+				<li><a href="/cofia/privacy/" data-es="Privacidad" data-en="Privacy">Privacidad</a></li>
+				<li><a href="/cofia/terms/" data-es="Términos" data-en="Terms">Términos</a></li>
+			</ul>
+
+			<div class="lang-switch" role="group" aria-label="Idioma / Language">
+				<button type="button" class="lang-btn is-active" data-set-lang="es" aria-label="Español">ES</button>
+				<span class="lang-divider" aria-hidden="true">/</span>
+				<button type="button" class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
+			</div><div class="theme-switch" role="group" aria-label="Tema / Theme">
+	<button type="button" class="theme-btn" data-set-theme="light" aria-label="Modo claro / Light mode" aria-pressed="true">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+	</button>
+	<button type="button" class="theme-btn" data-set-theme="dark" aria-label="Modo oscuro / Dark mode" aria-pressed="false">
+		<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z"/></svg>
+	</button>
+</div>
+</div>
+	</nav>
+
+	<main class="page-main">
+		<section class="hero dl-hero">
+	<div class="container">
+		<div class="dl-hero-text reveal">
+			<span class="status-pill glass">
+				<span class="status-dot" aria-hidden="true"></span>
+				<span data-es="Próximamente para iPhone y iPad" data-en="Coming soon for iPhone and iPad">Próximamente para iPhone y iPad</span>
+			</span>
+
+			<h1 class="hero-name dl-title"><span class="gradient-text">Cofia</span></h1>
+
+			<p class="dl-tagline" data-es="Aprueba tu oposición de TCAE." data-en="Pass your nursing-assistant exam.">Aprueba tu oposición de TCAE.</p>
+
+			<p class="dl-lead" data-es="Cofia es el entrenador de exámenes para la oposición de Técnico en Cuidados Auxiliares de Enfermería. Practica por temas, haz simulacros como el examen oficial y domina la parte específica de tu comunidad autónoma, con cada respuesta explicada y apoyada en la normativa. Todo en tu dispositivo, sin cuenta y sin conexión." data-en="Cofia is the exam trainer for the Spanish nursing-assistant (TCAE) public exam. Practice by topic, take mock exams just like the official one and master the specific part of your autonomous community, with every answer explained and backed by the regulations. All on your device, no account and offline.">Cofia es el entrenador de exámenes para la oposición de Técnico en Cuidados Auxiliares de Enfermería. Practica por temas, haz simulacros como el examen oficial y domina la parte específica de tu comunidad autónoma, con cada respuesta explicada y apoyada en la normativa. Todo en tu dispositivo, sin cuenta y sin conexión.</p>
+
+			<div class="dl-ctas">
+				<span class="appstore-badge appstore-badge--soon" aria-label="Muy pronto en el App Store">
+					<svg class="appstore-logo" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+					<span class="appstore-text">
+						<span class="appstore-small" data-es="Muy pronto en el" data-en="Coming soon to the">Muy pronto en el</span>
+						<span class="appstore-big">App Store</span>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section dl-section" id="features">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">01</span>
+			<h2 class="section-title" data-es="Llega al examen con todo estudiado" data-en="Reach the exam fully prepared">Llega al examen con todo estudiado</h2>
+			<p class="section-subtitle" data-es="Practica, simula y repasa hasta que aprobar sea cuestión de tiempo." data-en="Practice, simulate and review until passing is just a matter of time.">Practica, simula y repasa hasta que aprobar sea cuestión de tiempo.</p>
+		</header>
+
+		<ul class="dl-features" role="list">
+			<li class="dl-feature glass reveal">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
+				</span>
+				<strong data-es="Simulacros tipo examen" data-en="Mock exams like the real thing">Simulacros tipo examen</strong>
+				<span data-es="Exámenes con preguntas tipo test, cronómetro, corrección al instante y tu nota final, con el mismo formato que la oposición oficial." data-en="Multiple-choice exams with a timer, instant marking and your final score, in the same format as the official exam.">Exámenes con preguntas tipo test, cronómetro, corrección al instante y tu nota final, con el mismo formato que la oposición oficial.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 70ms">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+				</span>
+				<strong data-es="Práctica por temas" data-en="Practice by topic">Práctica por temas</strong>
+				<span data-es="Repasa la parte común, la específica del auxiliar de enfermería y la autonómica a tu ritmo y en el orden que quieras." data-en="Review the common part, the nursing-assistant specific part and the regional part at your own pace and in any order.">Repasa la parte común, la específica del auxiliar de enfermería y la autonómica a tu ritmo y en el orden que quieras.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 140ms">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+				</span>
+				<strong data-es="Las 17 comunidades autónomas" data-en="All 17 autonomous communities">Las 17 comunidades autónomas</strong>
+				<span data-es="Estudia la parte específica de tu comunidad: servicio de salud, ley de ordenación sanitaria y estatuto de autonomía, de Andalucía al País Vasco." data-en="Study the specific part of your community: health service, health-organisation law and statute of autonomy, from Andalusia to the Basque Country.">Estudia la parte específica de tu comunidad: servicio de salud, ley de ordenación sanitaria y estatuto de autonomía, de Andalucía al País Vasco.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 210ms">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 3 3 8 8 8"/><path d="M12 7v5l3 2"/></svg>
+				</span>
+				<strong data-es="Preguntas y respuestas aleatorias" data-en="Randomised questions and answers">Preguntas y respuestas aleatorias</strong>
+				<span data-es="Cada sesión baraja las preguntas y también el orden de las respuestas, para que estudies de verdad y no memorices la posición." data-en="Every session shuffles both the questions and the order of the answers, so you actually learn instead of memorising the position.">Cada sesión baraja las preguntas y también el orden de las respuestas, para que estudies de verdad y no memorices la posición.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 280ms">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+				</span>
+				<strong data-es="Explicaciones con la norma" data-en="Explanations backed by the rules">Explicaciones con la norma</strong>
+				<span data-es="Cada respuesta viene explicada y apoyada en la ley y el artículo correspondiente. Entiendes el porqué, no memorizas." data-en="Every answer is explained and backed by the relevant law and article. You understand the why, you don't just memorize.">Cada respuesta viene explicada y apoyada en la ley y el artículo correspondiente. Entiendes el porqué, no memorizas.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 350ms">
+				<span class="dl-feature-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9.5 12l2 2 3.5-4"/></svg>
+				</span>
+				<strong data-es="Sin cuenta y sin conexión" data-en="No account, offline">Sin cuenta y sin conexión</strong>
+				<span data-es="Todo funciona en tu dispositivo, sin registro y sin conexión. La parte común es gratuita; la específica y la autonómica, con la versión completa." data-en="Everything runs on your device, with no sign-up and offline. The common part is free; the specific and regional parts come with the full version.">Todo funciona en tu dispositivo, sin registro y sin conexión. La parte común es gratuita; la específica y la autonómica, con la versión completa.</span>
+			</li>
+		</ul>
+	</div>
+</section>
+
+	</main>
+
+	<footer class="site-footer cofia-footer">
+		<div class="container">
+			<ul class="footer-links" role="list">
+				<li><a href="/cofia/" data-es="Inicio" data-en="Home">Inicio</a></li>
+				<li><a href="/cofia/support/" data-es="Soporte" data-en="Support">Soporte</a></li>
+				<li><a href="/cofia/privacy/" data-es="Privacidad" data-en="Privacy">Privacidad</a></li>
+				<li><a href="/cofia/terms/" data-es="Términos" data-en="Terms">Términos</a></li>
+				<li><a href="/">oscargarrucho.com</a></li>
+			</ul>
+
+			<p class="footer-disclaimer" data-es="Cofia es una app de estudio independiente. No está afiliada al Sistema Nacional de Salud, a ningún servicio autonómico de salud ni a ningún organismo oficial." data-en="Cofia is an independent study app. It is not affiliated with the Spanish National Health System, any regional health service, or any official body.">Cofia es una app de estudio independiente. No está afiliada al Sistema Nacional de Salud, a ningún servicio autonómico de salud ni a ningún organismo oficial.</p>
+
+			<p class="copyright">© 2026 Óscar R. Garrucho · Cofia</p>
+		</div>
+	</footer>
+
+	<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1431,6 +1431,16 @@ body[data-lang=en] [data-lang-block=es] {
   color: transparent;
 }
 
+/* Cofia teal → care-rose gradient override */
+.cofia .gradient-text,
+.cofia .brand-accent {
+  background: linear-gradient(135deg, #0E8A80 0%, #E86A85 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* Aplomo deep green → mint gradient override */
 .aplomo .gradient-text,
 .aplomo .brand-accent {
@@ -1861,6 +1871,7 @@ body[data-lang=en] [data-lang-block=es] {
 .reten-footer,
 .penumbra-footer,
 .remanso-footer,
+.cofia-footer,
 .tomillo-footer {
   text-align: center;
 }
@@ -1881,6 +1892,7 @@ body[data-lang=en] [data-lang-block=es] {
 .reten-footer .container,
 .penumbra-footer .container,
 .remanso-footer .container,
+.cofia-footer .container,
 .tomillo-footer .container {
   display: flex;
   flex-direction: column;

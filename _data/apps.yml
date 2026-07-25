@@ -172,3 +172,12 @@ items:
     accent: "#0E8A80"
     es_tagline: Prepara tu oposición de TCAE
     en_tagline: Prepare for your nursing-assistant exam
+
+  - slug: fanal
+    name: Fanal
+    icon: fanal.png
+    url: /fanal/
+    status: soon
+    accent: "#C6853B"
+    es_tagline: Prepara tu oposición de celador
+    en_tagline: Prepare for your hospital-porter exam

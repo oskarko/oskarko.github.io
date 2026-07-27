@@ -74,6 +74,15 @@ items:
     es_tagline: Escáner de gastos para autónomos
     en_tagline: Expense scanner for freelancers
 
+  - slug: guarismo
+    name: Guarismo
+    icon: guarismo.png
+    url: /guarismo/
+    status: soon
+    accent: "#27408B"
+    es_tagline: Tickets y facturas con IA
+    en_tagline: Receipts & invoices with AI
+
   - slug: driza
     name: Driza
     icon: driza.png

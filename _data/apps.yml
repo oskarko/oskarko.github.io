@@ -74,15 +74,6 @@ items:
     es_tagline: Escáner de gastos para autónomos
     en_tagline: Expense scanner for freelancers
 
-  - slug: guarismo
-    name: Guarismo
-    icon: guarismo.png
-    url: /guarismo/
-    status: soon
-    accent: "#27408B"
-    es_tagline: Tickets y facturas con IA
-    en_tagline: Receipts & invoices with AI
-
   - slug: driza
     name: Driza
     icon: driza.png
@@ -177,7 +168,7 @@ items:
     name: Cofia
     icon: cofia.png
     url: /cofia/
-    status: soon
+    status: live
     accent: "#0E8A80"
     es_tagline: Prepara tu oposición de TCAE
     en_tagline: Prepare for your nursing-assistant exam
@@ -186,7 +177,16 @@ items:
     name: Fanal
     icon: fanal.png
     url: /fanal/
-    status: soon
+    status: live
     accent: "#C6853B"
     es_tagline: Prepara tu oposición de celador
     en_tagline: Prepare for your hospital-porter exam
+
+  - slug: guarismo
+    name: Guarismo
+    icon: guarismo.png
+    url: /guarismo/
+    status: live
+    accent: "#27408B"
+    es_tagline: Tickets y facturas con IA
+    en_tagline: Receipts & invoices with AI

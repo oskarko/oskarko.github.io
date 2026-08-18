@@ -190,3 +190,12 @@ items:
     accent: "#27408B"
     es_tagline: Tickets y facturas con IA
     en_tagline: Receipts & invoices with AI
+
+  - slug: bisagra
+    name: Bisagra
+    icon: bisagra.png
+    url: /bisagra/
+    status: soon
+    accent: "#3D5A80"
+    es_tagline: Custodia compartida sin discusiones
+    en_tagline: Co-parenting without arguments

@@ -195,7 +195,7 @@ items:
     name: Bisagra
     icon: bisagra.png
     url: /bisagra/
-    status: soon
+    status: live
     accent: "#3D5A80"
     es_tagline: Custodia compartida sin discusiones
     en_tagline: Co-parenting without arguments

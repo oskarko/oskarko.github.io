@@ -208,3 +208,12 @@ items:
     accent: "#4E9AA8"
     es_tagline: La menopausia, en un patrón claro
     en_tagline: Menopause, as a clear pattern
+
+  - slug: welcomebaby
+    name: Welcome Baby
+    icon: welcomebaby.png
+    url: /welcomebaby/
+    status: soon
+    accent: "#E8A33D"
+    es_tagline: Tomas, sueño y pañales con una mano
+    en_tagline: Feeds, sleep and nappies, one-handed

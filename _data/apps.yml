@@ -199,3 +199,12 @@ items:
     accent: "#3D5A80"
     es_tagline: Custodia compartida sin discusiones
     en_tagline: Co-parenting without arguments
+
+  - slug: cefiro
+    name: Céfiro
+    icon: cefiro.png
+    url: /cefiro/
+    status: soon
+    accent: "#4E9AA8"
+    es_tagline: La menopausia, en un patrón claro
+    en_tagline: Menopause, as a clear pattern

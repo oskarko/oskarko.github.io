@@ -217,3 +217,12 @@ items:
     accent: "#E8A33D"
     es_tagline: Tomas, sueño y pañales con una mano
     en_tagline: Feeds, sleep and nappies, one-handed
+
+  - slug: multacero
+    name: Multa Cero
+    icon: multacero.png
+    url: /multacero/
+    status: soon
+    accent: "#2563EB"
+    es_tagline: Recurre tu multa con argumentos
+    en_tagline: Appeal your traffic fine with arguments

@@ -226,3 +226,12 @@ items:
     accent: "#2563EB"
     es_tagline: Recurre tu multa con argumentos
     en_tagline: Appeal your traffic fine with arguments
+
+  - slug: tidoria
+    name: Tidoria
+    icon: tidoria.png
+    url: /tidoria/
+    status: soon
+    accent: "#C9A27A"
+    es_tagline: Ordenar estanterías, en calma
+    en_tagline: Sorting shelves, calmly

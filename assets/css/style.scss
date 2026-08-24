@@ -1561,6 +1561,13 @@ body[data-lang="en"] [data-lang-block="es"] { display: none; }
 	color: var(--success);
 }
 
+/* FAQ block under the support grid (Tidoria). Reuses .dl-legal-body for the prose. */
+.dl-faq { margin-top: 28px; }
+.dl-faq h3 {
+	margin: 1.6em 0 0.4em;
+	font-size: 17px;
+}
+
 @media (max-width: 720px) {
 	.dl-support-grid { grid-template-columns: 1fr; }
 }

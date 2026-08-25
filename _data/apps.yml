@@ -253,3 +253,12 @@ items:
     accent: "#3B49C4"
     es_tagline: El archivo de tu familia, con fechas
     en_tagline: Your family's archive, with dates
+
+  - slug: rentero
+    name: Rentero
+    icon: rentero.png
+    url: /rentero/
+    status: soon
+    accent: "#149379"
+    es_tagline: Tus alquileres, bajo control
+    en_tagline: Your rentals, under control

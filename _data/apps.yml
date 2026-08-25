@@ -235,3 +235,12 @@ items:
     accent: "#C9A27A"
     es_tagline: Ordenar estanterías, en calma
     en_tagline: Sorting shelves, calmly
+
+  - slug: familyadmin
+    name: Family Admin
+    icon: familyadmin.png
+    url: /familyadmin/
+    status: soon
+    accent: "#3B49C4"
+    es_tagline: El archivo de tu familia, con fechas
+    en_tagline: Your family's archive, with dates

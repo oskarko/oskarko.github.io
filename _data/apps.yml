@@ -262,3 +262,12 @@ items:
     accent: "#149379"
     es_tagline: Tus alquileres, bajo control
     en_tagline: Your rentals, under control
+
+  - slug: cubora
+    name: Cubora
+    icon: cubora.png
+    url: /cubora/
+    status: soon
+    accent: "#5A4FE0"
+    es_tagline: Resuelve y domina el cubo
+    en_tagline: Solve and master the cube

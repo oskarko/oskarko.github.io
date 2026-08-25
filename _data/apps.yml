@@ -173,6 +173,15 @@ items:
     es_tagline: Prepara tu oposición de TCAE
     en_tagline: Prepare for your nursing-assistant exam
 
+  - slug: fonendo
+    name: Fonendo
+    icon: fonendo.png
+    url: /fonendo/
+    status: soon
+    accent: "#2E7CE4"
+    es_tagline: Prepara tu examen MIR
+    en_tagline: Prepare for your MIR medical exam
+
   - slug: fanal
     name: Fanal
     icon: fanal.png

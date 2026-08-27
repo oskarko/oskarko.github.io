@@ -271,3 +271,12 @@ items:
     accent: "#5A4FE0"
     es_tagline: Resuelve y domina el cubo
     en_tagline: Solve and master the cube
+
+  - slug: loomora
+    name: Loomora
+    icon: loomora.png
+    url: /loomora/
+    status: soon
+    accent: "#C06B4E"
+    es_tagline: Borda. Respira. Disfruta.
+    en_tagline: Stitch. Breathe. Enjoy.

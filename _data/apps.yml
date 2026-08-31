@@ -280,3 +280,12 @@ items:
     accent: "#C06B4E"
     es_tagline: Borda. Respira. Disfruta.
     en_tagline: Stitch. Breathe. Enjoy.
+
+  - slug: blokora
+    name: Blokora
+    icon: blokora.png
+    url: /blokora/
+    status: soon
+    accent: "#7C5CFF"
+    es_tagline: Suelta. Gira. Revienta.
+    en_tagline: Drop. Rotate. Clear.

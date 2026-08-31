@@ -289,3 +289,12 @@ items:
     accent: "#7C5CFF"
     es_tagline: Suelta. Gira. Revienta.
     en_tagline: Drop. Rotate. Clear.
+
+  - slug: triora
+    name: Triora
+    icon: triora.png
+    url: /triora/
+    status: soon
+    accent: "#E8934A"
+    es_tagline: Empareja tres. Vacía el montón.
+    en_tagline: Match three. Clear the pile.

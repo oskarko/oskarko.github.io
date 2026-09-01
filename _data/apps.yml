@@ -298,3 +298,12 @@ items:
     accent: "#E8934A"
     es_tagline: Empareja tres. Vacía el montón.
     en_tagline: Match three. Clear the pile.
+
+  - slug: cromora
+    name: Cromora
+    icon: cromora.png
+    url: /cromora/
+    status: soon
+    accent: "#FF9A2E"
+    es_tagline: Mezcla colores. Sirve el pedido.
+    en_tagline: Mix colours. Fill the order.

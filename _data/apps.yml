@@ -318,8 +318,9 @@ items:
 
   - slug: lumaten
     name: LumaTen
+    icon: lumaten.png
     url: /lumaten/
     status: soon
-    accent: "#FFB84D"
-    es_tagline: Combina. Encadena. Brilla.
-    en_tagline: Match. Chain. Glow.
+    accent: "#FF6B6B"
+    es_tagline: Empareja iguales. O suma diez.
+    en_tagline: Match equals. Or make ten.

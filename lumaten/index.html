@@ -2,10 +2,11 @@
 layout: app
 slug: lumaten
 app_name: LumaTen
-app_symbol: bolt
+app_icon: /assets/img/apps/lumaten.png
+app_symbol: addten
 permalink: /lumaten/
-title: "LumaTen — Combina. Encadena. Brilla."
-description: "LumaTen es un juego de parejas numéricas: combina números iguales o que suman diez, encadena combos y completa 600 niveles."
+title: "LumaTen — Empareja iguales o suma diez"
+description: "LumaTen es un puzle de números: empareja dos fichas iguales, o dos que sumen diez, y vacía el tablero. 600 niveles con solución demostrada, reto diario, evento semanal y sin reloj salvo que lo pidas."
 disclaimer_es: "LumaTen es un juego independiente. No está afiliado a ninguna marca ni editorial de videojuegos."
 disclaimer_en: "LumaTen is an independent game. It is not affiliated with any games brand or publisher."
 ---
@@ -13,10 +14,16 @@ disclaimer_en: "LumaTen is an independent game. It is not affiliated with any ga
 <section class="hero dl-hero">
 	<div class="container">
 		<div class="dl-hero-text reveal">
-			<span class="status-pill glass"><span class="status-dot" aria-hidden="true"></span><span data-es="iPhone · sin cuenta · gratis" data-en="iPhone · no account · free">iPhone · sin cuenta · gratis</span></span>
+			<span class="status-pill glass">
+				<span class="status-dot" aria-hidden="true"></span>
+				<span data-es="iPhone · sin cuenta · gratis" data-en="iPhone · no account · free">iPhone · sin cuenta · gratis</span>
+			</span>
+
 			<h1 class="hero-name dl-title"><span class="gradient-text">LumaTen</span></h1>
-			<p class="dl-tagline" data-es="Combina. Encadena. Brilla." data-en="Match. Chain. Glow.">Combina. Encadena. Brilla.</p>
-			<p class="dl-lead" data-es="LumaTen convierte una regla sencilla en una cadena difícil de soltar: toca dos números iguales o dos números que sumen 10, limpia el tablero y conserva el combo." data-en="LumaTen turns one simple rule into a chain you want to keep: tap two equal numbers or two numbers that add up to 10, clear the board and keep your combo alive.">LumaTen convierte una regla sencilla en una cadena difícil de soltar: toca dos números iguales o dos números que sumen 10, limpia el tablero y conserva el combo.</p>
+
+			<p class="dl-tagline" data-es="Empareja iguales. O suma diez." data-en="Match equals. Or make ten.">Empareja iguales. O suma diez.</p>
+
+			<p class="dl-lead" data-es="El tablero es una rejilla de fichas numeradas. Tocas una, tocas otra, y si las dos son el mismo número —4 y 4— o si suman diez —1 y 9, 2 y 8, 3 y 7, 4 y 6, 5 y 5— la pareja se limpia. Para que se vean, las dos fichas tienen que estar seguidas en la misma fila, columna o diagonal, contando solo las casillas ya vacías entre ellas; y el final de una fila conecta con el principio de la siguiente, así que el tablero entero se lee como una única línea larga. Cuando limpias una fila completa, desaparece y se cierra el hueco. Y si te quedas sin jugadas, el nivel trae una fila de reserva: mientras te quede reserva, la partida sigue." data-en="The board is a grid of numbered tiles. Tap one, tap another, and if the two are the same number — 4 and 4 — or if they add up to ten — 1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5 — the pair clears. For two tiles to see each other they have to be consecutive along a row, a column or a diagonal, counting only the already-empty squares between them; and the end of one row connects to the start of the next, so the whole board reads as one long line. Clear a full row and it disappears, closing the gap. And when you run out of moves, the level brings in a reserve row: as long as reserve is left, the game goes on.">El tablero es una rejilla de fichas numeradas. Tocas una, tocas otra, y si las dos son el mismo número —4 y 4— o si suman diez —1 y 9, 2 y 8, 3 y 7, 4 y 6, 5 y 5— la pareja se limpia. Para que se vean, las dos fichas tienen que estar seguidas en la misma fila, columna o diagonal, contando solo las casillas ya vacías entre ellas; y el final de una fila conecta con el principio de la siguiente, así que el tablero entero se lee como una única línea larga. Cuando limpias una fila completa, desaparece y se cierra el hueco. Y si te quedas sin jugadas, el nivel trae una fila de reserva: mientras te quede reserva, la partida sigue.</p>
 		</div>
 	</div>
 </section>
@@ -25,16 +32,71 @@ disclaimer_en: "LumaTen is an independent game. It is not affiliated with any ga
 	<div class="container">
 		<header class="section-head reveal">
 			<span class="section-eyebrow">01</span>
-			<h2 class="section-title" data-es="Fácil de aprender, difícil de optimizar" data-en="Easy to learn, hard to optimise">Fácil de aprender, difícil de optimizar</h2>
-			<p class="section-subtitle" data-es="No hay cronómetro en la campaña. La tensión está en elegir la pareja correcta, conservar la cadena y decidir cuándo añadir una fila de reserva." data-en="There is no campaign timer. The tension comes from choosing the right pair, keeping the chain alive and deciding when to add a reserve row.">No hay cronómetro en la campaña. La tensión está en elegir la pareja correcta, conservar la cadena y decidir cuándo añadir una fila de reserva.</p>
+			<h2 class="section-title" data-es="Ningún nivel es imposible, y no es una promesa" data-en="No level is impossible, and that is not a promise">Ningún nivel es imposible, y no es una promesa</h2>
+			<p class="section-subtitle" data-es="Los 600 tableros no se buscan con un solucionador: se construyen jugando una partida terminada del revés. Cada paso de la generación es el inverso exacto de una jugada legal, así que el tablero nace con una solución completa ya conocida —y esa solución vacía el tablero sin gastar ni una fila de reserva—. Si pierdes, ha sido el orden que elegiste, nunca el reparto." data-en="The 600 boards are not found with a solver: they are built by playing a finished game backwards. Every step of the generation is the exact inverse of a legal move, so a board is born with a full solution already known — and that solution empties it without spending a single reserve row. If you lose, it was the order you chose, never the deal.">Los 600 tableros no se buscan con un solucionador: se construyen jugando una partida terminada del revés. Cada paso de la generación es el inverso exacto de una jugada legal, así que el tablero nace con una solución completa ya conocida —y esa solución vacía el tablero sin gastar ni una fila de reserva—. Si pierdes, ha sido el orden que elegiste, nunca el reparto.</p>
 		</header>
+
 		<ul class="dl-features" role="list">
-			<li class="dl-feature glass reveal"><strong data-es="Dos formas de hacer diez" data-en="Two ways to make ten">Dos formas de hacer diez</strong><span data-es="Combina parejas iguales como 4 + 4 o parejas que completen diez como 3 + 7. Las fichas se pueden conectar en horizontal, vertical o diagonal si no hay nada en medio." data-en="Match equal pairs such as 4 + 4 or pairs that make ten such as 3 + 7. Tiles can connect horizontally, vertically or diagonally when nothing sits between them.">Combina parejas iguales como 4 + 4 o parejas que completen diez como 3 + 7. Las fichas se pueden conectar en horizontal, vertical o diagonal si no hay nada en medio.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 70ms"><strong data-es="600 niveles con progresión" data-en="600 levels with progression">600 niveles con progresión</strong><span data-es="24 mundos de 25 niveles, estrellas por precisión, recompensas y reglas de color que cambian el ritmo sin convertirlo en un examen." data-en="24 worlds of 25 levels, stars for precision, rewards and colour rules that change the rhythm without turning it into a test.">24 mundos de 25 niveles, estrellas por precisión, recompensas y reglas de color que cambian el ritmo sin convertirlo en un examen.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 140ms"><strong data-es="Cuatro ayudas, ninguna obligatoria" data-en="Four helpers, none required">Cuatro ayudas, ninguna obligatoria</strong><span data-es="Pista, deshacer, barajar y prisma te ayudan a salir de un apuro. Se consiguen jugando y cada una tiene un uso claro." data-en="Hint, undo, shuffle and prism help you out of a tight spot. You earn them by playing and each has a clear purpose.">Pista, deshacer, barajar y prisma te ayudan a salir de un apuro. Se consiguen jugando y cada una tiene un uso claro.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 210ms"><strong data-es="Tres ritmos de partida" data-en="Three ways to play">Tres ritmos de partida</strong><span data-es="Campaña sin prisa, modo sin fin para perseguir tu récord y contrarreloj opcional de 60 segundos." data-en="A calm campaign, endless mode for your personal record and an optional 60-second time attack.">Campaña sin prisa, modo sin fin para perseguir tu récord y contrarreloj opcional de 60 segundos.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 280ms"><strong data-es="Reto diario y semanal" data-en="Daily and weekly challenges">Reto diario y semanal</strong><span data-es="Cada día y cada semana tienen una semilla común. Vuelve, mejora tu cadena y compara tus mejores resultados localmente." data-en="Every day and every week have a shared seed. Come back, improve your chain and compare your best local results.">Cada día y cada semana tienen una semilla común. Vuelve, mejora tu cadena y compara tus mejores resultados localmente.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 350ms"><strong data-es="Claro y accesible" data-en="Clear and accessible">Claro y accesible</strong><span data-es="Números grandes, contraste alto, iconos que no dependen solo del color y progreso que funciona sin conexión." data-en="Large numbers, high contrast, icons that do not rely on colour alone and progress that works offline.">Números grandes, contraste alto, iconos que no dependen solo del color y progreso que funciona sin conexión.</span></li>
+			<li class="dl-feature glass reveal">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="7" width="7" height="10" rx="1.6"/><rect x="15" y="7" width="7" height="10" rx="1.6"/><path d="M12 10.4v3.2M10.4 12h3.2"/></svg></span>
+				<strong data-es="Dos reglas, y ya sabes jugar" data-en="Two rules, and you can play">Dos reglas, y ya sabes jugar</strong>
+				<span data-es="Iguales o suman diez. No hay más. Todo lo que hace difícil un tablero sale de esas dos reglas y del orden en que decides usarlas: cada pareja que limpias cambia lo que se ve con lo que, y una jugada obvia ahora puede dejar sin salida a la de después." data-en="Equal, or they make ten. That is all of it. Everything that makes a board hard comes out of those two rules and the order you choose to apply them: every pair you clear changes what can see what, and an obvious move now can leave the next one with nowhere to go.">Iguales o suman diez. No hay más. Todo lo que hace difícil un tablero sale de esas dos reglas y del orden en que decides usarlas: cada pareja que limpias cambia lo que se ve con lo que, y una jugada obvia ahora puede dejar sin salida a la de después.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 70ms">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3.2l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.4 9.5l6-.8z"/></svg></span>
+				<strong data-es="Las estrellas se ganan no pidiendo ayuda" data-en="Stars are earned by not asking for help">Las estrellas se ganan no pidiendo ayuda</strong>
+				<span data-es="Cada nivel trae un número fijo de filas de reserva, y la puntuación depende de cuántas gastas: ninguna es la máxima, y cada fila que añades baja el resultado. La reserva es lo que evita que un tablero se atasque, no una moneda que se compra: no hay forma de conseguir más filas de las que trae el nivel." data-en="Every level carries a fixed number of reserve rows, and the score depends on how many you spend: none is the top mark, and each row you add brings it down. Reserve is what stops a board from dead-ending, not a currency you buy: there is no way to get more rows than the level ships with.">Cada nivel trae un número fijo de filas de reserva, y la puntuación depende de cuántas gastas: ninguna es la máxima, y cada fila que añades baja el resultado. La reserva es lo que evita que un tablero se atasque, no una moneda que se compra: no hay forma de conseguir más filas de las que trae el nivel.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 140ms">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3.2v3.4M16 3.2v3.4"/></svg></span>
+				<strong data-es="Reto diario y evento semanal" data-en="Daily challenge and weekly event">Reto diario y evento semanal</strong>
+				<span data-es="Un tablero al día y otro a la semana, generados a partir de la fecha: exactamente los mismos para todos los jugadores del mundo, sin servidor que los reparta. El diario lleva racha, y en los dos solo cuenta tu mejor resultado, así que puedes reintentarlos las veces que quieras." data-en="One board a day and another a week, generated from the date: exactly the same for every player in the world, with no server handing them out. The daily one keeps a streak, and in both only your best result counts, so you can retry as often as you like.">Un tablero al día y otro a la semana, generados a partir de la fecha: exactamente los mismos para todos los jugadores del mundo, sin servidor que los reparta. El diario lleva racha, y en los dos solo cuenta tu mejor resultado, así que puedes reintentarlos las veces que quieras.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 210ms">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.3V12l3.2 2"/></svg></span>
+				<strong data-es="El reloj solo aparece si lo llamas" data-en="The clock only shows up if you call it">El reloj solo aparece si lo llamas</strong>
+				<span data-es="La campaña no te cronometra: puedes dejar un tablero a medias y volver mañana. Si lo que quieres es la tensión, el contrarreloj son 90 segundos aparte, con su propio récord; y el modo sin fin es un tablero que no se acaba, para cuando lo que apetece es puntuación y no niveles." data-en="The campaign never times you: you can leave a board half done and come back tomorrow. If what you want is the pressure, the timed mode is 90 separate seconds with its own record; and endless is a board that does not end, for when what you feel like is a score rather than levels.">La campaña no te cronometra: puedes dejar un tablero a medias y volver mañana. Si lo que quieres es la tensión, el contrarreloj son 90 segundos aparte, con su propio récord; y el modo sin fin es un tablero que no se acaba, para cuando lo que apetece es puntuación y no niveles.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 280ms">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M4 12h4l2.5-6 3 12 2.5-6h4"/></svg></span>
+				<strong data-es="Cuatro potenciadores, ni uno obligatorio" data-en="Four boosters, not one of them required">Cuatro potenciadores, ni uno obligatorio</strong>
+				<span data-es="Pista señala una pareja legal, Deshacer devuelve la última, Barajar reordena lo que queda y Prisma limpia una pareja por ti. Se pagan con monedas, y las monedas se ganan jugando: los 600 niveles son superables sin gastar ninguno, porque la pista sale de la solución que el nivel ya traía." data-en="Hint points at a legal pair, Undo gives the last one back, Shuffle reorders what is left and Prism clears a pair for you. They are paid for with coins, and coins are earned by playing: all 600 levels can be cleared without spending one, because the hint comes from the solution the level already had.">Pista señala una pareja legal, Deshacer devuelve la última, Barajar reordena lo que queda y Prisma limpia una pareja por ti. Se pagan con monedas, y las monedas se ganan jugando: los 600 niveles son superables sin gastar ninguno, porque la pista sale de la solución que el nivel ya traía.</span>
+			</li>
+
+			<li class="dl-feature glass reveal" style="--delay: 350ms">
+				<span class="dl-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3.5l7 3.2v5.1c0 4.2-2.9 7.3-7 8.7-4.1-1.4-7-4.5-7-8.7V6.7z"/></svg></span>
+				<strong data-es="Funciona sin conexión" data-en="Plays offline">Funciona sin conexión</strong>
+				<span data-es="Todo el juego funciona sin internet menos la clasificación del reto diario y del evento semanal. No hay cuenta, ni registro, ni nombre: tu progreso vive en tu móvil y en ningún otro sitio." data-en="The whole game works with no internet at all except the daily and weekly leaderboards. There is no account, no sign-up and no name: your progress lives on your phone and nowhere else.">Todo el juego funciona sin internet menos la clasificación del reto diario y del evento semanal. No hay cuenta, ni registro, ni nombre: tu progreso vive en tu móvil y en ningún otro sitio.</span>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="section dl-section" id="accessibility">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">02</span>
+			<h2 class="section-title" data-es="El número es la pista, no el color" data-en="The number is the clue, not the colour">El número es la pista, no el color</h2>
+			<p class="section-subtitle" data-es="Las fichas van de seis colores, pero el color aquí no informa de nada: lo que decide si dos fichas hacen pareja es el número escrito encima, y ese número está siempre. Un jugador que no distinga ninguno de los seis tonos juega exactamente el mismo juego." data-en="Tiles come in six colours, but colour here carries no information: what decides whether two tiles make a pair is the number written on them, and the number is always there. A player who cannot tell any of the six hues apart plays exactly the same game.">Las fichas van de seis colores, pero el color aquí no informa de nada: lo que decide si dos fichas hacen pareja es el número escrito encima, y ese número está siempre. Un jugador que no distinga ninguno de los seis tonos juega exactamente el mismo juego.</p>
+		</header>
+
+		<ul class="dl-features" role="list">
+			<li class="dl-feature glass reveal">
+				<strong data-es="VoiceOver lee el tablero entero" data-en="VoiceOver reads the whole board">VoiceOver lee el tablero entero</strong>
+				<span data-es="Cada ficha se lee por su número, su fila y su columna, y cada casilla vacía se dice vacía, que es la mitad de la información: sin saber qué hay en medio no se sabe si dos fichas se ven. La selección se anuncia al tocar, así que se puede encadenar una pareja sin verla." data-en="Every tile is read out by its number, its row and its column, and every empty square says that it is empty, which is half the information: without knowing what sits in between you cannot tell whether two tiles can see each other. The selection is announced on tap, so a pair can be made without seeing it.">Cada ficha se lee por su número, su fila y su columna, y cada casilla vacía se dice vacía, que es la mitad de la información: sin saber qué hay en medio no se sabe si dos fichas se ven. La selección se anuncia al tocar, así que se puede encadenar una pareja sin verla.</span>
+			</li>
+			<li class="dl-feature glass reveal" style="--delay: 70ms">
+				<strong data-es="Números grandes en los cinco temas" data-en="Large numbers on all five themes">Números grandes en los cinco temas</strong>
+				<span data-es="Los cinco temas se dibujan con la misma tinta oscura sobre fichas claras, y el contraste se mide, no se estima. Cambiar de tema cambia el fondo y los seis colores de ficha: nunca el tamaño del número ni su legibilidad." data-en="All five themes draw the same dark ink on light tiles, and the contrast is measured rather than eyeballed. Switching theme changes the background and the six tile colours: never the size of the number or how readable it is.">Los cinco temas se dibujan con la misma tinta oscura sobre fichas claras, y el contraste se mide, no se estima. Cambiar de tema cambia el fondo y los seis colores de ficha: nunca el tamaño del número ni su legibilidad.</span>
+			</li>
+			<li class="dl-feature glass reveal" style="--delay: 140ms">
+				<strong data-es="La accesibilidad no se cobra" data-en="Accessibility is not something we charge for">La accesibilidad no se cobra</strong>
+				<span data-es="Nada de lo anterior está detrás de un interruptor que apagar, de un nivel que alcanzar ni de una compra que hacer. Tampoco del tema de pago: el tema Prism Club es exactamente igual de legible que el gratuito con el que empiezas." data-en="None of the above sits behind a switch to turn off, a level to reach or a purchase to make. Nor behind the paid theme: Prism Club is exactly as readable as the free one you start with.">Nada de lo anterior está detrás de un interruptor que apagar, de un nivel que alcanzar ni de una compra que hacer. Tampoco del tema de pago: el tema Prism Club es exactamente igual de legible que el gratuito con el que empiezas.</span>
+			</li>
 		</ul>
 	</div>
 </section>
@@ -42,14 +104,24 @@ disclaimer_en: "LumaTen is an independent game. It is not affiliated with any ga
 <section class="section dl-section" id="pricing">
 	<div class="container">
 		<header class="section-head reveal">
-			<span class="section-eyebrow">02</span>
-			<h2 class="section-title" data-es="Gratis, con reglas claras" data-en="Free, with clear rules">Gratis, con reglas claras</h2>
-			<p class="section-subtitle" data-es="La campaña está completa y no necesita una compra. Las monedas pagan ayudas y temas, y las compras dicen exactamente lo que entregan." data-en="The campaign is complete and needs no purchase. Coins pay for helpers and themes, and purchases state exactly what they deliver.">La campaña está completa y no necesita una compra. Las monedas pagan ayudas y temas, y las compras dicen exactamente lo que entregan.</p>
+			<span class="section-eyebrow">03</span>
+			<h2 class="section-title" data-es="Gratis, y sin letra pequeña" data-en="Free, and honest about it">Gratis, y sin letra pequeña</h2>
+			<p class="section-subtitle" data-es="Los 600 niveles, el reto diario, el evento semanal, el modo sin fin y el contrarreloj son gratis y están completos. Ninguna compra te da un tablero más fácil, una estrella más ni una fila de reserva extra: no hay suscripciones, ni cajas sorpresa, ni vidas que esperar." data-en="All 600 levels, the daily challenge, the weekly event, endless and the timed mode are free and complete. No purchase gives you an easier board, one more star or an extra reserve row: there are no subscriptions, no loot boxes and no lives to wait for.">Los 600 niveles, el reto diario, el evento semanal, el modo sin fin y el contrarreloj son gratis y están completos. Ninguna compra te da un tablero más fácil, una estrella más ni una fila de reserva extra: no hay suscripciones, ni cajas sorpresa, ni vidas que esperar.</p>
 		</header>
+
 		<ul class="dl-features" role="list">
-			<li class="dl-feature glass reveal"><strong data-es="Juega sin conexión" data-en="Play offline">Juega sin conexión</strong><span data-es="La campaña, el modo sin fin y los retos locales viven en tu dispositivo. No necesitas crear una cuenta para empezar." data-en="Campaign, endless mode and local challenges live on your device. You do not need an account to begin.">La campaña, el modo sin fin y los retos locales viven en tu dispositivo. No necesitas crear una cuenta para empezar.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 70ms"><strong data-es="Ayudas y temas" data-en="Helpers and themes">Ayudas y temas</strong><span data-es="Gana monedas jugando, desbloquea temas de color y guarda tus boosters para el movimiento que realmente importa." data-en="Earn coins by playing, unlock colour themes and save boosters for the move that really matters.">Gana monedas jugando, desbloquea temas de color y guarda tus boosters para el movimiento que realmente importa.</span></li>
-			<li class="dl-feature glass reveal" style="--delay: 140ms"><strong data-es="Sin publicidad invasiva" data-en="No intrusive advertising">Sin publicidad invasiva</strong><span data-es="La resolución de una partida no se interrumpe con publicidad. Los anuncios recompensados son una opción y el adaptador puede permanecer desactivado." data-en="A game resolution is never interrupted by advertising. Rewarded ads are optional and the adapter can remain disabled.">La resolución de una partida no se interrumpe con publicidad. Los anuncios recompensados son una opción y el adaptador puede permanecer desactivado.</span></li>
+			<li class="dl-feature glass reveal">
+				<strong data-es="Monedas" data-en="Coins">Monedas</strong>
+				<span data-es="Se ganan superando niveles, y también se pueden comprar en packs de 600, 1.800 o 6.000. Cada pack dice exactamente cuántas da. Pagan los cuatro potenciadores —Deshacer 25, Pista 30, Barajar 40, Prisma 60— y tres de los cinco temas de color." data-en="Earned by clearing levels, and also available in packs of 600, 1,800 or 6,000. Each pack states exactly how many it gives. They pay for the four boosters — Undo 25, Hint 30, Shuffle 40, Prism 60 — and for three of the five colour themes.">Se ganan superando niveles, y también se pueden comprar en packs de 600, 1.800 o 6.000. Cada pack dice exactamente cuántas da. Pagan los cuatro potenciadores —Deshacer 25, Pista 30, Barajar 40, Prisma 60— y tres de los cinco temas de color.</span>
+			</li>
+			<li class="dl-feature glass reveal" style="--delay: 70ms">
+				<strong data-es="Quitar anuncios" data-en="Remove Ads">Quitar anuncios</strong>
+				<span data-es="Una compra única que elimina el anuncio entre niveles. Y además te da directamente el Prisma extra que se ofrecía por ver un vídeo: la compra no quita nada, solo el vídeo." data-en="A one-off purchase that removes the ad between levels. It also hands you the extra Prism that was offered for watching a video: the purchase takes nothing away, only the video.">Una compra única que elimina el anuncio entre niveles. Y además te da directamente el Prisma extra que se ofrecía por ver un vídeo: la compra no quita nada, solo el vídeo.</span>
+			</li>
+			<li class="dl-feature glass reveal" style="--delay: 140ms">
+				<strong data-es="Todos los temas" data-en="All themes">Todos los temas</strong>
+				<span data-es="Una compra única que desbloquea los tres temas de monedas —Sunset Pop, Ocean Glow y Violet Night— más Prism Club, que es el único que las monedas no compran. Cambian el fondo y los seis colores de ficha, nunca la dificultad. Candy Cosmos, el tema con el que empiezas, es gratis." data-en="A one-off purchase that unlocks the three coin themes — Sunset Pop, Ocean Glow and Violet Night — plus Prism Club, the one theme coins cannot buy. They change the background and the six tile colours, never the difficulty. Candy Cosmos, the theme you start with, is free.">Una compra única que desbloquea los tres temas de monedas —Sunset Pop, Ocean Glow y Violet Night— más Prism Club, que es el único que las monedas no compran. Cambian el fondo y los seis colores de ficha, nunca la dificultad. Candy Cosmos, el tema con el que empiezas, es gratis.</span>
+			</li>
 		</ul>
 	</div>
 </section>

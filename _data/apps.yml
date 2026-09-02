@@ -315,3 +315,11 @@ items:
     accent: "#F2645A"
     es_tagline: Combina, cultiva y despierta.
     en_tagline: Match, grow and restore.
+
+  - slug: lumaten
+    name: LumaTen
+    url: /lumaten/
+    status: soon
+    accent: "#FFB84D"
+    es_tagline: Combina. Encadena. Brilla.
+    en_tagline: Match. Chain. Glow.

@@ -307,3 +307,11 @@ items:
     accent: "#FF9A2E"
     es_tagline: Mezcla colores. Sirve el pedido.
     en_tagline: Mix colours. Fill the order.
+
+  - slug: nectara
+    name: Nectara - Garden Match
+    url: /nectara/
+    status: soon
+    accent: "#F2645A"
+    es_tagline: Combina, cultiva y despierta.
+    en_tagline: Match, grow and restore.

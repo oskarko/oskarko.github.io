@@ -310,6 +310,7 @@ items:
 
   - slug: nectara
     name: Nectara - Garden Match
+    icon: nectara.png
     url: /nectara/
     status: soon
     accent: "#F2645A"

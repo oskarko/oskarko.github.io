@@ -325,3 +325,12 @@ items:
     accent: "#FF6B6B"
     es_tagline: Empareja iguales. O suma diez.
     en_tagline: Match equals. Or make ten.
+
+  - slug: ciclara
+    name: Ciclara
+    icon: ciclara.png
+    url: /ciclara/
+    status: soon
+    accent: "#7C6CF2"
+    es_tagline: No es un calendario. Es entender por qué.
+    en_tagline: Not a calendar. Understanding why.

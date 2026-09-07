@@ -317,6 +317,15 @@ items:
     es_tagline: Combina, cultiva y despierta.
     en_tagline: Match, grow and restore.
 
+  - slug: brumara
+    name: Brumara - Deep Sea Blast
+    icon: brumara.png
+    url: /brumara/
+    status: soon
+    accent: "#33E0FF"
+    es_tagline: Estalla medusas. Enciende el mar.
+    en_tagline: Burst jellies. Light the deep.
+
   - slug: lumaten
     name: LumaTen
     icon: lumaten.png

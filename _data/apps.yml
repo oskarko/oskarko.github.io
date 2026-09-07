@@ -246,13 +246,13 @@ items:
     en_tagline: Sorting shelves, calmly
 
   - slug: familyadmin
-    name: Family Admin
+    name: Cotejo
     icon: familyadmin.png
     url: /familyadmin/
     status: soon
     accent: "#3B49C4"
-    es_tagline: El archivo de tu familia, con fechas
-    en_tagline: Your family's archive, with dates
+    es_tagline: La fecha que manda la norma
+    en_tagline: Validity, by the rulebook
 
   - slug: rentero
     name: Rentero

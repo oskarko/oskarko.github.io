@@ -204,10 +204,10 @@ items:
     name: Bisagra
     icon: bisagra.png
     url: /bisagra/
-    status: live
+    status: soon
     accent: "#3D5A80"
-    es_tagline: Custodia compartida sin discusiones
-    en_tagline: Co-parenting without arguments
+    es_tagline: ¿Lo cubre la pensión de alimentos?
+    en_tagline: Is it already covered by child support?
 
   - slug: cefiro
     name: Céfiro

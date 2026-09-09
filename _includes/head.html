@@ -23,6 +23,14 @@
 
 {% seo %}
 
+{%- comment -%}
+	Google Search Console. Verified twice on purpose: this tag and the
+	googlef4e18f43a7bac9de.html file at the root. They are independent methods,
+	so deleting either one does not un-verify the property — and losing
+	verification silently means losing the search-query reports.
+{%- endcomment -%}
+<meta name="google-site-verification" content="dkt9wxkAhNILnojRGc7bU8veAWr7CEadtWM4gbJA_hE" />
+
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">

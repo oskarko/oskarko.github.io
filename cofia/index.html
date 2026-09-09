@@ -98,3 +98,39 @@ disclaimer_en: "Cofia is an independent study app. It is not affiliated with the
 		</ul>
 	</div>
 </section>
+
+<section class="section dl-section" id="tcae">
+	<div class="container">
+		<header class="section-head reveal">
+			<span class="section-eyebrow">02</span>
+			<h2 class="section-title" data-es="Prueba tu comunidad antes de descargar" data-en="Try your region before downloading">Prueba tu comunidad antes de descargar</h2>
+			<p class="section-subtitle" data-es="Cada comunidad se examina de su propia normativa. Tienes cinco preguntas de muestra de las 17, con la respuesta explicada." data-en="Every region has its own regulations in the exam. Here are five sample questions for each of the 17, with the answer explained.">Cada comunidad se examina de su propia normativa. Tienes cinco preguntas de muestra de las 17, con la respuesta explicada.</p>
+		</header>
+
+		<ul class="cq-regions reveal" role="list">
+			<li><a class="cq-region" href="{{ '/cofia/tcae/andalucia/' | relative_url }}"><span>Andalucía</span><span class="cq-region-code">SAS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/aragon/' | relative_url }}"><span>Aragón</span><span class="cq-region-code">SALUD</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/asturias/' | relative_url }}"><span>Asturias</span><span class="cq-region-code">SESPA</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/baleares/' | relative_url }}"><span>Islas Baleares</span><span class="cq-region-code">IB-Salut</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/canarias/' | relative_url }}"><span>Canarias</span><span class="cq-region-code">SCS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/cantabria/' | relative_url }}"><span>Cantabria</span><span class="cq-region-code">SCS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/castillalamancha/' | relative_url }}"><span>Castilla-La Mancha</span><span class="cq-region-code">SESCAM</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/castillayleon/' | relative_url }}"><span>Castilla y León</span><span class="cq-region-code">Sacyl</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/catalunya/' | relative_url }}"><span>Cataluña</span><span class="cq-region-code">ICS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/valencia/' | relative_url }}"><span>Comunidad Valenciana</span><span class="cq-region-code">GVA</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/extremadura/' | relative_url }}"><span>Extremadura</span><span class="cq-region-code">SES</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/galicia/' | relative_url }}"><span>Galicia</span><span class="cq-region-code">SERGAS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/larioja/' | relative_url }}"><span>La Rioja</span><span class="cq-region-code">SERIS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/madrid/' | relative_url }}"><span>Madrid</span><span class="cq-region-code">SERMAS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/murcia/' | relative_url }}"><span>Murcia</span><span class="cq-region-code">SMS</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/navarra/' | relative_url }}"><span>Navarra</span><span class="cq-region-code">SNS-O</span></a></li>
+			<li><a class="cq-region" href="{{ '/cofia/tcae/paisvasco/' | relative_url }}"><span>País Vasco</span><span class="cq-region-code">Osakidetza</span></a></li>
+		</ul>
+	</div>
+</section>
+
+{%- comment -%}
+	Brings in the .cq-regions styles. The quiz script finds no questions on this
+	page and returns without doing anything.
+{%- endcomment -%}
+{% include cofia-quiz.html %}

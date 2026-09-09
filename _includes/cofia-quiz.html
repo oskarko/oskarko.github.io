@@ -1,0 +1,219 @@
+<!--
+	Sample-quiz styles and behaviour for the Cofia TCAE pages.
+
+	The questions work with JavaScript disabled: every answer lives in a
+	<details> element, so the page is still a complete, indexable Q&A. The
+	script only adds the quiz feel on top — marking the option you picked and
+	opening the explanation for you.
+-->
+<style>
+	.cq-intro-norms {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.cq-norm {
+		display: inline-block;
+		padding: 6px 12px;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-pill);
+		background: var(--surface);
+		color: var(--text-2);
+		font-size: 0.82rem;
+		white-space: nowrap;
+	}
+	.cq-list {
+		display: grid;
+		gap: 18px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: cq;
+	}
+	.cq-item {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--surface);
+		padding: clamp(18px, 3vw, 26px);
+		box-shadow: var(--shadow-sm);
+	}
+	.cq-stem {
+		display: flex;
+		gap: 12px;
+		margin: 0 0 16px;
+		font-size: 1.04rem;
+		font-weight: 600;
+		color: var(--text-1);
+		line-height: 1.45;
+	}
+	.cq-num {
+		flex: 0 0 auto;
+		width: 26px;
+		height: 26px;
+		margin-top: 2px;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		background: var(--surface-2);
+		border: 1px solid var(--border);
+		color: var(--text-2);
+		font-size: 0.78rem;
+		font-weight: 700;
+	}
+	.cq-options {
+		display: grid;
+		gap: 8px;
+		margin: 0 0 14px;
+		padding: 0;
+		list-style: none;
+	}
+	.cq-option {
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 12px 14px;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: transparent;
+		color: var(--text-1);
+		font: inherit;
+		font-size: 0.95rem;
+		cursor: pointer;
+		transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out);
+	}
+	.cq-option:hover:not([data-state]) {
+		background: var(--surface-2);
+		border-color: var(--border-2);
+	}
+	.cq-option:focus-visible {
+		outline: 2px solid var(--text-2);
+		outline-offset: 2px;
+	}
+	.cq-option[data-state="right"] {
+		border-color: var(--success);
+		background: color-mix(in srgb, var(--success) 14%, transparent);
+	}
+	.cq-option[data-state="wrong"] {
+		border-color: var(--accent-3);
+		background: color-mix(in srgb, var(--accent-3) 12%, transparent);
+	}
+	.cq-mark {
+		float: right;
+		margin-left: 12px;
+		font-weight: 700;
+	}
+	.cq-option[data-state="right"] .cq-mark { color: var(--success); }
+	.cq-option[data-state="wrong"] .cq-mark { color: var(--accent-3); }
+	.cq-why {
+		border-top: 1px solid var(--border);
+		padding-top: 12px;
+	}
+	.cq-why > summary {
+		cursor: pointer;
+		color: var(--text-2);
+		font-size: 0.88rem;
+		font-weight: 600;
+	}
+	.cq-why > summary:focus-visible {
+		outline: 2px solid var(--text-2);
+		outline-offset: 3px;
+	}
+	.cq-why p {
+		margin: 10px 0 0;
+		color: var(--text-2);
+		font-size: 0.93rem;
+		line-height: 1.6;
+	}
+	.cq-answer {
+		color: var(--text-1);
+		font-weight: 600;
+	}
+	.cq-wall {
+		margin-top: 26px;
+		border: 1px solid var(--border-2);
+		border-radius: var(--radius);
+		background: var(--surface-2);
+		padding: clamp(20px, 3.4vw, 32px);
+		text-align: center;
+	}
+	.cq-wall h2 {
+		margin: 0 0 10px;
+		font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+	}
+	.cq-wall p {
+		margin: 0 auto 20px;
+		max-width: 52ch;
+		color: var(--text-2);
+		line-height: 1.6;
+	}
+	.cq-wall .dl-ctas { justify-content: center; }
+	.cq-regions {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.cq-region {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		padding: 14px 16px;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--surface);
+		color: var(--text-1);
+		text-decoration: none;
+		transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out);
+	}
+	.cq-region:hover {
+		background: var(--surface-2);
+		border-color: var(--border-2);
+	}
+	.cq-region-code {
+		color: var(--text-3);
+		font-size: 0.76rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+	}
+</style>
+
+<script>
+	(function () {
+		var items = document.querySelectorAll('.cq-item');
+		if (!items.length) return;
+
+		items.forEach(function (item) {
+			var options = item.querySelectorAll('.cq-option');
+			var why = item.querySelector('.cq-why');
+
+			options.forEach(function (option) {
+				option.addEventListener('click', function () {
+					// Answering twice would let you brute-force the option list,
+					// which is not the point of a five-question sample.
+					if (item.dataset.answered === 'true') return;
+					item.dataset.answered = 'true';
+
+					var picked = option.dataset.correct === 'true';
+					options.forEach(function (other) {
+						other.disabled = true;
+						if (other.dataset.correct === 'true') {
+							other.dataset.state = 'right';
+							other.querySelector('.cq-mark').textContent = '✓';
+						}
+					});
+					if (!picked) {
+						option.dataset.state = 'wrong';
+						option.querySelector('.cq-mark').textContent = '✗';
+					}
+					if (why) why.open = true;
+				});
+			});
+		});
+	})();
+</script>

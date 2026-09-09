@@ -343,3 +343,12 @@ items:
     accent: "#7C6CF2"
     es_tagline: No es un calendario. Es entender por qué.
     en_tagline: Not a calendar. Understanding why.
+
+  - slug: triploom
+    name: Triploom
+    icon: triploom.png
+    url: /triploom/
+    status: soon
+    accent: "#F0B429"
+    es_tagline: Tu viaje, revisado antes de salir.
+    en_tagline: Your trip, reviewed before you go.
